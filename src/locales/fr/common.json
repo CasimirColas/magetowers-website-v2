@@ -1,0 +1,20 @@
+{
+  "water": "eau",
+  "language_selector": {
+    "available": "Langues",
+    "select_a_language": "Sélectionnez une langue"
+  },
+  "routes": {
+    "": "Accueil",
+    "rules": "Règles",
+    "cards": "Cartes",
+    "credits": "Crédits",
+    "links": "Liens"
+  },
+  "navigation": {
+    "menu": "Menu",
+    "navigation": "Navigation",
+    "previous": "Précédent",
+    "next": "Suivant"
+  }
+}
