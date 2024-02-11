@@ -19,6 +19,9 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        skyWithTower: "url('/backgrounds/skyWithTower.png')",
+      },
       fontFamily: {
         text: ["Carlito", "sans-serif"],
         title: ["Vinque", "sans-serif"],

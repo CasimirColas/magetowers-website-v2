@@ -2,14 +2,27 @@ import { useTranslations } from "next-intl";
 import getStaticPropsI18n from "@/utils/next-intl/getStaticPropsI18n";
 import { GetStaticPropsContext } from "next";
 import DefaultLayout from "@/components/layout/DefaultLayout";
+import LandingSection from "@/components/home/LandingSection";
+import ScreenSection from "@/components/layout/ScreenSection";
 
 export default function Home() {
   const t = useTranslations("home");
   const c = useTranslations("common");
 
   return (
-    <DefaultLayout title={c("routes.")}>
-      <p>test</p>
+    <DefaultLayout
+      title={c("routes.")}
+      className="snap-y snap-mandatory overflow-scroll sm:overflow-visible"
+    >
+      <LandingSection className="" />
+      <ScreenSection className="bg-red-200 flex flex-col justify-between">
+        <p>start</p>
+        <p>end</p>
+      </ScreenSection>
+      <ScreenSection className="bg-green-200 flex flex-col justify-between">
+        <p>start</p>
+        <p>end</p>
+      </ScreenSection>
     </DefaultLayout>
   );
 }

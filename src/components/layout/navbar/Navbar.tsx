@@ -3,10 +3,9 @@ import NavbarDesktop from "./NavbarDesktop";
 import NavbarMobile from "./NavbarMobile";
 import useMediaQuery from "@/utils/hooks/useMediaQuery";
 
-function Navbar() {
+function Navbar({ className }: { className?: string }) {
   const { pathname } = useRouter();
   const isSm = useMediaQuery("sm");
-  const className = "sticky top-0";
   return isSm ? (
     <NavbarDesktop pathname={pathname} className={className} />
   ) : (

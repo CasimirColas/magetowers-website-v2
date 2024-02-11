@@ -43,7 +43,7 @@ function NavbarMobile({ className, pathname }: NavbarMobileProps) {
   return (
     <nav
       className={cn(
-        "flex w-full h-18 bg-white justify-between items-center p-4 z-10 border border-b",
+        "flex w-full h-16 bg-white justify-between items-center p-4 z-10 border border-b",
         className
       )}
     >
