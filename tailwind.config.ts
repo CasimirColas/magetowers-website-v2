@@ -7,6 +7,7 @@ const config = {
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
+    "./@/**/*.{ts,tsx}",
   ],
   prefix: "",
   theme: {
@@ -22,6 +23,9 @@ const config = {
       backgroundImage: {
         skyWithTower: "url('/backgrounds/skyWithTower.png')",
         lakeSetup: "url('/backgrounds/lakeSetup.jpg')",
+        mossyWall: "url('/backgrounds/mossyWall.jpg')",
+        snowyWaterfall: "url('/backgrounds/snowyWaterfall.jpg')",
+        setupOnStump: "url('/backgrounds/setupOnStump.jpg')",
       },
       fontFamily: {
         text: ["Carlito", "sans-serif"],
@@ -50,7 +54,7 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("tailwindcss-animated")],
 } satisfies Config;
 
 export default config;

@@ -3,8 +3,11 @@ import getStaticPropsI18n from "@/utils/next-intl/getStaticPropsI18n";
 import { GetStaticPropsContext } from "next";
 import DefaultLayout from "@/components/layout/DefaultLayout";
 import LandingSection from "@/components/home/LandingSection";
-import ScreenSection from "@/components/layout/ScreenSection";
 import VideoSection from "@/components/home/VideoSection";
+import ExpectationSection from "@/components/home/ExpectationSection";
+import PowerSection from "@/components/home/PowerSection";
+import FutureSection from "@/components/home/FutureSection";
+import ThanksSection from "@/components/home/ThanksSection";
 
 export default function Home() {
   const t = useTranslations("home");
@@ -17,10 +20,10 @@ export default function Home() {
     >
       <LandingSection />
       <VideoSection />
-      <ScreenSection className="bg-green-200 flex flex-col justify-between">
-        <p>start</p>
-        <p>end</p>
-      </ScreenSection>
+      <ExpectationSection />
+      <PowerSection />
+      <FutureSection />
+      <ThanksSection />
     </DefaultLayout>
   );
 }

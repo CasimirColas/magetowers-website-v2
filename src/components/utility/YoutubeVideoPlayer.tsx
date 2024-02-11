@@ -9,7 +9,7 @@ function YoutubeVideoPlayer({
 }) {
   return (
     <iframe
-      className={cn("aspect-video rounded-xl border-2 bg-white", className)}
+      className={cn("aspect-video rounded-lg border-2 bg-white", className)}
       src={url}
       title="YouTube video player"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
