@@ -4,6 +4,7 @@ import { GetStaticPropsContext } from "next";
 import DefaultLayout from "@/components/layout/DefaultLayout";
 import LandingSection from "@/components/home/LandingSection";
 import ScreenSection from "@/components/layout/ScreenSection";
+import VideoSection from "@/components/home/VideoSection";
 
 export default function Home() {
   const t = useTranslations("home");
@@ -14,11 +15,8 @@ export default function Home() {
       title={c("routes.")}
       className="snap-y snap-mandatory overflow-scroll sm:overflow-visible"
     >
-      <LandingSection className="" />
-      <ScreenSection className="bg-red-200 flex flex-col justify-between">
-        <p>start</p>
-        <p>end</p>
-      </ScreenSection>
+      <LandingSection />
+      <VideoSection />
       <ScreenSection className="bg-green-200 flex flex-col justify-between">
         <p>start</p>
         <p>end</p>

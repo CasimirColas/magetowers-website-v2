@@ -21,6 +21,7 @@ const config = {
     extend: {
       backgroundImage: {
         skyWithTower: "url('/backgrounds/skyWithTower.png')",
+        lakeSetup: "url('/backgrounds/lakeSetup.jpg')",
       },
       fontFamily: {
         text: ["Carlito", "sans-serif"],

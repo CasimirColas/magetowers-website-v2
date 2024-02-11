@@ -9,7 +9,7 @@ function ScreenSection({
   children,
 }: ScreenSectionProps & { children: React.ReactNode }) {
   return (
-    <section className={cn("w-full h-full p-6 snap-center", className)}>
+    <section className={cn("w-full h-full p-6 snap-start", className)}>
       {children}
     </section>
   );
