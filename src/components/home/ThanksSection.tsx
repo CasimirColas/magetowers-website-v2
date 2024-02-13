@@ -104,7 +104,7 @@ function FutureSection() {
       <span />
       <div className="flex flex-col gap-4 h-full justify-center">
         <h3
-          className="text-3xl font-title text-center sm:mt-4 text-white sm:text-5xl sm:pb-12 pb-4"
+          className="text-3xl font-title text-center text-white sm:text-5xl sm:pb-12 pb-4"
           style={{
             textShadow: "-2px 2px 0px #072755, -1px 2px 0px #072755",
           }}
