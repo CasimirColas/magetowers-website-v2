@@ -26,6 +26,7 @@ const config = {
         mossyWall: "url('/backgrounds/mossyWall.jpg')",
         snowyWaterfall: "url('/backgrounds/snowyWaterfall.jpg')",
         setupOnStump: "url('/backgrounds/setupOnStump.jpg')",
+        lakeBox: "url('/backgrounds/lakeBox.jpg')",
       },
       fontFamily: {
         text: ["Carlito", "sans-serif"],
