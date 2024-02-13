@@ -1,3 +1,10 @@
 {
-  "hello": "bonjour"
+  "thanks_section": {
+    "title": "Grand merci à...",
+    "santiago": "L'artiste derrière les illustrations du jeu.",
+    "cardboardnaut": "Le créateur du teaser et de la bande-annonce.",
+    "trash_cat_music": "La compositrice de la musique principale.",
+    "community": "La communauté",
+    "community_text": "Qui a testé le jeu et a aidé à l'améliorer tout au long du processus."
+  }
 }

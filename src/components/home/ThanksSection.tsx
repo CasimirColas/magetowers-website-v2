@@ -11,12 +11,15 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "../ui/sheet";
+import { useTranslations } from "next-intl";
 
 function FutureSection() {
+  const t = useTranslations("home.thanks_section");
+
   const thanks: ThanksCardProps[] = [
     {
       title: "Santiago Hertzan",
-      subText: "The artist behind the illustrations for the game",
+      subText: t("santiago"),
       image: "/avatars/santiagoHpp.jpg",
       alt: "Santiago Hertzan",
       description: (
@@ -41,7 +44,7 @@ function FutureSection() {
     },
     {
       title: "Cardboardnaut",
-      subText: "The creator of the teaser and the trailler",
+      subText: t("cardboardnaut"),
       image: "/avatars/astrobox.png",
       alt: "Cardboardnaut",
       description: (
@@ -63,7 +66,7 @@ function FutureSection() {
     },
     {
       title: "Trash Cat Music",
-      subText: "The musician behind the main music track",
+      subText: t("trash_cat_music"),
       image: "/avatars/trashCatMusic.png",
       alt: "Trash Cat Music",
       description: (
@@ -75,8 +78,8 @@ function FutureSection() {
       ),
     },
     {
-      title: "The community",
-      subText: "Who playtested and help make the game along the way",
+      title: t("community"),
+      subText: t("community_text"),
       image: "/avatars/d6.png",
       alt: "The community",
       // description: (
@@ -109,7 +112,7 @@ function FutureSection() {
             textShadow: "-2px 2px 0px #072755, -1px 2px 0px #072755",
           }}
         >
-          Special thanks to...
+          {t("title")}
         </h3>
         {thanks.map((thank) => (
           <ThanksCard
