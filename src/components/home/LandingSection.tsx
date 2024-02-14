@@ -8,12 +8,14 @@ import {
 } from "../visuals/BrandLogos";
 import { urls } from "@/config/urls";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 interface LandingSectionProps {
   className?: string;
 }
 
 function LandingSection({ className }: LandingSectionProps) {
+  const t = useTranslations("home.landing_section");
   return (
     <section
       className={cn(
@@ -27,14 +29,19 @@ function LandingSection({ className }: LandingSectionProps) {
           textShadow: "-4px 5px 0px #69a0bd, -1px 5px 0px #69a0bd",
         }}
       >
-        Mage Towers
+        {t("title")}
       </h1>
       <p className="p-4 rounded-full bg-white text-xl font-bold text-sky shadow-lg">
-        Coming to Kickstarter soon!
+        {t("comming_soon")}
       </p>
       <div className="flex flex-col justify-center items-center gap-4">
-        <h2 className="scroll-m-20 border-b text-xl font-semibold tracking-tight first:mt-0 text-white border-white">
-          In the mean time follow us here
+        <h2
+          className="scroll-m-20  text-xl font-semibold tracking-tight first:mt-0 text-white underline underline-offset-8 w-10/12 text-center"
+          style={{
+            textShadow: "-1px 1px 2px #333333",
+          }}
+        >
+          {t("follow_us")}
         </h2>
         <div className="flex justify-center items-center gap-2">
           <Link href={urls.youtubeURL} target="_blank" className="hover:grow-1">

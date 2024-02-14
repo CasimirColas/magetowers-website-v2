@@ -104,7 +104,7 @@ function FutureSection() {
   ];
   return (
     <ScreenSection className="flex flex-col items-center sm:flex-row bg-white gap-8 justify-around bg-lakeBox bg-cover bg-center">
-      <span />
+      <span className="hidden sm:block" />
       <div className="flex flex-col gap-4 h-full justify-center">
         <h3
           className="text-3xl font-title text-center text-white sm:text-5xl sm:pb-12 pb-4"

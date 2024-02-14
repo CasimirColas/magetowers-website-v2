@@ -1,4 +1,29 @@
 {
+  "landing_section": {
+    "title": "Mage Towers",
+    "comming_soon": "Comming to Kickstarter soon!",
+    "follow_us": "In the meantime, you can follow us here to stay updated"
+  },
+  "video_section": {
+    "title": "Watch the trailer!",
+    "text_full": "Do you enjoy Hearthstone, Magic the Gathering or Yu-Gi-Oh! ||Try Mage Towers!|| It can be played with ||up to 4 friends|| (or maybe even more 🤔) and it is very easy to get into. The ||variety of playstyles|| and win conditions, will guaranty that no game will ever feel or play the same."
+  },
+  "expectations_section": {
+    "title": "Play the game !",
+    "text_full": "Mage Towers is a game centered around building you mage tower and collecting different types of mana to empower your spells and use powerful incantations. You gain mana by adding Catalyst blocks to your tower and infusing them with the power of glyphs, at the end of your turn you will receive mana of the appropriate type for each Catalyst block in your tower. Each mana type revolves around different play styles."
+  },
+  "power_section": {
+    "title": "Show off your skills and tactics!",
+    "text_full": "Use your cards wisely to outsmart your opponent and think ahead to predict his moves. The game is easy to learn but hard to master. The key to victory is to master all the spells and their interractions. Shift and adapt your strategy to the ever changing battlefield and become the ultimate mage! Create devastating combos! Win by the using powerfull incantations or ending the game having the greatest magic tower in the realm."
+  },
+  "future_section": {
+    "title": "What's next?",
+    "p1": "Currently our base 1v1 pack is ready an waiting to be shipped. But there is much more to come!",
+    "p2": "If the game gets fully funded, 2 expansions are already planned! They will bring artefacts and unseen kinds of magic.",
+    "p3": "The ultimate goal would be to release a deluxe edition box containing both expansions, enought cards for 4 players with items like a player mat and tokens to provide the best playing experience possible.",
+    "p4": "Any excess from the crowdfunding campaign will go towards making a video game.",
+    "text_full": "Currently our base 1v1 pack is ready an waiting to be shipped. But there is much more to come! If the game gets fully funded, 2 expansions are already planned! They will bring artefacts and unseen kinds of magic. The ultimate goal would be to release a deluxe edition box containing both expansions, enought cards for 4 players with items like a player mat and tokens to provide the best playing experience possible. Any excess from the crowdfunding campaign will go towards making a video game."
+  },
   "thanks_section": {
     "title": "Special thanks to...",
     "santiago": "The artist behind the illustrations for the game.",
