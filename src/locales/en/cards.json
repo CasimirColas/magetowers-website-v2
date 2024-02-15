@@ -21,7 +21,7 @@
   },
   "catalyst": {
     "name": "Catalyst",
-    "description": "When the card is played combine it with 1 regular magic glyph or 2 creation glyphs to infuse it, otherwise you will need 2 regular glyphs of the same type. At the end of your turn gives you 1 mana of the type of the infusing glyph(s)"
+    "description": "||When the card is played|| combine it with 1 regular magic glyph or 2 creation glyphs to infuse it, ||otherwise|| you will need 2 regular glyphs of the same type. At the end of your turn gives you 1 mana of the type of the infusing glyph(s)"
   },
   "generator": {
     "name": "Generator",

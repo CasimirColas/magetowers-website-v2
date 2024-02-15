@@ -21,7 +21,7 @@
   },
   "catalyst": {
     "name": "Catalyseur",
-    "description": "Lorsque la carte est jouée, combinez-la avec 1 glyphe magique régulier ou 2 glyphe de création pour l'infuser, autrement vous aurez besoin de 2 glyphes réguliers du même type. À la fin de votre tour, vous recevrez 1 mana du type du(des) glyphe(s) infusé(s)"
+    "description": "||Lorsque la carte est jouée||, combinez-la avec 1 glyphe magique régulier ou 2 glyphe de création pour l'infuser, ||autrement|| vous aurez besoin de 2 glyphes réguliers du même type. À la fin de votre tour, vous recevrez 1 mana du type du(des) glyphe(s) infusé(s)"
   },
   "generator": {
     "name": "Générateur",

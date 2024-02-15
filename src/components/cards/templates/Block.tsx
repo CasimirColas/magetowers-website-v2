@@ -4,6 +4,7 @@ import { cardsDictionary as d } from "../dictionary";
 import { useTranslations } from "next-intl";
 import { useEffect } from "react";
 import { adjustFontSize } from "@/utils/functions/adjustFontSize";
+import { parseText } from "@/utils/functions/parseText";
 import clsx from "clsx";
 
 interface BlockProps {
@@ -48,7 +49,11 @@ function Block({ name, className, id }: BlockProps) {
               "text-red-600 border-t border-slate-400 pt-1": key === "warning",
             })}
           >
-            {t(key)}
+            {parseText({
+              default: true,
+              text: t(key),
+              args: { childClassName: "text-black" },
+            })}
           </div>
         ))}
       </div>
