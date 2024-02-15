@@ -1,5 +1,9 @@
 import Card from "@/components/cards/Card";
-import { blockNameList, glyphNameList } from "@/components/cards/types";
+import {
+  blockNameList,
+  glyphNameList,
+  utilityNameList,
+} from "@/components/cards/types";
 import DefaultLayout from "@/components/layout/DefaultLayout";
 import getStaticPropsI18n from "@/utils/next-intl/getStaticPropsI18n";
 import { GetStaticPropsContext } from "next";
@@ -11,7 +15,7 @@ export default function Cards() {
     <DefaultLayout title={c("routes.cards")}>
       <div>Welcome to Cards</div>
       <div className="flex gap-2 w-full justify-center  items-center">
-        {blockNameList.map((name, index) => (
+        {utilityNameList.map((name, index) => (
           <Card key={name} name={name} id={index + "-map"} />
         ))}
       </div>

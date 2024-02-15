@@ -15,7 +15,7 @@ function Card({ name, id }: CardProps) {
     glyph: <Glyph name={name} id={id} />,
     spell: <Spell name={name} />,
     block: <Block name={name} id={id} />,
-    utility: <Utility name={name} />,
+    utility: <Utility name={name} id={id} />,
   }[d[name].category];
 }
 

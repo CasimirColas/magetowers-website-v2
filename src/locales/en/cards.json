@@ -101,7 +101,7 @@
   "renovation": {
     "name": "Renovation",
     "choose_option": "Choose one of the following options:",
-    "option_1": "Reconfigure your tower using the already played blocks",
+    "option_1": "Reconfigure your tower using the already placed blocks",
     "option_2": "Insert a block from your hand into your tower",
     "option_3": "Destroy a block from your tower and draw a card from the bench",
     "warning": "The placement restrictions of your blocks must be respected"
