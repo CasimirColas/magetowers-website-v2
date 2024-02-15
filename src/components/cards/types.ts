@@ -1,10 +1,19 @@
 // Inner Object types
 
-export type categoryName = "block" | "spell" | "glyph" | "utility";
+export type cardCategory = "block" | "spell" | "glyph" | "utility";
+
+// Mana types
+
+export type manaType =
+  | "destruction"
+  | "arcane"
+  | "order"
+  | "chaos"
+  | "creation";
 
 // Objects
 export interface BlockObject {
-  category: categoryName;
+  category: cardCategory;
   name: string;
   image: string;
   desc: string;
@@ -12,7 +21,7 @@ export interface BlockObject {
 }
 
 export interface GlyphObject {
-  category: categoryName;
+  category: cardCategory;
   name: string;
   image: string;
   desc: string;
@@ -20,7 +29,7 @@ export interface GlyphObject {
 }
 
 export interface SpellObject {
-  category: categoryName;
+  category: cardCategory;
   name: string;
   image: string;
   sigil: string;
@@ -32,7 +41,7 @@ export interface SpellObject {
 }
 
 export interface UtilityObject {
-  category: categoryName;
+  category: cardCategory;
   name: string;
   image: string;
   desc: string;
@@ -48,57 +57,57 @@ export type CardsObjects =
 export type CardNames = BlockNames | SpellNames | GlyphNames | UtilityNames;
 
 export type GlyphNames =
-  | "Destruction"
-  | "Arcane"
-  | "Order"
-  | "Chaos"
-  | "Creation";
+  | "destruction"
+  | "arcane"
+  | "order"
+  | "chaos"
+  | "creation";
 
 export type BlockNames =
-  | "Catalyst"
-  | "Generator"
-  | "ArcaneMirror"
-  | "Observatory";
+  | "catalyst"
+  | "generator"
+  | "arcaneMirror"
+  | "observatory";
 
 export type SpellNames =
-  | "Ignite"
-  | "Sacrifice"
-  | "Amplify"
-  | "Clearsight"
-  | "Benevolence"
-  | "Equality"
-  | "MindControl"
-  | "Confusion"
-  | "Apotheosis";
-export type UtilityNames = "Renovation" | "Spellcatcher";
+  | "ignite"
+  | "sacrifice"
+  | "amplify"
+  | "clearsight"
+  | "benevolence"
+  | "equality"
+  | "mindControl"
+  | "confusion"
+  | "apotheosis";
+export type UtilityNames = "renovation" | "spellcatcher";
 
 // Lists
 export const blockNameList: BlockNames[] = [
-  "Catalyst",
-  "Generator",
-  "ArcaneMirror",
-  "Observatory",
+  "catalyst",
+  "generator",
+  "arcaneMirror",
+  "observatory",
 ];
 export const glyphNameList: GlyphNames[] = [
-  "Destruction",
-  "Arcane",
-  "Order",
-  "Chaos",
-  "Creation",
+  "destruction",
+  "arcane",
+  "order",
+  "chaos",
+  "creation",
 ];
 export const spellNameList: SpellNames[] = [
-  "Ignite",
-  "Sacrifice",
-  "Amplify",
-  "Clearsight",
-  "Benevolence",
-  "Equality",
-  "MindControl",
-  "Confusion",
-  "Apotheosis",
+  "ignite",
+  "sacrifice",
+  "amplify",
+  "clearsight",
+  "benevolence",
+  "equality",
+  "mindControl",
+  "confusion",
+  "apotheosis",
 ];
 
-export const utilityNameList: UtilityNames[] = ["Renovation", "Spellcatcher"];
+export const utilityNameList: UtilityNames[] = ["renovation", "spellcatcher"];
 
 export const cardsNameList: CardNames[] = ([] as CardNames[]).concat(
   blockNameList as CardNames[],

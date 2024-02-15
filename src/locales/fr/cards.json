@@ -1,21 +1,21 @@
 {
-  "glyph_destruction": {
+  "destruction": {
     "name": "Glyphe de Destruction",
     "description": "Gagnez 1 mana de destruction pour ce tour"
   },
-  "glyph_arcane": {
+  "arcane": {
     "name": "Glyphe d'Arcane",
     "description": "Gagnez 1 mana d'arcane pour ce tour"
   },
-  "glyph_order": {
+  "order": {
     "name": "Glyphe d'Ordre",
     "description": "Gagnez 1 mana d'ordre pour ce tour"
   },
-  "glyph_chaos": {
+  "chaos": {
     "name": "Glyphe de Chaos",
     "description": "Gagnez 1 mana de chaos pour ce tour"
   },
-  "glyph_creation": {
+  "creation": {
     "name": "Glyphe de Création",
     "description": "Gagnez 1 mana de n'importe quel type pour ce tour"
   },
@@ -100,6 +100,7 @@
   },
   "renovation": {
     "name": "Rénovation",
+    "choose_option": "Choisissez une option:",
     "option_1": "Reconfigurez votre tour en utilisant les blocs déjà placés",
     "option_2": "Insérez un bloc de votre main dans votre tour",
     "option_3": "Détruisez un bloc de votre tour et tirez une carte du banc",

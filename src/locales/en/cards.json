@@ -1,21 +1,21 @@
 {
-  "glyph_destruction": {
+  "destruction": {
     "name": "Glyph of Destruction",
     "description": "Gain 1 mana of destruction for this turn"
   },
-  "glyph_arcane": {
+  "arcane": {
     "name": "Glyph of Arcane",
     "description": "Gain 1 mana of arcane for this turn"
   },
-  "glyph_order": {
+  "order": {
     "name": "Glyph of Order",
     "description": "Gain 1 mana of order for this turn"
   },
-  "glyph_chaos": {
+  "chaos": {
     "name": "Glyph of Chaos",
     "description": "Gain 1 mana of chaos for this turn"
   },
-  "glyph_creation": {
+  "creation": {
     "name": "Glyph of Creation",
     "description": "Gain 1 mana of any type for this turn"
   },
@@ -100,6 +100,7 @@
   },
   "renovation": {
     "name": "Renovation",
+    "choose_option": "Choose one of the following options:",
     "option_1": "Reconfigure your tower using the already played blocks",
     "option_2": "Insert a block from your hand into your tower",
     "option_3": "Destroy a block from your tower and draw a card from the bench",
