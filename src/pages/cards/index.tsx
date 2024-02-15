@@ -1,6 +1,7 @@
 import Card from "@/components/cards/Card";
 import {
   blockNameList,
+  cardsNameList,
   glyphNameList,
   spellNameList,
   utilityNameList,
@@ -16,8 +17,13 @@ export default function Cards() {
     <DefaultLayout title={c("routes.cards")}>
       <div>Welcome to Cards</div>
       <div className="flex gap-4 w-full justify-center  items-center flex-wrap">
-        {spellNameList.map((name, index) => (
-          <Card key={name} name={name} id={index + "-map"} />
+        {cardsNameList.map((name, index) => (
+          <Card
+            key={name}
+            name={name}
+            id={index + "-map"}
+            className="w-[6.3cm]"
+          />
         ))}
       </div>
     </DefaultLayout>

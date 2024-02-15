@@ -21,7 +21,7 @@ function Spell({ name, className, id }: SpellProps) {
   const ct = useTranslations("common.vocabulary");
   useEffect(() => {
     adjustFontSize(titleId, 0.075);
-    adjustFontSize(descriptionId, 0.044);
+    adjustFontSize(descriptionId, 0.042);
   }, []);
   return (
     <div
