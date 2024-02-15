@@ -37,7 +37,7 @@ function Block({ name, className, id }: BlockProps) {
         {t("name")}
       </div>
       <div
-        className="absolute right-1/2 translate-x-1/2 bottom-[2%] h-[25%] w-11/12 bg-[#ffffffb3] rounded-md p-4 text-center font-medium"
+        className="absolute right-1/2 translate-x-1/2 bottom-[2%] h-[25%] w-11/12 bg-[#ffffffb3] rounded-md p-[4%] text-center font-medium"
         id={descriptionId}
       >
         {card.description_keys.map((key, index) => (
