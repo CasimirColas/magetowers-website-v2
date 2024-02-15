@@ -19,9 +19,9 @@
     "name": "Glyphe de Création",
     "description": "Gagnez 1 mana de ||n'importe quel|| type pour ce tour"
   },
-  "catalsyt": {
+  "catalyst": {
     "name": "Catalyseur",
-    "description": "Lorsque la carte est jouée, combinez-la avec 1 glyphe magique régulier ou 2 glyphe de création pour l'infuser, sinon vous aurez besoin de 2 glyphes réguliers du même type. À la fin de votre tour, vous recevrez 1 mana du type du(des) glyphe(s) infusé(s)"
+    "description": "Lorsque la carte est jouée, combinez-la avec 1 glyphe magique régulier ou 2 glyphe de création pour l'infuser, autrement vous aurez besoin de 2 glyphes réguliers du même type. À la fin de votre tour, vous recevrez 1 mana du type du(des) glyphe(s) infusé(s)"
   },
   "generator": {
     "name": "Générateur",
@@ -30,12 +30,12 @@
   },
   "arcane_mirror": {
     "name": "Miroir Arcanique",
-    "description": "Choisissez un adversaire, jusqu'à la fin de la partie ce bloc copiera la fonction du bloc au même étage dans la tour de l'adversaire",
-    "warning": "Ne copie pas les effets bonus appliqués au bloc. Ne peut pas copier un Observatoire."
+    "description": "Choisissez un adversaire, jusqu'à la fin de la partie ce bloc copiera la fonction du bloc au même étage dans ça tour",
+    "warning": "Ne copie pas les effets bonus appliqués au bloc. Ne peut pas copier un Observatoire"
   },
   "observatory": {
     "name": "Observatoire",
-    "description": "À partir de votre prochain tour, tous les sorts que vous jouez commenceront au niveau 2. Le premier niveau des sorts ne vous est plus accessible",
+    "description": "À partir de votre prochain tour, tous les sorts que vous jouez commenceront forcément au niveau 2.",
     "warning": "Vous ne pouvez placer de blocs au-dessus de celui-ci"
   },
   "ignite": {

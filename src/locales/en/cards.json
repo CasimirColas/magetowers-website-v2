@@ -19,7 +19,7 @@
     "name": "Glyph of Creation",
     "description": "Gain 1 mana of ||any|| type for this turn"
   },
-  "catalsyt": {
+  "catalyst": {
     "name": "Catalyst",
     "description": "When the card is played combine it with 1 regular magic glyph or 2 creation glyphs to infuse it, otherwise you will need 2 regular glyphs of the same type. At the end of your turn gives you 1 mana of the type of the infusing glyph(s)"
   },
@@ -30,12 +30,12 @@
   },
   "arcane_mirror": {
     "name": "Arcane Mirror",
-    "description": "Choose an opponent, until the end of the game this block will copy the function of the block at the same level in the opponent's tower",
-    "warning": "Does not copy the bonus effects applied to the block. Cannot copy an Observatory."
+    "description": "Choose an opponent, until the end of the game this block will copy the function of the block at the same level in his tower",
+    "warning": "Does not copy the bonus effects applied to the block. Cannot copy an Observatory"
   },
   "observatory": {
     "name": "Observatory",
-    "description": "From your next turn, all the spells you play will start at level 2. The first level of the spells is no longer available to you",
+    "description": "From your next turn, any spells you play will automatically start at level 2",
     "warning": "You cannot place any other block on top of this one"
   },
   "ignite": {

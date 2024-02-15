@@ -50,7 +50,7 @@ function Glyph({ name, className, id }: GlyphProps) {
       </div>
       <div
         className={clsx(
-          "font-text absolute bottom-[2.5%] right-[49%] translate-x-1/2  w-[72%] h-[17%] p-2 text-center flex items-center font-medium ",
+          "font-text absolute bottom-[2.5%] right-[49%] translate-x-1/2  w-[72%] h-[17%] p-2 text-center flex items-center font-medium",
           {
             "[&_b]:text-destruction": card.manaType === "destruction",
             "[&_b]:text-arcane": card.manaType === "arcane",
