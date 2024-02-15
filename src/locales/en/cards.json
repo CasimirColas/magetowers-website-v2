@@ -1,0 +1,108 @@
+{
+  "glyph_destruction": {
+    "name": "Glyph of Destruction",
+    "description": "Gain 1 mana of destruction for this turn"
+  },
+  "glyph_arcane": {
+    "name": "Glyph of Arcane",
+    "description": "Gain 1 mana of arcane for this turn"
+  },
+  "glyph_order": {
+    "name": "Glyph of Order",
+    "description": "Gain 1 mana of order for this turn"
+  },
+  "glyph_chaos": {
+    "name": "Glyph of Chaos",
+    "description": "Gain 1 mana of chaos for this turn"
+  },
+  "glyph_creation": {
+    "name": "Glyph of Creation",
+    "description": "Gain 1 mana of any type for this turn"
+  },
+  "catalsyt": {
+    "name": "Catalyst",
+    "description": "When the card is played combine it with 1 regular magic glyph or 2 creation glyphs to infuse it, otherwise you will need 2 regular glyphs of the same type. At the end of your turn gives you 1 mana of the type of the infusing glyph(s)"
+  },
+  "generator": {
+    "name": "Generator",
+    "description": "Doubles the mana given to you by the block above",
+    "warning": "This block can only be the first block in your tower"
+  },
+  "arcane_mirror": {
+    "name": "Arcane Mirror",
+    "description": "Choose an opponent, until the end of the game this block will copy the function of the block at the same level in the opponent's tower",
+    "warning": "Does not copy the bonus effects applied to the block. Cannot copy an Observatory."
+  },
+  "observatory": {
+    "name": "Observatory",
+    "description": "From your next turn, all the spells you play will start at level 2. The first level of the spells is no longer available to you",
+    "warning": "You cannot place any other block on top of this one"
+  },
+  "ignite": {
+    "name": "Ignite",
+    "level_1": "Choose a card in your opponent's hand and discard it",
+    "level_2": "Choose a card from your hand and 2 cards from your opponent's hand and discard them",
+    "level_3": "Look at your opponent's hand then choose one of his cards to discard"
+  },
+  "sacrifice": {
+    "name": "Sacrifice",
+    "level_1": "At the end of your turn discard your whole hand, gain a mana of destruction for every 2 discarded cards",
+    "level_2": "Same as the previous level but you choose a regular type of mana to be generated instead of destruction",
+    "level_3": "Discard any number of cards from your hand, gain 1 mana of destruction for every discarded card"
+  },
+  "amplify": {
+    "name": "Amplify",
+    "level_1": "Double the number of cards drawn or discarded from your next spell",
+    "level_2": "The next 2 spells you play this turn start at level 2",
+    "level_3": "At the end of your turn, gain the double amount of mana from every source"
+  },
+  "clearsight": {
+    "name": "Clearsight",
+    "level_1": "Draw a card from the bench",
+    "level_2": "Draw 2 cards from the bench, then look at the cards in the street whithout revealing them",
+    "level_3": "Look at the cards in the street whithout revealing them, then draw 3 cards from the bench or the deck"
+  },
+  "benevolence": {
+    "name": "Benevolence",
+    "level_1": "Take a card of your choice from one of your opponent's hand",
+    "level_2": "Steal up to 3 regular manas from one of your opponents",
+    "level_3": "Start a new turn after your first one ends. Your blocks will not give you any mana at the end of it"
+  },
+  "equality": {
+    "name": "Equality",
+    "level_1": "Draw until you have as many cards as one of your opponents",
+    "level_2": "Choose if all the players draw 2 from the deck, or discard 3 cards from their hand",
+    "level_3": "Reduce all mana points accumulated by all players to 0"
+  },
+  "mind_control": {
+    "name": "Mind Control",
+    "level_1": "Interchange the street and the market, mix the new street then draw a card from the bench",
+    "level_2": "Shuffle the bench into the deck, distribute a new bench, draw 3 cards from it and your turn ends",
+    "level_3": "At the end of your turn, exchange your hand with any of your opponents"
+  },
+  "confusion": {
+    "name": "Confusion",
+    "level_1": "Shuffle your hand into the deck, draw as many cards as you had",
+    "level_2": "Same as the previous level but for an opponent",
+    "level_3": "The effects of the previous levels are combined. All your opponents are targeted, but you can choose the number of cards to shuffle and draw"
+  },
+  "apotheosis": {
+    "name": "Apotheosis",
+    "level_1": "Does nothing",
+    "level_2": "Draw 5 cards from the deck",
+    "level_3": "Destroy a block from the Tower of one of your opponents",
+    "level_4": "You win the game"
+  },
+  "spellcatcher": {
+    "name": "Spellcatcher",
+    "description": "Whenever a spell or a spellcatcher is played, you can use this card to counter it. If in the end a spell is countered, it is discarded and the mana used to play it is lost",
+    "warning": "You cannot play this card during an incantation"
+  },
+  "renovation": {
+    "name": "Renovation",
+    "option_1": "Reconfigure your tower using the already played blocks",
+    "option_2": "Insert a block from your hand into your tower",
+    "option_3": "Destroy a block from your tower and draw a card from the bench",
+    "warning": "The placement restrictions of your blocks must be respected"
+  }
+}
