@@ -1,5 +1,8 @@
 {
-  "water": "eau",
+  "vocabulary": {
+    "level": "niveau",
+    "sigil": "sigle"
+  },
   "language_selector": {
     "available": "Langues",
     "select_a_language": "Sélectionnez une langue"
