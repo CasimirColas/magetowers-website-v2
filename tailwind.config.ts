@@ -20,6 +20,9 @@ const config = {
       },
     },
     extend: {
+      aspectRatio: {
+        card: "63/110",
+      },
       backgroundImage: {
         skyWithTower: "url('/backgrounds/skyWithTower.png')",
         lakeSetup: "url('/backgrounds/lakeSetup.jpg')",
@@ -38,6 +41,11 @@ const config = {
         brick: "#fa7307",
         redbrick: "#b02c09",
         tile: "#072755",
+        destruction: "#dc2626",
+        arcane: "#38b6ff",
+        order: "#e19f3b",
+        chaos: "#7030a0",
+        creation: "#21a122",
       },
       keyframes: {
         "accordion-down": {
