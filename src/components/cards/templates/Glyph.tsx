@@ -6,6 +6,7 @@ import { adjustFontSize } from "@/utils/functions/adjustFontSize";
 import { useEffect } from "react";
 import { parseText } from "@/utils/functions/parseText";
 import clsx from "clsx";
+import Image from "next/image";
 
 interface GlyphProps {
   id: string;
@@ -50,7 +51,7 @@ function Glyph({ name, className, id }: GlyphProps) {
       </div>
       <div
         className={clsx(
-          "font-text absolute bottom-[2.5%] right-[49%] translate-x-1/2  w-[72%] h-[17%] p-2 text-center flex items-center font-medium",
+          "font-text absolute bottom-[2.5%] right-[49%] translate-x-1/2  w-[72%] h-[17%] p-2 text-center flex items-center font-medium flex-col",
           {
             "[&_b]:text-destruction": card.manaType === "destruction",
             "[&_b]:text-arcane": card.manaType === "arcane",
@@ -62,6 +63,18 @@ function Glyph({ name, className, id }: GlyphProps) {
         id={descriptionId}
       >
         {pd}
+        {/* Design overkill for now */}
+        {/* {card.manaType === "creation" ? (
+          <></>
+        ) : (
+          <Image
+            src={`/activated-glyphs/${card.manaType}.png`}
+            alt=""
+            width={100}
+            height={100}
+            className="aspect-square w-[15%] h-auto"
+          />
+        )} */}
       </div>
     </div>
   );

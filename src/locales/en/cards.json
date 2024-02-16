@@ -17,7 +17,7 @@
   },
   "creation": {
     "name": "Glyph of Creation",
-    "description": "Gain 1 mana of ||any|| type for this turn"
+    "description": "Gain 1 mana of ||any|| type for this turn or ||level up a spell||"
   },
   "catalyst": {
     "name": "Catalyst",
@@ -70,7 +70,7 @@
   },
   "equality": {
     "name": "Equality",
-    "level_1": "Draw until you have as many cards as one of your opponents",
+    "level_1": "Draw from the deck until you have as many cards as one of your opponents",
     "level_2": "Choose if all the players draw 2 from the deck, or discard 3 cards from their hand",
     "level_3": "Reduce all mana points accumulated by all players to 0"
   },
@@ -89,7 +89,7 @@
   "apotheosis": {
     "name": "Apotheosis",
     "level_1": "Does nothing",
-    "level_2": "Draw 5 cards from the deck",
+    "level_2": "Draw 3 cards from the deck",
     "level_3": "Destroy a block from the Tower of one of your opponents",
     "level_4": "You win the game"
   },

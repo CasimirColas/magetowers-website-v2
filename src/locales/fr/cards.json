@@ -17,7 +17,7 @@
   },
   "creation": {
     "name": "Glyphe de Création",
-    "description": "Gagnez 1 mana de ||n'importe quel|| type pour ce tour"
+    "description": "Gagnez 1 mana de ||n'importe quel|| type pour ce tour ou ||montez un sort de niveau||"
   },
   "catalyst": {
     "name": "Catalyseur",
@@ -58,9 +58,9 @@
   },
   "clearsight": {
     "name": "Clairvoyance",
-    "level_1": "Tirez une carte du banc",
-    "level_2": "Tirez 2 cartes du banc, puis regardez les cartes de la rue sans les révéler",
-    "level_3": "Regardez les cartes de la rue sans les révéler, puis tirez 3 cartes du banc ou du deck"
+    "level_1": "Piochez une carte du banc",
+    "level_2": "Piochez 2 cartes du banc, puis regardez les cartes de la rue sans les révéler",
+    "level_3": "Regardez les cartes de la rue sans les révéler, puis Piochez 3 cartes du banc ou du deck"
   },
   "benevolence": {
     "name": "Bienveillance",
@@ -70,26 +70,26 @@
   },
   "equality": {
     "name": "Égalité",
-    "level_1": "Tirez jusqu'à avoir autant de cartes que l'un de vos adversaires",
+    "level_1": "Piochez du deck jusqu'à avoir autant de cartes que l'un de vos adversaires",
     "level_2": "Choisissez si tous les joueurs tirent 2 cartes du deck, ou défaussent 3 cartes de leur main",
     "level_3": "Réduisez à 0 tous les points de mana accumulés par tous les joueurs"
   },
   "mind_control": {
     "name": "Contrôle Mental",
-    "level_1": "Intervertissez la rue et le marché, mélangez la nouvelle rue puis tirez une carte du banc",
-    "level_2": "Mélangez le banc dans le deck, distribuez un nouveau banc, tirez 3 cartes de celui-ci et votre tour se termine",
+    "level_1": "Intervertissez la rue et le marché, mélangez la nouvelle rue puis piochez une carte du banc",
+    "level_2": "Mélangez le banc dans le deck, distribuez un nouveau banc, piochez 3 cartes de celui-ci et votre tour se termine",
     "level_3": "À la fin de votre tour, échangez votre main avec celle de l'un de vos adversaires"
   },
   "confusion": {
     "name": "Confusion",
-    "level_1": "Mélangez votre main dans le deck, tirez autant de cartes que vous en aviez",
+    "level_1": "Mélangez votre main dans le deck, piochez s'y autant de cartes que vous en aviez",
     "level_2": "Comme le niveau précédent mais pour un adversaire",
     "level_3": "Les effets des niveaux précédents sont combinés. Tous vos adversaires sont ciblés, mais vous pouvez choisir le nombre de cartes à mélanger et à tirer"
   },
   "apotheosis": {
     "name": "Apothéose",
     "level_1": "Ne fait rien",
-    "level_2": "Tirez 5 cartes du deck",
+    "level_2": "Piochez 3 cartes du deck",
     "level_3": "Détruisez un bloc de la tour de l'un de vos adversaires",
     "level_4": "Vous gagnez la partie"
   },
@@ -103,7 +103,7 @@
     "choose_option": "Choisissez une option:",
     "option_1": "Reconfigurez votre tour en utilisant les blocs déjà placés",
     "option_2": "Insérez un bloc de votre main dans votre tour",
-    "option_3": "Détruisez un bloc de votre tour et tirez une carte du banc",
+    "option_3": "Détruisez un bloc de votre tour et piochez une carte du banc",
     "warning": "Les restrictions de placement de vos blocs doivent être respectées"
   }
 }
