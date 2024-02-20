@@ -1,4 +1,7 @@
 {
+  "actions": {
+    "copied_email": "Email copié au presse-papier"
+  },
   "vocabulary": {
     "level": "niveau",
     "sigil": "sigle"

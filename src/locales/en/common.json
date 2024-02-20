@@ -1,4 +1,7 @@
 {
+  "actions": {
+    "copied_email": "Email copied to clipboard"
+  },
   "vocabulary": {
     "level": "level",
     "sigil": "sigil"

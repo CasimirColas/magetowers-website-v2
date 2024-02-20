@@ -8,6 +8,7 @@ import ExpectationSection from "@/components/home/ExpectationSection";
 import PowerSection from "@/components/home/PowerSection";
 import FutureSection from "@/components/home/FutureSection";
 import ThanksSection from "@/components/home/ThanksSection";
+import { Toaster } from "@/components/ui/toaster";
 
 export default function Home() {
   const t = useTranslations("home");
@@ -24,6 +25,7 @@ export default function Home() {
       <PowerSection />
       <FutureSection />
       <ThanksSection />
+      <Toaster />
     </DefaultLayout>
   );
 }

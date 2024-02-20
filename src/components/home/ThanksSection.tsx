@@ -12,9 +12,12 @@ import {
   SheetTrigger,
 } from "../ui/sheet";
 import { useTranslations } from "next-intl";
+import { useToast } from "../ui/use-toast";
 
 function FutureSection() {
   const t = useTranslations("home.thanks_section");
+  const ct = useTranslations("common.actions");
+  const { toast } = useToast();
 
   const thanks: ThanksCardProps[] = [
     {
@@ -55,8 +58,12 @@ function FutureSection() {
           <Link
             href={"mailto:levithornton@gmail.com"}
             onClick={() => {
-              navigator.clipboard.writeText("levithornton@gmail.com");
-              alert("Copied email: " + "levithornton@gmail.com");
+              if (navigator.clipboard)
+                navigator.clipboard.writeText("levithornton@gmail.com");
+              toast({
+                description: ct("copied_email"),
+                variant: "success",
+              });
             }}
           >
             <Send size="20px" className="hover:text-sky" />
