@@ -34,7 +34,9 @@ function NavbarDesktop({ className, pathname }: NavbarDesktopProps) {
           variant="link"
           size="default"
           asChild
-          className={clsx("text-xl", { "text-sky": pathname === `/${route}` })}
+          className={clsx("text-xl hover:text-tile", {
+            "text-sky": pathname === `/${route}`,
+          })}
         >
           <Link href={`/${route}`} className="text-lg">
             {t(route)}
