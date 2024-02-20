@@ -14,7 +14,7 @@ function PowerSection() {
       <Card className="w-full sm:max-w-xl h-full bg-opacity-95 rounded-lg">
         <CardHeader>
           <CardTitle
-            className="text-3xl font-title text-center mt-4 text-tile sm:text-5xl"
+            className="text-3xl font-title text-center mt-4 text-tile sm:text-4xl"
             style={{
               textShadow: "-2px 2px 0px #69a0bd, -1px 2px 0px #69a0bd",
             }}
