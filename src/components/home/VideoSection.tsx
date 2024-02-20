@@ -13,8 +13,6 @@ function VideoSection() {
     return parseText({ default: true, text: textToParse });
   };
   const { locale } = useRouter();
-  console.log(locale);
-
   return (
     <ScreenSection className="flex flex-col items-center sm:flex-row bg-lakeSetup bg-cover bg-center gap-8">
       <div className="sm:w-1/2 sm:p-12">
