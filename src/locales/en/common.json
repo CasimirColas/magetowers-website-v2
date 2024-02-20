@@ -12,12 +12,13 @@
     "rules": "Rules",
     "cards": "Cards",
     "credits": "Credits",
-    "links": "Links"
+    "ressources": "Ressources"
   },
   "navigation": {
     "menu": "Menu",
     "navigation": "Navigation",
     "previous": "Previous",
     "next": "Next"
-  }
+  },
+  "ressources": {}
 }
