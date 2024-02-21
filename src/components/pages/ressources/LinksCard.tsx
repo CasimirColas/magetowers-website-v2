@@ -1,13 +1,13 @@
 import Link from "next/link";
-import { Button } from "../ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+import { Button } from "../../ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "../../ui/card";
 import { urls } from "@/config/urls";
 import {
   TikTokFilled,
   TwitterFilled,
   Youtube,
   Instagram,
-} from "../visuals/BrandLogos";
+} from "../../visuals/BrandLogos";
 import { Download } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { parseText } from "@/utils/functions/parseText";

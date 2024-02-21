@@ -1,7 +1,7 @@
 import Link from "next/link";
-import ScreenSection from "../layout/ScreenSection";
+import ScreenSection from "../../layout/ScreenSection";
 import ThanksCard, { ThanksCardProps } from "./components/ThanksCard";
-import { ArtStation, Instagram, Twitter } from "../visuals/BrandLogos";
+import { ArtStation, Instagram, Twitter } from "../../visuals/BrandLogos";
 import { Code2, Send, ScrollText } from "lucide-react";
 import {
   Sheet,
@@ -10,9 +10,9 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "../ui/sheet";
+} from "../../ui/sheet";
 import { useTranslations } from "next-intl";
-import { useToast } from "../ui/use-toast";
+import { useToast } from "../../ui/use-toast";
 
 function FutureSection() {
   const t = useTranslations("home.thanks_section");

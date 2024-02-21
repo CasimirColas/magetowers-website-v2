@@ -5,7 +5,7 @@ import {
   TikTokFilled,
   TwitterFilled,
   Youtube,
-} from "../visuals/BrandLogos";
+} from "../../visuals/BrandLogos";
 import { urls } from "@/config/urls";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";

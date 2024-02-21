@@ -1,16 +1,16 @@
 import { useTranslations } from "next-intl";
-import ScreenSection from "../layout/ScreenSection";
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+import ScreenSection from "../../layout/ScreenSection";
+import { Card, CardContent, CardHeader, CardTitle } from "../../ui/card";
 import { parseText } from "@/utils/functions/parseText";
 
-function PowerSection() {
-  const t = useTranslations("home.power_section");
+function FutureSection() {
+  const t = useTranslations("home.future_section");
   const pt = (text: string) => {
     const textToParse = t(text);
     return parseText({ default: true, text: textToParse });
   };
   return (
-    <ScreenSection className="flex flex-col items-center sm:flex-row bg-setupOnStump bg-cover bg-center gap-8">
+    <ScreenSection className="flex flex-col items-center sm:flex-row bg-snowyWaterfall bg-cover bg-center gap-8">
       <Card className="w-full sm:max-w-xl h-full bg-opacity-95 rounded-lg">
         <CardHeader>
           <CardTitle
@@ -23,6 +23,8 @@ function PowerSection() {
           </CardTitle>
         </CardHeader>
         <CardContent className="sm:text-xl sm:py-8 sm:px-8">
+          {/* {isSm ? [pt("p1"), pt("p2"), pt("p3"), pt("p4")] : pt("text_full")} */}
+          {/* {[pt("p1"), pt("p2"), pt("p3"), pt("p4")]} */}
           {pt("text_full")}
         </CardContent>
       </Card>
@@ -30,4 +32,4 @@ function PowerSection() {
   );
 }
 
-export default PowerSection;
+export default FutureSection;

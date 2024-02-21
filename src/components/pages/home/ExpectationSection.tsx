@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
-import ScreenSection from "../layout/ScreenSection";
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+import ScreenSection from "../../layout/ScreenSection";
+import { Card, CardContent, CardHeader, CardTitle } from "../../ui/card";
 import { parseText } from "@/utils/functions/parseText";
 
 function ExpectationSection() {

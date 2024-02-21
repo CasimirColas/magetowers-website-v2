@@ -1,7 +1,7 @@
 import { urls } from "@/config/urls";
-import ScreenSection from "../layout/ScreenSection";
-import YoutubeVideoPlayer from "../utility/YoutubeVideoPlayer";
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+import ScreenSection from "../../layout/ScreenSection";
+import YoutubeVideoPlayer from "../../utility/YoutubeVideoPlayer";
+import { Card, CardContent, CardHeader, CardTitle } from "../../ui/card";
 import { useTranslations } from "next-intl";
 import { parseText } from "@/utils/functions/parseText";
 import { useRouter } from "next/router";

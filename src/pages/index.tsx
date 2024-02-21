@@ -2,12 +2,12 @@ import { useTranslations } from "next-intl";
 import getStaticPropsI18n from "@/utils/next-intl/getStaticPropsI18n";
 import { GetStaticPropsContext } from "next";
 import DefaultLayout from "@/components/layout/DefaultLayout";
-import LandingSection from "@/components/home/LandingSection";
-import VideoSection from "@/components/home/VideoSection";
-import ExpectationSection from "@/components/home/ExpectationSection";
-import PowerSection from "@/components/home/PowerSection";
-import FutureSection from "@/components/home/FutureSection";
-import ThanksSection from "@/components/home/ThanksSection";
+import LandingSection from "@/components/pages/home/LandingSection";
+import VideoSection from "@/components/pages/home/VideoSection";
+import ExpectationSection from "@/components/pages/home/ExpectationSection";
+import PowerSection from "@/components/pages/home/PowerSection";
+import FutureSection from "@/components/pages/home/FutureSection";
+import ThanksSection from "@/components/pages/home/ThanksSection";
 import { Toaster } from "@/components/ui/toaster";
 
 export default function Home() {
