@@ -1,6 +1,5 @@
 import { cn } from "@/lib/utils";
-import { CardNames } from "../types";
-import { cardsDictionary as d } from "../dictionary";
+import { CardDictionary, cardsDictionary as d } from "../dictionary";
 import { useTranslations } from "next-intl";
 import { adjustFontSize } from "@/utils/functions/adjustFontSize";
 import { useEffect } from "react";
@@ -10,14 +9,13 @@ import Image from "next/image";
 
 interface GlyphProps {
   id: string;
-  name: CardNames;
+  card: CardDictionary;
   className?: string;
 }
 
-function Glyph({ name, className, id }: GlyphProps) {
+function Glyph({ className, id, card }: GlyphProps) {
   const titleId = "glyph-title-" + id;
   const descriptionId = "glyph-description-" + id;
-  const card = d[name];
   const t = useTranslations(`cards.${card.translation_key}`);
   const pd = parseText({
     text: t("description"),

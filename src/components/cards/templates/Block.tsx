@@ -1,6 +1,5 @@
 import { cn } from "@/lib/utils";
-import { CardNames } from "../types";
-import { cardsDictionary as d } from "../dictionary";
+import { CardDictionary, cardsDictionary as d } from "../dictionary";
 import { useTranslations } from "next-intl";
 import { useEffect } from "react";
 import { adjustFontSize } from "@/utils/functions/adjustFontSize";
@@ -9,14 +8,13 @@ import clsx from "clsx";
 
 interface BlockProps {
   id: string;
-  name: CardNames;
+  card: CardDictionary;
   className?: string;
 }
 
-function Block({ name, className, id }: BlockProps) {
+function Block({ className, id, card }: BlockProps) {
   const titleId = "glyph-title-" + id;
   const descriptionId = "glyph-description-" + id;
-  const card = d[name];
   const t = useTranslations(`cards.${card.translation_key}`);
   useEffect(() => {
     adjustFontSize(titleId, 0.1);

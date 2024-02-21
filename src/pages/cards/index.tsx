@@ -15,7 +15,6 @@ export default function Cards() {
   const c = useTranslations("common");
   return (
     <DefaultLayout title={c("routes.cards")}>
-      <div>Welcome to Cards</div>
       <div className="flex gap-4 w-full justify-center  items-center flex-wrap">
         {cardsNameList.map((name, index) => (
           <Card

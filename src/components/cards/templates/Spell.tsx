@@ -1,6 +1,5 @@
 import { cn } from "@/lib/utils";
-import { CardNames } from "../types";
-import { cardsDictionary as d } from "../dictionary";
+import { CardDictionary, cardsDictionary as d } from "../dictionary";
 import { useTranslations } from "next-intl";
 import { useEffect } from "react";
 import { adjustFontSize } from "@/utils/functions/adjustFontSize";
@@ -9,14 +8,13 @@ import Image from "next/image";
 
 interface SpellProps {
   id: string;
-  name: CardNames;
+  card: CardDictionary;
   className?: string;
 }
 
-function Spell({ name, className, id }: SpellProps) {
+function Spell({ className, id, card }: SpellProps) {
   const titleId = "glyph-title-" + id;
   const descriptionId = "glyph-description-" + id;
-  const card = d[name];
   const t = useTranslations(`cards.${card.translation_key}`);
   const ct = useTranslations("common.vocabulary");
   useEffect(() => {

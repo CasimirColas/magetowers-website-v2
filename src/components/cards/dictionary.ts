@@ -1,6 +1,6 @@
 import { CardNames, cardCategory, manaType } from "./types";
 
-type CardDictionary = {
+export type CardDictionary = {
   count: number;
   category: cardCategory;
   manaType: manaType | null;

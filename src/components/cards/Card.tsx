@@ -13,10 +13,10 @@ interface CardProps {
 
 function Card({ name, id, className }: CardProps) {
   return {
-    glyph: <Glyph name={name} id={id} className={className} />,
-    spell: <Spell name={name} id={id} className={className} />,
-    block: <Block name={name} id={id} className={className} />,
-    utility: <Utility name={name} id={id} className={className} />,
+    glyph: <Glyph card={d[name]} id={id} className={className} />,
+    spell: <Spell card={d[name]} id={id} className={className} />,
+    block: <Block card={d[name]} id={id} className={className} />,
+    utility: <Utility card={d[name]} id={id} className={className} />,
   }[d[name].category];
 }
 

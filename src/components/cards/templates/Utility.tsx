@@ -1,6 +1,5 @@
 import { cn } from "@/lib/utils";
-import { CardNames } from "../types";
-import { cardsDictionary as d } from "../dictionary";
+import { CardDictionary, cardsDictionary as d } from "../dictionary";
 import { useTranslations } from "next-intl";
 import clsx from "clsx";
 import { useEffect } from "react";
@@ -8,14 +7,13 @@ import { adjustFontSize } from "@/utils/functions/adjustFontSize";
 
 interface UtilityProps {
   id: string;
-  name: CardNames;
+  card: CardDictionary;
   className?: string;
 }
 
-function Utility({ name, className, id }: UtilityProps) {
+function Utility({ className, id, card }: UtilityProps) {
   const titleId = "glyph-title-" + id;
   const descriptionId = "glyph-description-" + id;
-  const card = d[name];
   const t = useTranslations(`cards.${card.translation_key}`);
   useEffect(() => {
     adjustFontSize(titleId, 0.06);
