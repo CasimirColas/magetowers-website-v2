@@ -4,7 +4,27 @@
   },
   "vocabulary": {
     "level": "level",
-    "sigil": "sigil"
+    "sigil": "sigil",
+    "block": "block",
+    "spell": "spell",
+    "glyph": "glyph",
+    "utility": "utility",
+    "destruction": "destruction",
+    "creation": "creation",
+    "chaos": "chaos",
+    "arcane": "arcane",
+    "order": "order"
+  },
+  "search": {
+    "card_placeholder": "Search for a card..."
+  },
+  "mana_selector": {
+    "placeholder": "Select a type of mana",
+    "label": "Types of mana"
+  },
+  "type_selector": {
+    "placeholder": "Select a type of card",
+    "label": "Types of cards"
   },
   "language_selector": {
     "available": "Languages",

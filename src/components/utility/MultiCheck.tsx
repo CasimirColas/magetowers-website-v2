@@ -34,7 +34,10 @@ export function MultiCHecks({
       <DropdownMenuTrigger asChild>
         <Button
           variant="outline"
-          className={cn("w-full flex justify-between items-center", className)}
+          className={cn(
+            "w-full flex justify-between items-center overflow-hidden",
+            className
+          )}
         >
           {trigger}
           <ChevronDown className="h-4 w-4 opacity-50" />

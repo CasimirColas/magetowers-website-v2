@@ -1,6 +1,9 @@
 import { cardCategory, cardCategoryList } from "@/components/cards/types";
 import { MultiCHecks } from "@/components/utility/MultiCheck";
 import { CardFilter } from "@/pages/cards";
+import { useTranslations } from "next-intl";
+import CardSelectOption from "./CardSelectOption";
+import { Castle, Wand, Hexagon, Wrench } from "lucide-react";
 
 interface CardTypeSelectorProps {
   className?: string;
@@ -13,6 +16,16 @@ function CardTypeSelector({
   values,
   setState,
 }: CardTypeSelectorProps) {
+  const t = useTranslations("common");
+
+  const size = "h-4";
+  const typeLabels = {
+    block: <Castle size={24} className={size} />,
+    spell: <Wand size={24} className={size} />,
+    glyph: <Hexagon size={24} className={size} />,
+    utility: <Wrench size={24} className={size} />,
+  };
+
   function onChange(value: string) {
     setState((prev) => {
       if (prev.type.includes(value as cardCategory)) {
@@ -25,11 +38,22 @@ function CardTypeSelector({
   return (
     <MultiCHecks
       className={className}
-      trigger={"Select a card type"}
-      menuLabel="Card Types"
+      trigger={
+        values.length > 0 ? (
+          <div className="flex gap-1">{values.map((e) => typeLabels[e])} </div>
+        ) : (
+          t("type_selector.placeholder")
+        )
+      }
+      menuLabel={t("type_selector.label")}
       values={values}
       options={cardCategoryList.map((category) => {
-        return { key: category, label: category };
+        return {
+          key: category,
+          label: (
+            <CardSelectOption item={category} addon={typeLabels[category]} />
+          ),
+        };
       })}
       onChange={onChange}
     />

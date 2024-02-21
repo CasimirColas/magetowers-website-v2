@@ -1,6 +1,9 @@
 import { manaType, manaTypeList } from "@/components/cards/types";
 import { MultiCHecks } from "@/components/utility/MultiCheck";
 import { CardFilter } from "@/pages/cards";
+import { useTranslations } from "next-intl";
+import CardSelectOption from "./CardSelectOption";
+import Image from "next/image";
 
 interface CardManaSelectorProps {
   className?: string;
@@ -13,6 +16,8 @@ function CardManaSelector({
   values,
   setState,
 }: CardManaSelectorProps) {
+  const t = useTranslations("common");
+
   function onChange(value: string) {
     setState((prev) => {
       if (prev.mana.includes(value as manaType)) {
@@ -21,14 +26,48 @@ function CardManaSelector({
       return { ...prev, mana: [...prev.mana, value as manaType] };
     });
   }
+
   return (
     <MultiCHecks
       className={className}
-      trigger={"Select a mana type"}
-      menuLabel="Card Mana Types"
+      trigger={
+        values.length > 0 ? (
+          <div className="flex gap-1">
+            {values.map((e, i) => (
+              <Image
+                key={i}
+                src={`/activated-glyphs/${e}.png`}
+                alt="test"
+                width={100}
+                height={100}
+                className="h-6 w-6"
+              />
+            ))}
+          </div>
+        ) : (
+          t("mana_selector.placeholder")
+        )
+      }
+      menuLabel={t("mana_selector.label")}
       values={values}
       options={manaTypeList.map((mana) => {
-        return { key: mana, label: mana };
+        return {
+          key: mana,
+          label: (
+            <CardSelectOption
+              item={mana}
+              addon={
+                <Image
+                  src={`/activated-glyphs/${mana}.png`}
+                  alt="test"
+                  width={100}
+                  height={100}
+                  className="h-6 w-6"
+                />
+              }
+            />
+          ),
+        };
       })}
       onChange={onChange}
     />

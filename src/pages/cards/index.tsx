@@ -61,18 +61,18 @@ export default function Cards() {
 
   return (
     <DefaultLayout title={c("routes.cards")}>
-      <div className="flex p-6 gap-4">
+      <div className="flex p-6 gap-4 sm:flex-row flex-col">
         <CardTypeSelector
-          className="w-44"
+          className="w-56"
           setState={setFilters}
           values={filters.type}
         />
         <CardManaSelector
-          className="w-44"
+          className="w-56"
           setState={setFilters}
           values={filters.mana}
         />
-        <CardSearch className="w-44" setState={setFilters} />
+        <CardSearch className="w-56" setState={setFilters} />
       </div>
       <div className="flex gap-4 w-full justify-center  items-center flex-wrap">
         {displayedCardNames.map((name, index) => (
