@@ -33,13 +33,16 @@ export default function Cards() {
   useEffect(() => {
     const filteredCards = cardsNameList.filter((card) => {
       const cardData = d[card];
-      if (filters.type && filters.type.includes(cardData.category)) {
+      if (
+        filters.mana.length > 0 &&
+        // @ts-ignore - when manaType is null works as expected
+        !filters.mana.includes(cardData.manaType)
+      ) {
         return false;
       }
       if (
-        filters.mana &&
-        cardData.manaType &&
-        filters.mana.includes(cardData.manaType)
+        filters.type.length > 0 &&
+        !filters.type.includes(cardData.category)
       ) {
         return false;
       }
@@ -59,8 +62,16 @@ export default function Cards() {
   return (
     <DefaultLayout title={c("routes.cards")}>
       <div className="flex p-6 gap-4">
-        <CardTypeSelector className="w-44" setState={setDisplayedCardNames} />
-        <CardManaSelector className="w-44" setState={setDisplayedCardNames} />
+        <CardTypeSelector
+          className="w-44"
+          setState={setFilters}
+          values={filters.type}
+        />
+        <CardManaSelector
+          className="w-44"
+          setState={setFilters}
+          values={filters.mana}
+        />
         <CardSearch className="w-44" setState={setFilters} />
       </div>
       <div className="flex gap-4 w-full justify-center  items-center flex-wrap">

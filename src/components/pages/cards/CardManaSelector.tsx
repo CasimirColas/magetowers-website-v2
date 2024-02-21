@@ -1,47 +1,37 @@
-import { CardNames, manaTypeList } from "@/components/cards/types";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { cn } from "@/lib/utils";
-import { SelectGroup } from "@radix-ui/react-select";
-import Image from "next/image";
+import { manaType, manaTypeList } from "@/components/cards/types";
+import { MultiCHecks } from "@/components/utility/MultiCheck";
+import { CardFilter } from "@/pages/cards";
 
 interface CardManaSelectorProps {
   className?: string;
-  setState: React.Dispatch<React.SetStateAction<CardNames[]>>;
+  values: manaType[];
+  setState: React.Dispatch<React.SetStateAction<CardFilter>>;
 }
 
-function CardManaSelector({ className }: CardManaSelectorProps) {
+function CardManaSelector({
+  className,
+  values,
+  setState,
+}: CardManaSelectorProps) {
+  function onChange(value: string) {
+    setState((prev) => {
+      if (prev.mana.includes(value as manaType)) {
+        return { ...prev, mana: prev.mana.filter((mana) => mana !== value) };
+      }
+      return { ...prev, mana: [...prev.mana, value as manaType] };
+    });
+  }
   return (
-    <Select>
-      <SelectTrigger className={cn("", className)}>
-        <SelectValue placeholder="Select a mana type" />
-      </SelectTrigger>
-      <SelectContent>
-        <SelectGroup>
-          <SelectLabel>Card Mana</SelectLabel>
-          {manaTypeList.map((mana) => (
-            <SelectItem key={mana} value={mana}>
-              <div className="flex flex-row gap-2 justify-between w-full items-center">
-                <Image
-                  src={`/activated-glyphs/${mana}.png`}
-                  alt={`Mana sigil`}
-                  width={70}
-                  height={70}
-                  className="h-8 w-8"
-                />
-                <p>{mana}</p>
-              </div>
-            </SelectItem>
-          ))}
-        </SelectGroup>
-      </SelectContent>
-    </Select>
+    <MultiCHecks
+      className={className}
+      trigger={"Select a mana type"}
+      menuLabel="Card Mana Types"
+      values={values}
+      options={manaTypeList.map((mana) => {
+        return { key: mana, label: mana };
+      })}
+      onChange={onChange}
+    />
   );
 }
 
