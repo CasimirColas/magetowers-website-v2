@@ -2,8 +2,8 @@ import Link from "next/link";
 import {
   Instagram,
   KickStarter,
-  TikTok,
-  Twitter,
+  TikTokFilled,
+  TwitterFilled,
   Youtube,
 } from "../visuals/BrandLogos";
 import { urls } from "@/config/urls";
@@ -59,34 +59,15 @@ function LandingSection({ className }: LandingSectionProps) {
             href={urls.twitterURL}
             target="_blank"
             className="rounded-md overflow-hidden"
-            style={{
-              backgroundImage: "url(/white.svg)",
-              backgroundSize: "60%",
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
-            }}
           >
-            <Twitter w="45" />
+            <TwitterFilled w="45" />
           </Link>
           <Link
             href={urls.tiktokURL}
             target="_blank"
             className="rounded-md overflow-hidden"
-            style={{
-              backgroundImage: "url(/white.svg)",
-              backgroundSize: "60%",
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
-            }}
           >
-            <TikTok w="45" />
-          </Link>
-          <Link
-            href={urls.kickstarterURL}
-            target="_blank"
-            className="rounded-md overflow-hidden"
-          >
-            <KickStarter w="38" />
+            <TikTokFilled w="45" />
           </Link>
         </div>
       </div>

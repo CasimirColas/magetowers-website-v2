@@ -26,7 +26,7 @@ function FutureSection() {
       image: "/avatars/santiagoHpp.jpg",
       alt: "Santiago Hertzan",
       description: (
-        <div className="flex items-center justify-center gap-1 flex-col h-full">
+        <div className="flex items-center justify-center gap-2 flex-col h-full">
           <Link
             href={"https://www.artstation.com/santiagohertzan"}
             target="_blank"
@@ -39,7 +39,11 @@ function FutureSection() {
           >
             <Instagram w="25px" />
           </Link>
-          <Link href={"https://twitter.com/SantiagoHertzan"} target="_blank">
+          <Link
+            href={"https://twitter.com/SantiagoHertzan"}
+            target="_blank"
+            className="mt-1"
+          >
             <Twitter w="25px" />
           </Link>
         </div>
@@ -62,7 +66,6 @@ function FutureSection() {
                 navigator.clipboard.writeText("levithornton@gmail.com");
               toast({
                 description: ct("copied_email"),
-                variant: "success",
               });
             }}
           >
