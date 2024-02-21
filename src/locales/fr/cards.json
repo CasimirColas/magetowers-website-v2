@@ -60,7 +60,7 @@
     "name": "Clairvoyance",
     "level_1": "Piochez une carte du banc",
     "level_2": "Piochez 2 cartes du banc, puis regardez les cartes de la rue sans les révéler",
-    "level_3": "Regardez les cartes de la rue sans les révéler, puis Piochez 3 cartes du banc ou du deck"
+    "level_3": "Regardez les cartes de la rue sans les révéler, puis piochez 3 cartes du banc ou du deck"
   },
   "benevolence": {
     "name": "Bienveillance",

@@ -2,6 +2,13 @@
 
 export type cardCategory = "block" | "spell" | "glyph" | "utility";
 
+export const cardCategoryList: cardCategory[] = [
+  "block",
+  "spell",
+  "glyph",
+  "utility",
+];
+
 // Mana types
 
 export type manaType =
@@ -10,6 +17,14 @@ export type manaType =
   | "order"
   | "chaos"
   | "creation";
+
+export const manaTypeList: manaType[] = [
+  "destruction",
+  "arcane",
+  "order",
+  "chaos",
+  "creation",
+];
 
 // Objects
 export interface BlockObject {
