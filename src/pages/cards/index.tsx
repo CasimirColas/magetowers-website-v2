@@ -17,6 +17,7 @@ import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { RotateCcw } from "lucide-react";
+import DetailsDialog from "@/components/utility/DetailsDialog";
 
 export type CardFilter = {
   type: cardCategory[];
@@ -92,9 +93,20 @@ export default function Cards() {
       {/* "flex gap-4 w-full justify-center items-center flex-wrap" */}
       <div className="overflow-scroll flex snap-x snap-mandatory gap-8 px-[4.5rem] sm:px-0 sm:gap-4 sm:flex-wrap sm:overflow-visible sm:justify-center">
         {displayedCardNames.map((name, index) => (
-          <div key={name} className="min-w-[6.3cm] snap-center">
-            <Card name={name} id={index + "-map"} className="w-[6.3cm]" />
-          </div>
+          <DetailsDialog
+            key={index}
+            trigger={
+              <div className="sm:w-[6.3cm] w-[4cm] snap-center">
+                <Card name={name} id={index + "-map"} className="w-full" />
+              </div>
+            }
+          >
+            <Card
+              name={name}
+              id={index + "-map-detail"}
+              className="w-auto h-full"
+            />
+          </DetailsDialog>
         ))}
       </div>
     </DefaultLayout>
