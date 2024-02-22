@@ -70,7 +70,7 @@ function NavbarMobile({ className, pathname }: NavbarMobileProps) {
                     <Link
                       href={`/${route}`}
                       className={clsx("text-xl text-center w-full", {
-                        "text-sky": pathname === `/${route}`,
+                        "text-view": pathname === `/${route}`,
                       })}
                     >
                       <span className="flex gap-4 justify-start w-full items-center">

@@ -57,7 +57,7 @@ function FutureSection() {
       description: (
         <div className="flex items-center justify-around gap-1 flex-col h-full">
           <Link href={"https://www.cardboardnaut.com"} target="_blank">
-            <Code2 size="20px" className="hover:text-sky" />
+            <Code2 size="20px" className="hover:text-view" />
           </Link>
           <Link
             href={"mailto:levithornton@gmail.com"}
@@ -69,7 +69,7 @@ function FutureSection() {
               });
             }}
           >
-            <Send size="20px" className="hover:text-sky" />
+            <Send size="20px" className="hover:text-view" />
           </Link>
         </div>
       ),
@@ -82,7 +82,7 @@ function FutureSection() {
       description: (
         <div className="flex items-center justify-around gap-1 flex-col h-full">
           <Link href={"https://www.trashcatmusic.com"} target="_blank">
-            <Code2 size="20px" className="hover:text-sky" />
+            <Code2 size="20px" className="hover:text-view" />
           </Link>
         </div>
       ),
@@ -96,7 +96,7 @@ function FutureSection() {
       //   <div className="flex items-center justify-around gap-1 flex-col h-full">
       //     <Sheet>
       //       <SheetTrigger>
-      //         <ScrollText size="20px" className="hover:text-sky" />
+      //         <ScrollText size="20px" className="hover:text-view" />
       //       </SheetTrigger>
       //       <SheetContent side={"bottom"}>
       //         <SheetHeader>

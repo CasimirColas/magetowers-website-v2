@@ -15,6 +15,7 @@ import { cardsDictionary as d } from "@/components/cards/dictionary";
 import { GetStaticPropsContext } from "next";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
+import { Button } from "@/components/ui/button";
 
 export type CardFilter = {
   type: cardCategory[];
@@ -68,6 +69,19 @@ export default function Cards() {
           values={filters.mana}
         />
         <CardSearch className="w-56" setState={setFilters} />
+        <Button
+          variant={"sky"}
+          className="w-56"
+          onClick={() =>
+            setFilters({
+              type: cardCategoryList,
+              mana: manaTypeList,
+              search: null,
+            })
+          }
+        >
+          {c("buttons.reset")}
+        </Button>
       </div>
       <div className="flex gap-4 w-full justify-center  items-center flex-wrap">
         {displayedCardNames.map((name, index) => (

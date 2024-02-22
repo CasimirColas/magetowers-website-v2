@@ -1,4 +1,7 @@
 {
+  "buttons": {
+    "reset": "Reset"
+  },
   "actions": {
     "copied_email": "Email copied to clipboard"
   },

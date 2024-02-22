@@ -1,4 +1,7 @@
 {
+  "buttons": {
+    "reset": "Réinitialiser"
+  },
   "actions": {
     "copied_email": "Email copié au presse-papier"
   },

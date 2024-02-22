@@ -33,7 +33,7 @@ function LandingSection({ className }: LandingSectionProps) {
       </h1>
 
       <div className="flex flex-col justify-center items-center sm:gap-6 gap-4">
-        <p className="p-4 rounded-full bg-white text-xl font-bold text-sky shadow-lg sm:mb-8">
+        <p className="p-4 rounded-full bg-white text-xl font-bold text-view shadow-lg sm:mb-8">
           {t("comming_soon")}
         </p>
         <h2

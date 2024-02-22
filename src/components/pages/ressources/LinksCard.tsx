@@ -55,7 +55,7 @@ function LinksCard() {
           default: true,
           args: {
             parentClassName: "text-xs sm:text-sm",
-            childClassName: "text-sky underline",
+            childClassName: "text-view underline",
           },
         })}
         <span className="border border-slate-300 rounded-full" />

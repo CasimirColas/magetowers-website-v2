@@ -37,7 +37,7 @@ const config = {
       },
       colors: {
         cloud: "#b9ebf4",
-        sky: "#0698c5",
+        view: "#0698c5",
         brick: "#fa7307",
         redbrick: "#b02c09",
         tile: "#072755",

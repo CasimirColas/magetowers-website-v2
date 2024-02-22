@@ -35,7 +35,7 @@ export function parseText(props: ParserProps) {
         if (i % 2 === 0) return text;
         return createElement(
           "b",
-          { key: i, className: cn("text-sky", props?.args?.childClassName) },
+          { key: i, className: cn("text-view", props?.args?.childClassName) },
           text
         );
       })
