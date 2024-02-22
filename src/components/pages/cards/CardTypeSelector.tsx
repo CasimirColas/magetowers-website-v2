@@ -20,10 +20,10 @@ function CardTypeSelector({
 
   const size = "h-4";
   const typeLabels = {
-    block: <Castle size={24} className={size} />,
-    spell: <Wand size={24} className={size} />,
-    glyph: <Hexagon size={24} className={size + " rotate-90"} />,
-    utility: <Wrench size={24} className={size} />,
+    block: <Castle size={24} className={size} key={"block"} />,
+    spell: <Wand size={24} className={size} key={"spell"} />,
+    glyph: <Hexagon size={24} className={size + " rotate-90"} key={"glyph"} />,
+    utility: <Wrench size={24} className={size} key={"utility"} />,
   };
 
   function onChange(value: string) {

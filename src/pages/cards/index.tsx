@@ -1,8 +1,10 @@
 import Card from "@/components/cards/Card";
 import {
   cardCategory,
+  cardCategoryList,
   cardsNameList,
   manaType,
+  manaTypeList,
 } from "@/components/cards/types";
 import DefaultLayout from "@/components/layout/DefaultLayout";
 import CardManaSelector from "@/components/pages/cards/CardManaSelector";
@@ -24,8 +26,8 @@ export default function Cards() {
   const c = useTranslations("common");
   const ct = useTranslations("cards");
   const [filters, setFilters] = useState<CardFilter>({
-    type: [],
-    mana: [],
+    type: cardCategoryList,
+    mana: manaTypeList,
     search: null,
   });
   const [displayedCardNames, setDisplayedCardNames] = useState(cardsNameList);
@@ -33,16 +35,10 @@ export default function Cards() {
   useEffect(() => {
     const filteredCards = cardsNameList.filter((card) => {
       const cardData = d[card];
-      if (
-        filters.mana.length > 0 &&
-        !filters.mana.includes(cardData.manaType)
-      ) {
+      if (!filters.mana.includes(cardData.manaType)) {
         return false;
       }
-      if (
-        filters.type.length > 0 &&
-        !filters.type.includes(cardData.category)
-      ) {
+      if (!filters.type.includes(cardData.category)) {
         return false;
       }
       if (

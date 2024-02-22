@@ -62,6 +62,7 @@ function CardManaSelector({
               if (e === "none")
                 return (
                   <Hexagon
+                    key={i}
                     size={20}
                     className="rotate-90  h-6 w-6 p-[0.1rem]"
                   />
