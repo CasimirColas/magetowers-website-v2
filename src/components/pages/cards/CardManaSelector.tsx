@@ -4,6 +4,7 @@ import { CardFilter } from "@/pages/cards";
 import { useTranslations } from "next-intl";
 import CardSelectOption from "./CardSelectOption";
 import Image from "next/image";
+import { Hexagon } from "lucide-react";
 
 interface CardManaSelectorProps {
   className?: string;
@@ -27,22 +28,55 @@ function CardManaSelector({
     });
   }
 
-  return (
-    <MultiCHecks
-      className={className}
-      trigger={
-        values.length > 0 ? (
-          <div className="flex gap-1">
-            {values.map((e, i) => (
+  const options = manaTypeList.map((mana) => {
+    return {
+      key: mana,
+      label: (
+        <CardSelectOption
+          item={mana}
+          addon={
+            mana === "none" ? (
+              <Hexagon size={20} className="rotate-90  h-6 w-6 p-[0.1rem]" />
+            ) : (
               <Image
-                key={i}
-                src={`/activated-glyphs/${e}.png`}
+                src={`/activated-glyphs/${mana}.png`}
                 alt="test"
                 width={100}
                 height={100}
                 className="h-6 w-6"
               />
-            ))}
+            )
+          }
+        />
+      ),
+    };
+  });
+
+  return (
+    <MultiCHecks
+      className={className}
+      trigger={
+        values.length > 0 ? (
+          <div className="flex gap-1 items-center">
+            {values.map((e, i) => {
+              if (e === "none")
+                return (
+                  <Hexagon
+                    size={20}
+                    className="rotate-90  h-6 w-6 p-[0.1rem]"
+                  />
+                );
+              return (
+                <Image
+                  key={i}
+                  src={`/activated-glyphs/${e}.png`}
+                  alt="test"
+                  width={100}
+                  height={100}
+                  className="h-6 w-6"
+                />
+              );
+            })}
           </div>
         ) : (
           t("mana_selector.placeholder")
@@ -50,25 +84,7 @@ function CardManaSelector({
       }
       menuLabel={t("mana_selector.label")}
       values={values}
-      options={manaTypeList.map((mana) => {
-        return {
-          key: mana,
-          label: (
-            <CardSelectOption
-              item={mana}
-              addon={
-                <Image
-                  src={`/activated-glyphs/${mana}.png`}
-                  alt="test"
-                  width={100}
-                  height={100}
-                  className="h-6 w-6"
-                />
-              }
-            />
-          ),
-        };
-      })}
+      options={options}
       onChange={onChange}
     />
   );

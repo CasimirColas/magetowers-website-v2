@@ -35,7 +35,6 @@ export default function Cards() {
       const cardData = d[card];
       if (
         filters.mana.length > 0 &&
-        // @ts-ignore - when manaType is null works as expected
         !filters.mana.includes(cardData.manaType)
       ) {
         return false;

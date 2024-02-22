@@ -22,7 +22,7 @@ function CardTypeSelector({
   const typeLabels = {
     block: <Castle size={24} className={size} />,
     spell: <Wand size={24} className={size} />,
-    glyph: <Hexagon size={24} className={size} />,
+    glyph: <Hexagon size={24} className={size + " rotate-90"} />,
     utility: <Wrench size={24} className={size} />,
   };
 

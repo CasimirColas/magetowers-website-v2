@@ -12,6 +12,7 @@ export const cardCategoryList: cardCategory[] = [
 // Mana types
 
 export type manaType =
+  | "none"
   | "destruction"
   | "arcane"
   | "order"
@@ -19,6 +20,7 @@ export type manaType =
   | "creation";
 
 export const manaTypeList: manaType[] = [
+  "none",
   "destruction",
   "arcane",
   "order",

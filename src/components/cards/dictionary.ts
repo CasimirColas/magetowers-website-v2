@@ -3,7 +3,7 @@ import { CardNames, cardCategory, manaType } from "./types";
 export type CardDictionary = {
   count: number;
   category: cardCategory;
-  manaType: manaType | null;
+  manaType: manaType;
   cardImage: string;
   translation_key: string;
   description_keys: string[];
@@ -53,7 +53,7 @@ export const cardsDictionary: Record<CardNames, CardDictionary> = {
   catalyst: {
     count: 12,
     category: "block",
-    manaType: null,
+    manaType: "none",
     cardImage: "/cards/catalyst.png",
     translation_key: "catalyst",
     description_keys: ["description"],
@@ -61,7 +61,7 @@ export const cardsDictionary: Record<CardNames, CardDictionary> = {
   generator: {
     count: 2,
     category: "block",
-    manaType: null,
+    manaType: "none",
     cardImage: "/cards/generator.png",
     translation_key: "generator",
     description_keys: ["description", "warning"],
@@ -69,7 +69,7 @@ export const cardsDictionary: Record<CardNames, CardDictionary> = {
   arcaneMirror: {
     count: 1,
     category: "block",
-    manaType: null,
+    manaType: "none",
     cardImage: "/cards/arcane_mirror.png",
     translation_key: "arcane_mirror",
     description_keys: ["description", "warning"],
@@ -77,7 +77,7 @@ export const cardsDictionary: Record<CardNames, CardDictionary> = {
   observatory: {
     count: 2,
     category: "block",
-    manaType: null,
+    manaType: "none",
     cardImage: "/cards/observatory.png",
     translation_key: "observatory",
     description_keys: ["description", "warning"],
@@ -157,7 +157,7 @@ export const cardsDictionary: Record<CardNames, CardDictionary> = {
   spellcatcher: {
     count: 3,
     category: "utility",
-    manaType: null,
+    manaType: "none",
     cardImage: "/cards/spellcatcher.png",
     translation_key: "spellcatcher",
     description_keys: ["description", "warning"],
@@ -165,7 +165,7 @@ export const cardsDictionary: Record<CardNames, CardDictionary> = {
   renovation: {
     count: 3,
     category: "utility",
-    manaType: null,
+    manaType: "none",
     cardImage: "/cards/renovation.png",
     translation_key: "renovation",
     description_keys: [

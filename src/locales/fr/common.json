@@ -13,7 +13,8 @@
     "creation": "création",
     "chaos": "chaos",
     "arcane": "arcane",
-    "order": "ordre"
+    "order": "ordre",
+    "none": "aucun"
   },
   "search": {
     "card_placeholder": "Rechercher une carte..."
