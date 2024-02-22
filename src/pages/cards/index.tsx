@@ -58,9 +58,9 @@ export default function Cards() {
   }, [filters]);
 
   return (
-    <DefaultLayout title={c("routes.cards")}>
-      <div className="flex p-6 gap-4 sm:flex-row flex-col justify-center items-center">
-        <div className="flex gap-4 sm:flex-row flex-col w-full sm:justify-end">
+    <DefaultLayout title={c("routes.cards")} className="flex flex-col">
+      <div className="flex-none flex p-6 gap-4 md:flex-row flex-col justify-center items-center pb-0 sm:pb-6">
+        <div className="flex gap-4 sm:flex-row flex-col w-full md:justify-end sm:justify-center">
           <CardTypeSelector
             className="w-full sm:max-w-56"
             setState={setFilters}
@@ -72,7 +72,7 @@ export default function Cards() {
             values={filters.mana}
           />
         </div>
-        <div className="flex gap-4 w-full">
+        <div className="flex gap-4 w-full sm:justify-center md:justify-start">
           <CardSearch className="w-2/3 sm:max-w-56" setState={setFilters} />
           <Button
             variant={"sky"}
@@ -91,12 +91,12 @@ export default function Cards() {
         </div>
       </div>
       {/* "flex gap-4 w-full justify-center items-center flex-wrap" */}
-      <div className="overflow-scroll flex snap-x snap-mandatory gap-8 px-[4.5rem] sm:px-0 sm:gap-4 sm:flex-wrap sm:overflow-visible sm:justify-center">
+      <div className="overflow-scroll flex snap-x snap-mandatory gap-8 px-[4.5rem] sm:px-0 sm:gap-4 sm:flex-wrap sm:overflow-visible sm:justify-center h-full">
         {displayedCardNames.map((name, index) => (
           <DetailsDialog
             key={index}
             trigger={
-              <div className="sm:w-[6.3cm] w-[4cm] snap-center">
+              <div className="sm:w-[6.3cm] h-[calc(100dvh-5rem-200px)] snap-center aspect-card sm:h-auto">
                 <Card name={name} id={index + "-map"} className="w-full" />
               </div>
             }

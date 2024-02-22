@@ -81,7 +81,7 @@ function Spell({ className, id, card }: SpellProps) {
                   ))
               )}
             </div>
-            <div>{t(key)}</div>
+            <div className="text-left">{t(key)}</div>
           </div>
         ))}
       </div>
