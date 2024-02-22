@@ -90,7 +90,7 @@
     "name": "Apotheosis",
     "level_1": "Does nothing",
     "level_2": "Draw 3 cards from the deck",
-    "level_3": "Destroy a block from the Tower of one of your opponents",
+    "level_3": "Destroy a block in the tower of one of your opponents",
     "level_4": "You win the game"
   },
   "spellcatcher": {
