@@ -58,7 +58,10 @@ export default function Cards() {
   }, [filters]);
 
   return (
-    <DefaultLayout title={c("routes.cards")} className="flex flex-col">
+    <DefaultLayout
+      title={c("routes.cards")}
+      className="flex flex-col bg-iceland bg-cover bg-center bg-fixed overflow-auto"
+    >
       <div className="flex-none flex p-6 gap-4 md:flex-row flex-col justify-center items-center pb-0 sm:pb-6">
         <div className="flex gap-4 sm:flex-row flex-col w-full md:justify-end sm:justify-center">
           <CardTypeSelector
@@ -90,7 +93,6 @@ export default function Cards() {
           </Button>
         </div>
       </div>
-      {/* "flex gap-4 w-full justify-center items-center flex-wrap" */}
       <div className="overflow-scroll flex snap-x snap-mandatory gap-8 px-[4.5rem] sm:px-0 sm:gap-4 sm:flex-wrap sm:overflow-visible sm:justify-center h-full">
         {displayedCardNames.map((name, index) => (
           <DetailsDialog

@@ -24,6 +24,7 @@ const config = {
         card: "63/110",
       },
       backgroundImage: {
+        iceland: "url('/backgrounds/iceland.jpg')",
         skyWithTower: "url('/backgrounds/skyWithTower.png')",
         lakeSetup: "url('/backgrounds/lakeSetup.jpg')",
         mossyWall: "url('/backgrounds/mossyWall.jpg')",
