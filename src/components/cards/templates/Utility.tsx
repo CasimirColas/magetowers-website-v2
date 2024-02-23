@@ -21,11 +21,12 @@ function Utility({ className, id, card }: UtilityProps) {
   }, []);
   return (
     <div
-      className={cn("aspect-card w-[400px] relative rounded-md", className)}
+      className={cn("aspect-card w-[400px] relative", className)}
       style={{
         backgroundImage: `url(${card.cardImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
       }}
     >
       <div

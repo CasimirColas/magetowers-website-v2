@@ -98,7 +98,12 @@ export default function Cards() {
           <DetailsDialog
             key={index}
             trigger={
-              <div className="sm:w-[6.3cm] h-[calc(100dvh-5rem-200px)] snap-center aspect-card sm:h-auto">
+              <div
+                className="sm:w-[6.3cm] h-[calc(100dvh-5rem-200px)] snap-center aspect-card sm:h-auto rounded-md overflow-hidden sm:hover:scale-105 transition-transform duration-300 ease-in-out"
+                style={{
+                  boxShadow: "4px 4px 15px 3px rgba(0, 0, 0, 0.3)",
+                }}
+              >
                 <Card name={name} id={index + "-map"} className="w-full" />
               </div>
             }
@@ -106,7 +111,7 @@ export default function Cards() {
             <Card
               name={name}
               id={index + "-map-detail"}
-              className="w-auto h-full"
+              className="w-auto h-full rounded-xl"
             />
           </DetailsDialog>
         ))}
