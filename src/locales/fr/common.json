@@ -1,4 +1,9 @@
 {
+  "errors": {
+    "404": "Page non trouvée",
+    "500": "Erreur interne du serveur",
+    "no_cards": "Aucune carte ne correspond à votre recherche"
+  },
   "buttons": {
     "reset": "Réinitialiser"
   },

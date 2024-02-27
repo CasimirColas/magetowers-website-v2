@@ -7,9 +7,9 @@ import {
   manaTypeList,
 } from "@/components/cards/types";
 import DefaultLayout from "@/components/layout/DefaultLayout";
-import CardManaSelector from "@/components/pages/cards/CardManaSelector";
-import CardSearch from "@/components/pages/cards/CardSearch";
-import CardTypeSelector from "@/components/pages/cards/CardTypeSelector";
+import CardManaSelector from "@/components/pages/cards/selectors/CardManaSelector";
+import CardSearch from "@/components/pages/cards/selectors/CardSearch";
+import CardTypeSelector from "@/components/pages/cards/selectors/CardTypeSelector";
 import getStaticPropsI18n from "@/utils/next-intl/getStaticPropsI18n";
 import { cardsDictionary as d } from "@/components/cards/dictionary";
 import { GetStaticPropsContext } from "next";
@@ -18,6 +18,8 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { RotateCcw } from "lucide-react";
 import DetailsDialog from "@/components/utility/DetailsDialog";
+import CardFilters from "@/components/pages/cards/CardFilters";
+import Image from "next/image";
 
 export type CardFilter = {
   type: cardCategory[];
@@ -60,46 +62,32 @@ export default function Cards() {
   return (
     <DefaultLayout
       title={c("routes.cards")}
-      className="flex flex-col bg-iceland bg-cover bg-center bg-fixed overflow-auto"
+      className="flex flex-col bg-iceland bg-cover bg-center bg-fixed"
     >
-      <div className="flex-none flex p-6 gap-4 md:flex-row flex-col justify-center items-center pb-0 sm:pb-6">
-        <div className="flex gap-4 sm:flex-row flex-col w-full md:justify-end sm:justify-center">
-          <CardTypeSelector
-            className="w-full sm:max-w-56"
-            setState={setFilters}
-            values={filters.type}
-          />
-          <CardManaSelector
-            className="w-full sm:max-w-56"
-            setState={setFilters}
-            values={filters.mana}
-          />
-        </div>
-        <div className="flex gap-4 w-full sm:justify-center md:justify-start">
-          <CardSearch className="w-2/3 sm:max-w-56" setState={setFilters} />
-          <Button
-            variant={"sky"}
-            className="w-1/3 sm:max-w-56 flex justify-center items-center gap-2"
-            onClick={() =>
-              setFilters({
-                type: cardCategoryList,
-                mana: manaTypeList,
-                search: null,
-              })
-            }
-          >
-            {c("buttons.reset")}
-            <RotateCcw size={24} className="p-1" />
-          </Button>
-        </div>
-      </div>
-      <div className="overflow-scroll flex snap-x snap-mandatory gap-8 px-[4.5rem] sm:px-0 sm:gap-4 sm:flex-wrap sm:overflow-visible sm:justify-center h-full">
+      <CardFilters setFilters={setFilters} filters={filters} />
+      <div className="overflow-auto flex gap-8 sm:px-0 sm:gap-4 flex-wrap justify-center h-full sm:pt-28 pb-6 pt-56">
+        {displayedCardNames.length === 0 ? (
+          <div className="absolute w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center pt-24">
+            <div className="flex justify-center items-center flex-col aspect-[744/507] h-[20vh] w-auto">
+              <Image
+                src={"/illustrations/confusion.png"}
+                width={400}
+                height={400}
+                alt="confused face"
+                className="w-full border-b-2 border-slate-600"
+              />
+              <p className="w-full text-center bg-slate-600 text-white p-2 sm:p-4 rounded-b-md bg-opacity-50">
+                {c("errors.no_cards")}
+              </p>
+            </div>
+          </div>
+        ) : null}
         {displayedCardNames.map((name, index) => (
           <DetailsDialog
             key={index}
             trigger={
               <div
-                className="sm:w-[6.3cm] h-[calc(100dvh-5rem-200px)] snap-center aspect-card sm:h-auto rounded-md overflow-hidden sm:hover:scale-105 transition-transform duration-300 ease-in-out"
+                className="sm:w-[6.3cm] w-[40vw] snap-center aspect-card sm:h-auto rounded-md overflow-hidden sm:hover:scale-105 transition-transform duration-300 ease-in-out"
                 style={{
                   boxShadow: "4px 4px 15px 3px rgba(0, 0, 0, 0.3)",
                 }}
