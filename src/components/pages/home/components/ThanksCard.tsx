@@ -5,9 +5,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 export interface ThanksCardProps {
+  className?: string;
   title: string;
   subText: string;
   image: string;
@@ -16,6 +18,7 @@ export interface ThanksCardProps {
 }
 
 function ThanksCard({
+  className,
   title,
   subText,
   image,
@@ -23,7 +26,7 @@ function ThanksCard({
   description,
 }: ThanksCardProps) {
   return (
-    <Card className="flex-row flex sm:h-28 h-24">
+    <Card className={cn("flex-row flex sm:h-28 h-24", className)}>
       <Image
         className="h-full w-auto rounded-l-lg aspect-square object-center"
         src={image}

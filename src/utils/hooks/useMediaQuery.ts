@@ -10,7 +10,7 @@ const defaultBreakpoints = {
   "2xl": "1400px",
 };
 
-const useMediaQuery = (query: Breakpoint) => {
+export default function useMediaQuery(query: Breakpoint) {
   const [matches, setMatches] = useState(true);
 
   useEffect(() => {
@@ -24,6 +24,4 @@ const useMediaQuery = (query: Breakpoint) => {
   }, [matches, query]);
 
   return matches;
-};
-
-export default useMediaQuery;
+}
