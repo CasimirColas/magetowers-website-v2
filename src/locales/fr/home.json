@@ -10,19 +10,15 @@
   },
   "expectations_section": {
     "title": "Jouez au jeu !",
-    "text_full": "Mage Towers est un jeu centré sur la construction de votre tour de mage et la collecte de différents types de mana pour renforcer vos sorts et utiliser de puissantes incantations. Vous gagnez du mana en ajoutant des blocs Catalyste à votre tour et en les imprégnant du pouvoir des glyphes, à la fin de votre tour, vous recevrez du mana du type approprié pour chaque bloc Catalyst dans votre tour. Chaque type de mana repose sur des styles de jeu différents."
+    "text_full": "Mage Towers est un jeu centré sur la ||construction de votre tour de mage|| et la collecte de différents types de mana pour ||renforcer vos sorts|| et utiliser de ||puissantes incantations||. Vous gagnez du mana en ajoutant des blocs ||Catalyseur|| à votre tour et en les imprégnant du pouvoir des ||glyphes||, à la fin de votre tour, vous recevrez du mana du type approprié pour chaque bloc Catalyseur dans votre tour. Chaque type de mana repose sur un ||style de jeu différents||."
   },
   "power_section": {
     "title": "Montrez vos compétences tactiques !",
-    "text_full": "Utilisez vos cartes judicieusement pour déjouer votre adversaire et anticipez ses mouvements. Le jeu est facile à apprendre mais difficile à maîtriser. La clé de la victoire est de maîtriser tous les sorts et leurs interactions. Changez et adaptez votre stratégie au champ de bataille en constante évolution et devenez le mage ultime ! Créez des combos dévastatrices ! Gagnez en utilisant de puissantes incantations ou en ayant la plus grande tour de magie dans le royaume à la fin de la partie."
+    "text_full": "Utilisez vos cartes judicieusement pour ||déjouer votre adversaire|| et anticipez ses mouvements. Le jeu est ||facile à prendre en main mais difficile à maîtriser||. La clé de la victoire est de ||maîtriser tous les sorts et leurs interactions||. Changez et adaptez votre stratégie au ||champ de bataille en constante évolution|| et devenez le mage ultime ! ||Créez des combos dévastatrices!|| Gagnez en utilisant de puissantes incantations ou en ayant ||la plus impressionante tour de mage|| du royaume à la fin de la partie."
   },
   "future_section": {
     "title": "Qu'est-ce qui vient ensuite?",
-    "p1": "Actuellement, notre pack de base 1c1 est prêt et attend d'être expédié. Mais il y a beaucoup plus à venir !",
-    "p2": "Si le jeu est entièrement financé, 2 extensions qui apporteront des artefacts et des types de magie inédits sont déjà prévues.",
-    "p3": "L'objectif ultime serait de sortir une boîte d'édition deluxe contenant les deux extensions, suffisamment de cartes pour 4 joueurs et des éléments tels qu'un tapis de joueur et des jetons pour offrir la meilleure expérience de jeu possible.",
-    "p4": "Tout excédent de la campagne de financement participatif sera utilisé pour créer un jeu vidéo.",
-    "text_full": "Actuellement, notre pack de base 1c1 est prêt et attend d'être expédié. Mais il y a beaucoup plus à venir ! Si le jeu est entièrement financé, 2 extensions qui apporteront des artefacts et des types de magie inédits sont déjà prévues. L'objectif ultime serait de sortir une boîte d'édition deluxe contenant les deux extensions, suffisamment de cartes pour 4 joueurs et des éléments tels qu'un tapis de joueur et des jetons pour offrir la meilleure expérience de jeu possible. Tout excédent de la campagne de financement participatif sera utilisé pour créer un jeu vidéo."
+    "text_full": "Actuellement, notre ||pack de base 1 contre 1 est prêt et attend d'être expédié||. Mais il y a beaucoup plus à venir ! Si le jeu est entièrement financé, ||2 extensions sont sont déjà prévues!|| Elles apporteront des artéfacts et des types de magie inédits. ||L'objectif ultime|| serait de sortir une boîte d'||édition deluxe|| contenant les deux extensions, suffisamment de cartes pour 4 joueurs et des éléments tels qu'||un tapis de jeu|| et des jetons pour offrir la ||meilleure expérience de jeu possible||. ||Tout excédent de la campagne de financement|| participatif sera utilisé pour créer un ||jeu vidéo||!"
   },
   "thanks_section": {
     "title": "Grand merci à...",

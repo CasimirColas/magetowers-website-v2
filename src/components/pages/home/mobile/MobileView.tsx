@@ -2,10 +2,9 @@ import scrollBackgroundWithContent from "@/utils/functions/scrollBackgroundWithC
 import { useEffect } from "react";
 import LandingSection from "./sections/LandingSection";
 import VideoSection from "./sections/VideoSection";
-import ExpectationSection from "./sections/ExpectationSection";
-import PowerSection from "./sections/PowerSection";
-import FutureSection from "./sections/FutureSection";
 import ThanksSection from "./sections/ThanksSection";
+import MobileSimpleSection from "./MobileSimpleSection";
+import Image from "next/image";
 
 function MobileView() {
   useEffect(() => {
@@ -18,9 +17,31 @@ function MobileView() {
     >
       <LandingSection />
       <VideoSection />
-      <ExpectationSection />
-      <PowerSection />
-      <FutureSection />
+      <MobileSimpleSection translationsKey="expectations_section" />
+      <MobileSimpleSection
+        translationsKey="power_section"
+        addonBottom={
+          <Image
+            src="/illustrations/clear-sight.png"
+            className="w-3/4"
+            width={200}
+            height={200}
+            alt="Clear sight"
+          />
+        }
+      />
+      <MobileSimpleSection
+        translationsKey="future_section"
+        addonBottom={
+          <Image
+            src="/illustrations/old-wiz.png"
+            className="w-3/4"
+            width={200}
+            height={200}
+            alt="Old wizard"
+          />
+        }
+      />
       <ThanksSection />
     </div>
   );

@@ -32,5 +32,5 @@ export default function Home() {
 }
 
 export async function getStaticProps({ locale }: GetStaticPropsContext) {
-  return getStaticPropsI18n(["home", "common"], locale);
+  return getStaticPropsI18n(["home", "common", "cards"], locale);
 }
