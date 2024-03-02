@@ -24,25 +24,16 @@ function Spell({ className, id, card }: SpellProps) {
   return (
     <div
       className={cn(
-        "aspect-card w-[400px] relative overflow-hidden",
+        "aspect-card w-[400px] relative overflow-hidden ",
         className
       )}
       style={{
-        backgroundImage: `url(${card.cardImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
+        backgroundImage: `url(${card.cardImage}),url(/cards/spell_bkg.png)`,
+        backgroundSize: "cover, 100% 41%",
+        backgroundPosition: "center,top",
+        backgroundRepeat: "no-repeat,no-repeat",
       }}
     >
-      <div
-        className="absolute right-1/2 translate-x-1/2 w-full h-[41%] top-0 z-[-1]"
-        style={{
-          backgroundImage: "url(/cards/spell_bkg.png)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      />
       <div
         className="absolute font-title text-tile right-1/2 translate-x-1/2 bottom-[62%] font-bold w-2/3 text-center"
         id={titleId}

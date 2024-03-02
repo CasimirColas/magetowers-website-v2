@@ -34,7 +34,7 @@ function DefaultLayout({
       <Navbar className="fixed top-0" />
       <main
         className={cn(
-          "h-[calc(100dvh-4rem)] sm:h-[calc(100dvh-5rem)] mt-16 sm:mt-20 absolute w-full z-[-2]",
+          "h-[calc(100dvh-4rem)] sm:h-[calc(100dvh-5rem)] mt-16 sm:mt-20 absolute w-full",
           className
         )}
       >
