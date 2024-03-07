@@ -5,11 +5,11 @@
     "follow_us": "In the meantime, you can follow us here to stay updated"
   },
   "video_section": {
-    "title": "Watch the trailer!",
+    "title": "Checkout the trailer!",
     "text_full": "Do you enjoy Hearthstone, Magic the Gathering or Yu-Gi-Oh! ||Try Mage Towers!|| It can be played with ||up to 4 friends|| (or maybe even more 🤔) and it is very easy to get into. The ||variety of playstyles|| and win conditions, will guaranty that no game will ever feel or play the same."
   },
   "expectations_section": {
-    "title": "Play the game !",
+    "title": "What to expect?",
     "text_full": "Mage Towers is a game centered around ||building you mage tower|| and collecting different types of mana to ||empower your spells|| and use ||powerful incantations||. You gain mana by adding ||Catalyst|| blocks to your tower and infusing them with the power of ||glyphs||, at the end of your turn you will receive mana of the appropriate type for each Catalyst block in your tower. ||Each mana type has it's own play style||."
   },
   "power_section": {
@@ -27,5 +27,12 @@
     "trash_cat_music": "The composer of the main track.",
     "community": "The community",
     "community_text": "Who playtested and help make the game along the way."
+  },
+  "manatypes_carousel": {
+    "destruction": "||Discarding|| cards. Whether it's your own or your opponent's, there is always a way to make the most of it.",
+    "arcane": "||Drawing|| cards to craft the perfect hand and ||magnify the output|| of your cards",
+    "chaos": "||Randomness and unpredictability||. You never know what you are going to get.",
+    "order": "||Close the gap|| between players and ||control|| the board.",
+    "look": "Look at the cards"
   }
 }

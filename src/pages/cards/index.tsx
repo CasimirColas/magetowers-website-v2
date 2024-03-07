@@ -1,4 +1,4 @@
-import Card from "@/components/cards/Card";
+import GameCard from "@/components/cards/GameCard";
 import {
   cardCategory,
   cardCategoryList,
@@ -7,16 +7,11 @@ import {
   manaTypeList,
 } from "@/components/cards/types";
 import DefaultLayout from "@/components/layout/DefaultLayout";
-import CardManaSelector from "@/components/pages/cards/selectors/CardManaSelector";
-import CardSearch from "@/components/pages/cards/selectors/CardSearch";
-import CardTypeSelector from "@/components/pages/cards/selectors/CardTypeSelector";
 import getStaticPropsI18n from "@/utils/next-intl/getStaticPropsI18n";
 import { cardsDictionary as d } from "@/components/cards/dictionary";
 import { GetStaticPropsContext } from "next";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
-import { RotateCcw } from "lucide-react";
 import DetailsDialog from "@/components/utility/DetailsDialog";
 import CardFilters from "@/components/pages/cards/CardFilters";
 import Image from "next/image";
@@ -92,14 +87,14 @@ export default function Cards() {
                   boxShadow: "4px 4px 15px 3px rgba(0, 0, 0, 0.3)",
                 }}
               >
-                <Card name={name} id={index + "-map"} className="w-full" />
+                <GameCard name={name} id={index + "-map"} className="w-full" />
               </div>
             }
           >
-            <Card
+            <GameCard
               name={name}
               id={index + "-map-detail"}
-              className="w-auto h-full rounded-xl"
+              className="w-auto h-[80vh] rounded-xl"
             />
           </DetailsDialog>
         ))}

@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { CardDictionary, cardsDictionary as d } from "../dictionary";
+import { CardDictionaryType, cardsDictionary as d } from "../dictionary";
 import { useTranslations } from "next-intl";
 import clsx from "clsx";
 import { useEffect } from "react";
@@ -7,7 +7,7 @@ import { adjustFontSize } from "@/utils/functions/adjustFontSize";
 
 interface UtilityProps {
   id: string;
-  card: CardDictionary;
+  card: CardDictionaryType;
   className?: string;
 }
 

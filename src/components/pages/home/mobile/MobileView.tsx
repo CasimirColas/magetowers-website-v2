@@ -5,6 +5,7 @@ import VideoSection from "./sections/VideoSection";
 import ThanksSection from "./sections/ThanksSection";
 import MobileSimpleSection from "./MobileSimpleSection";
 import Image from "next/image";
+import GameplayLoopCarousel from "./GameplayLoopCarousel";
 
 function MobileView() {
   useEffect(() => {
@@ -17,15 +18,29 @@ function MobileView() {
     >
       <LandingSection />
       <VideoSection />
-      <MobileSimpleSection translationsKey="expectations_section" />
+      <MobileSimpleSection
+        translationsKey="expectations_section"
+        addonBottom={
+          <>
+            <Image
+              src="/illustrations/gainMana.png"
+              alt="gain mana"
+              width={300}
+              height={300}
+              className="w-3/4"
+            />
+            <GameplayLoopCarousel />
+          </>
+        }
+      />
       <MobileSimpleSection
         translationsKey="power_section"
         addonBottom={
           <Image
             src="/illustrations/clear-sight.png"
             className="w-3/4"
-            width={200}
-            height={200}
+            width={300}
+            height={300}
             alt="Clear sight"
           />
         }
@@ -36,8 +51,8 @@ function MobileView() {
           <Image
             src="/illustrations/old-wiz.png"
             className="w-3/4"
-            width={200}
-            height={200}
+            width={300}
+            height={300}
             alt="Old wizard"
           />
         }

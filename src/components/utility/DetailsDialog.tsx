@@ -13,7 +13,7 @@ function DetailsDialog({ children, className, trigger }: DetailsDialogProps) {
       <DialogTrigger>{trigger}</DialogTrigger>
       <DialogContent
         className={cn(
-          "bg-opacity-0 border-none max-w-max h-full flex justify-center items-center",
+          "bg-opacity-0 border-none max-w-max max-h-max flex justify-center items-center shadow-none p-2",
           className
         )}
       >

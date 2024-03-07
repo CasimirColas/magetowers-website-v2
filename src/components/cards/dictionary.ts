@@ -1,6 +1,7 @@
 import { CardNames, cardCategory, manaType } from "./types";
 
-export type CardDictionary = {
+export type CardDictionaryType = {
+  name: CardNames;
   count: number;
   category: cardCategory;
   manaType: manaType;
@@ -9,8 +10,9 @@ export type CardDictionary = {
   description_keys: string[];
 };
 
-export const cardsDictionary: Record<CardNames, CardDictionary> = {
+export const cardsDictionary: Record<CardNames, CardDictionaryType> = {
   destruction: {
+    name: "destruction",
     count: 5,
     category: "glyph",
     manaType: "destruction",
@@ -19,6 +21,7 @@ export const cardsDictionary: Record<CardNames, CardDictionary> = {
     description_keys: ["description"],
   },
   arcane: {
+    name: "arcane",
     count: 5,
     category: "glyph",
     manaType: "arcane",
@@ -27,6 +30,7 @@ export const cardsDictionary: Record<CardNames, CardDictionary> = {
     description_keys: ["description"],
   },
   order: {
+    name: "order",
     count: 5,
     category: "glyph",
     manaType: "order",
@@ -35,6 +39,7 @@ export const cardsDictionary: Record<CardNames, CardDictionary> = {
     description_keys: ["description"],
   },
   chaos: {
+    name: "chaos",
     count: 5,
     category: "glyph",
     manaType: "chaos",
@@ -43,6 +48,7 @@ export const cardsDictionary: Record<CardNames, CardDictionary> = {
     description_keys: ["description"],
   },
   creation: {
+    name: "creation",
     count: 3,
     category: "glyph",
     manaType: "creation",
@@ -51,6 +57,7 @@ export const cardsDictionary: Record<CardNames, CardDictionary> = {
     description_keys: ["description"],
   },
   catalyst: {
+    name: "catalyst",
     count: 12,
     category: "block",
     manaType: "none",
@@ -59,6 +66,7 @@ export const cardsDictionary: Record<CardNames, CardDictionary> = {
     description_keys: ["description"],
   },
   generator: {
+    name: "generator",
     count: 2,
     category: "block",
     manaType: "none",
@@ -67,6 +75,7 @@ export const cardsDictionary: Record<CardNames, CardDictionary> = {
     description_keys: ["description", "warning"],
   },
   arcaneMirror: {
+    name: "arcaneMirror",
     count: 1,
     category: "block",
     manaType: "none",
@@ -75,6 +84,7 @@ export const cardsDictionary: Record<CardNames, CardDictionary> = {
     description_keys: ["description", "warning"],
   },
   observatory: {
+    name: "observatory",
     count: 2,
     category: "block",
     manaType: "none",
@@ -83,6 +93,7 @@ export const cardsDictionary: Record<CardNames, CardDictionary> = {
     description_keys: ["description", "warning"],
   },
   ignite: {
+    name: "ignite",
     count: 3,
     category: "spell",
     manaType: "destruction",
@@ -91,6 +102,7 @@ export const cardsDictionary: Record<CardNames, CardDictionary> = {
     description_keys: ["level_1", "level_2", "level_3"],
   },
   sacrifice: {
+    name: "sacrifice",
     count: 3,
     category: "spell",
     manaType: "destruction",
@@ -99,6 +111,7 @@ export const cardsDictionary: Record<CardNames, CardDictionary> = {
     description_keys: ["level_1", "level_2", "level_3"],
   },
   amplify: {
+    name: "amplify",
     count: 3,
     category: "spell",
     manaType: "arcane",
@@ -107,6 +120,7 @@ export const cardsDictionary: Record<CardNames, CardDictionary> = {
     description_keys: ["level_1", "level_2", "level_3"],
   },
   clearsight: {
+    name: "clearsight",
     count: 3,
     category: "spell",
     manaType: "arcane",
@@ -115,6 +129,7 @@ export const cardsDictionary: Record<CardNames, CardDictionary> = {
     description_keys: ["level_1", "level_2", "level_3"],
   },
   benevolence: {
+    name: "benevolence",
     count: 3,
     category: "spell",
     manaType: "order",
@@ -123,6 +138,7 @@ export const cardsDictionary: Record<CardNames, CardDictionary> = {
     description_keys: ["level_1", "level_2", "level_3"],
   },
   equality: {
+    name: "equality",
     count: 3,
     category: "spell",
     manaType: "order",
@@ -131,6 +147,7 @@ export const cardsDictionary: Record<CardNames, CardDictionary> = {
     description_keys: ["level_1", "level_2", "level_3"],
   },
   mindControl: {
+    name: "mindControl",
     count: 3,
     category: "spell",
     manaType: "chaos",
@@ -139,6 +156,7 @@ export const cardsDictionary: Record<CardNames, CardDictionary> = {
     description_keys: ["level_1", "level_2", "level_3"],
   },
   confusion: {
+    name: "confusion",
     count: 3,
     category: "spell",
     manaType: "chaos",
@@ -147,6 +165,7 @@ export const cardsDictionary: Record<CardNames, CardDictionary> = {
     description_keys: ["level_1", "level_2", "level_3"],
   },
   apotheosis: {
+    name: "apotheosis",
     count: 2,
     category: "spell",
     manaType: "creation",
@@ -155,6 +174,7 @@ export const cardsDictionary: Record<CardNames, CardDictionary> = {
     description_keys: ["level_1", "level_2", "level_3", "level_4"],
   },
   spellcatcher: {
+    name: "spellcatcher",
     count: 3,
     category: "utility",
     manaType: "none",
@@ -163,6 +183,7 @@ export const cardsDictionary: Record<CardNames, CardDictionary> = {
     description_keys: ["description", "warning"],
   },
   renovation: {
+    name: "renovation",
     count: 3,
     category: "utility",
     manaType: "none",

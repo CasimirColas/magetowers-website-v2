@@ -11,7 +11,7 @@ interface CardProps {
   className?: string;
 }
 
-function Card({ name, id, className }: CardProps) {
+function GameCard({ name, id, className }: CardProps) {
   return {
     glyph: <Glyph card={d[name]} id={id} className={className} />,
     spell: <Spell card={d[name]} id={id} className={className} />,
@@ -20,4 +20,4 @@ function Card({ name, id, className }: CardProps) {
   }[d[name].category];
 }
 
-export default Card;
+export default GameCard;

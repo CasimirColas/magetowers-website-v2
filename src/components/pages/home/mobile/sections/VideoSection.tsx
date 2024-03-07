@@ -4,7 +4,6 @@ import YoutubeVideoPlayer from "../../../../utility/YoutubeVideoPlayer";
 import { Card, CardContent, CardHeader, CardTitle } from "../../../../ui/card";
 import { useTranslations } from "next-intl";
 import { parseText } from "@/utils/functions/parseText";
-import { useRouter } from "next/router";
 import Image from "next/image";
 
 function VideoSection() {
@@ -13,13 +12,10 @@ function VideoSection() {
     const textToParse = t(text);
     return parseText({ default: true, text: textToParse });
   };
-  const { locale } = useRouter();
   return (
     <ScreenSection className="flex items-center flex-col gap-8 h-fit">
       <Card className="w-full bg-opacity-85 rounded-lg sm:max-w-xl flex flex-col items-center">
-        <CardHeader
-          className={`pb-0 ${locale === "fr" ? "px-0 sm:px-6" : undefined}`}
-        >
+        <CardHeader className="pb-0">
           <CardTitle
             className="text-3xl font-title text-center text-tile sm:text-4xl"
             style={{
