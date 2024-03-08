@@ -15,7 +15,7 @@ import DetailsDialog from "@/components/utility/DetailsDialog";
 import GameCard from "@/components/cards/GameCard";
 import { cardsDictionary as d } from "@/components/cards/dictionary";
 
-function GameplayLoopCarousel() {
+function MagicTypesCarousel() {
   const t = useTranslations("home.manatypes_carousel");
   const ct = useTranslations("common.vocabulary");
   return (
@@ -171,4 +171,4 @@ function Item({
   );
 }
 
-export default GameplayLoopCarousel;
+export default MagicTypesCarousel;

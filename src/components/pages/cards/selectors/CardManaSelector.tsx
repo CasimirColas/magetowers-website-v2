@@ -39,7 +39,7 @@ function CardManaSelector({
               <Hexagon size={20} className="rotate-90  h-6 w-6 p-[0.1rem]" />
             ) : (
               <Image
-                src={`/activated-glyphs/${mana}.png`}
+                src={`/glyphs/activated-icons/${mana}.png`}
                 alt="test"
                 width={100}
                 height={100}
@@ -70,7 +70,7 @@ function CardManaSelector({
               return (
                 <Image
                   key={i}
-                  src={`/activated-glyphs/${e}.png`}
+                  src={`/glyphs/activated-icons/${e}.png`}
                   alt="test"
                   width={100}
                   height={100}

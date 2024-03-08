@@ -53,7 +53,7 @@ function Spell({ className, id, card }: SpellProps) {
               {`${cfl(ct("level"))} ${index + 1}:`}
               {index === 0 ? (
                 <Image
-                  src="/sigils/empty.png"
+                  src="/glyphs/sigils/empty.png"
                   alt={ct("sigil")}
                   width={50}
                   height={50}
@@ -65,7 +65,7 @@ function Spell({ className, id, card }: SpellProps) {
                   .map((_, i) => (
                     <Image
                       key={i}
-                      src={`/sigils/${card.manaType}.png`}
+                      src={`/glyphs/sigils/${card.manaType}.png`}
                       alt={ct("sigil")}
                       width={50}
                       height={50}

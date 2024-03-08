@@ -33,6 +33,11 @@
     "arcane": "||Drawing|| cards to craft the perfect hand and ||magnify the output|| of your cards",
     "chaos": "||Randomness and unpredictability||. You never know what you are going to get.",
     "order": "||Close the gap|| between players and ||control|| the board.",
-    "look": "Look at the cards"
+    "look": "Look at the cards",
+    "more": "Click to know more"
+  },
+  "bench": {
+    "title": "Will you chose luck over a guaranteed reward?",
+    "description": "At the beginning of each turn, you have the choice to draw one face-up card from the market or two face-down cards from the street. What will you do?"
   }
 }

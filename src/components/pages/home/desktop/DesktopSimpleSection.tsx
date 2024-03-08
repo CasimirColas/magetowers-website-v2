@@ -1,29 +1,36 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import { useTranslations } from "next-intl";
 import { parseText } from "@/utils/functions/parseText";
+import { useTranslations } from "next-intl";
 
-interface MobileSimpleSectionProps {
+interface DesktopSimpleSectionProps {
   className?: string;
   translationsKey: string;
   addonTop?: JSX.Element;
   addonBottom?: JSX.Element;
+  addonRight?: JSX.Element;
 }
 
-function MobileSimpleSection({
+function DesktopSimpleSection({
   className,
   translationsKey,
   addonTop,
+  addonRight,
   addonBottom,
-}: MobileSimpleSectionProps) {
+}: DesktopSimpleSectionProps) {
   const t = useTranslations("home." + translationsKey);
   const pt = (text: string) => {
     const textToParse = t(text);
     return parseText({ default: true, text: textToParse });
   };
   return (
-    <section className={cn("w-full p-6 flex justify-center", className)}>
-      <Card className="w-full sm:max-w-xl bg-opacity-85 rounded-lg flex flex-col items-center border-b-0">
+    <section
+      className={cn(
+        "w-full h-full p-6 flex bg-cover bg-center justify-between items-center",
+        className
+      )}
+    >
+      <Card className="bg-opacity-95 rounded-lg flex flex-col items-center w-1/2 max-w-xl h-min border-b-0">
         <CardHeader>
           <CardTitle
             className="text-3xl font-title text-center mt-4 text-tile sm:text-4xl"
@@ -40,8 +47,9 @@ function MobileSimpleSection({
         </CardContent>
         {addonBottom}
       </Card>
+      {addonRight ?? <span />}
     </section>
   );
 }
 
-export default MobileSimpleSection;
+export default DesktopSimpleSection;

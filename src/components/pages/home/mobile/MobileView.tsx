@@ -5,7 +5,7 @@ import VideoSection from "./sections/VideoSection";
 import ThanksSection from "./sections/ThanksSection";
 import MobileSimpleSection from "./MobileSimpleSection";
 import Image from "next/image";
-import GameplayLoopCarousel from "./GameplayLoopCarousel";
+import MagicTypesCarousel from "./MagicTypesCarousel";
 
 function MobileView() {
   useEffect(() => {
@@ -29,7 +29,7 @@ function MobileView() {
               height={300}
               className="w-3/4"
             />
-            <GameplayLoopCarousel />
+            <MagicTypesCarousel />
           </>
         }
       />
@@ -37,7 +37,7 @@ function MobileView() {
         translationsKey="power_section"
         addonBottom={
           <Image
-            src="/illustrations/clear-sight.png"
+            src="/illustrations/clearsight.png"
             className="w-3/4"
             width={300}
             height={300}

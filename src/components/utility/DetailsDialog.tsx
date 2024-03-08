@@ -3,14 +3,20 @@ import { Dialog, DialogContent, DialogTrigger } from "../ui/dialog";
 
 interface DetailsDialogProps {
   children: React.ReactNode;
+  triggerClassName?: string;
   trigger: JSX.Element;
   className?: string;
 }
 
-function DetailsDialog({ children, className, trigger }: DetailsDialogProps) {
+function DetailsDialog({
+  children,
+  className,
+  trigger,
+  triggerClassName,
+}: DetailsDialogProps) {
   return (
     <Dialog>
-      <DialogTrigger>{trigger}</DialogTrigger>
+      <DialogTrigger className={triggerClassName}>{trigger}</DialogTrigger>
       <DialogContent
         className={cn(
           "bg-opacity-0 border-none max-w-max max-h-max flex justify-center items-center shadow-none p-2",
