@@ -20,40 +20,37 @@ function DesktopView() {
       <LandingSection />
       <VideoSection />
       <DesktopSimpleSection
-        className="bg-snowyWaterfall"
+        className="bg-snowyWaterfall gap-8"
         translationsKey="expectations_section"
+        classNameCard="h-full"
         addonBottom={
           <Image
             src="/illustrations/gainMana.png"
-            className="h-[250px] object-contain w-auto mt-auto"
-            width={300}
-            height={300}
+            className="object-contain grow h-0 w-auto"
+            width={400}
+            height={400}
             alt="gain mana"
           />
         }
         addonRight={<MagicTypesPresentation />}
       />
       <DesktopSimpleSection
-        className="bg-mossyWall"
+        className="bg-mossyWall gap-8"
         translationsKey="power_section"
+        classNameCard="h-full"
         addonBottom={
           <Image
             src="/illustrations/clearsight.png"
-            className="h-[250px] object-contain w-auto mt-auto"
+            className="h-0 object-contain w-auto grow"
             width={300}
             height={300}
             alt="clear sight"
           />
         }
         addonRight={
-          <Card className="w-1/3 flex flex-col items-center pb-8">
+          <Card className="w-1/2 flex flex-col items-center pb-8 max-w-xl">
             <CardHeader>
-              <CardTitle
-                className="font-title text-center mt-4 text-tile text-2xl"
-                style={{
-                  textShadow: "-1px 1px 0px #69a0bd",
-                }}
-              >
+              <CardTitle className="text-center mt-4 text-tile text-xl">
                 {t("title")}
               </CardTitle>
             </CardHeader>
@@ -65,17 +62,19 @@ function DesktopView() {
         }
       />
       <DesktopSimpleSection
-        className="bg-setupOnStump"
+        className="bg-setupOnStump gap-8"
+        classNameCard="h-full"
         translationsKey="future_section"
         addonBottom={
           <Image
             src="/illustrations/old-wiz.png"
-            className="h-[250px] object-contain w-auto mt-auto"
+            className="object-contain grow h-0 w-auto"
             width={300}
             height={300}
             alt="old wizard"
           />
         }
+        addonRight={<span className="w-1/2" />}
       />
       <ThanksSection />
     </>

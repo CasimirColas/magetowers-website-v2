@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 
 interface DesktopSimpleSectionProps {
   className?: string;
+  classNameCard?: string;
   translationsKey: string;
   addonTop?: JSX.Element;
   addonBottom?: JSX.Element;
@@ -13,6 +14,7 @@ interface DesktopSimpleSectionProps {
 
 function DesktopSimpleSection({
   className,
+  classNameCard,
   translationsKey,
   addonTop,
   addonRight,
@@ -30,10 +32,15 @@ function DesktopSimpleSection({
         className
       )}
     >
-      <Card className="bg-opacity-95 rounded-lg flex flex-col items-center w-1/2 max-w-xl h-min border-b-0">
+      <Card
+        className={cn(
+          "bg-opacity-95 rounded-lg flex flex-col items-center w-1/2 max-w-xl border-b-0 max-h-[800px]",
+          classNameCard
+        )}
+      >
         <CardHeader>
           <CardTitle
-            className="text-3xl font-title text-center mt-4 text-tile sm:text-4xl"
+            className="font-title text-center mt-4 text-tile text-4xl"
             style={{
               textShadow: "-2px 2px 0px #69a0bd, -1px 2px 0px #69a0bd",
             }}
@@ -42,7 +49,7 @@ function DesktopSimpleSection({
           </CardTitle>
         </CardHeader>
         {addonTop}
-        <CardContent className="sm:text-xl sm:py-8 sm:px-8">
+        <CardContent className="text-xl py-8 px-8">
           {pt("text_full")}
         </CardContent>
         {addonBottom}

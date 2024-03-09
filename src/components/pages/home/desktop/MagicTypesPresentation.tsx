@@ -109,7 +109,7 @@ function Item({
           </div>
         </HoverCardTrigger>
         <HoverCardContent
-          className="flex flex-col items-center justify-between border-none gap-2 w-[40vw]"
+          className="flex flex-col items-center justify-between border-none gap-2 w-[40vw] mb-12 mt-28"
           side="left"
           align="center"
         >
