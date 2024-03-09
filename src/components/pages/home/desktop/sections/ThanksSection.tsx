@@ -1,7 +1,7 @@
 import ScreenSection from "../../../../layout/ScreenSection";
 import ThanksCard from "../../components/ThanksCard";
 import { useTranslations } from "next-intl";
-import ThxCardsData from "../../thxCardsData";
+import ThxCardsData from "@/components/pages/home/ThxCardsData";
 
 function FutureSection() {
   const t = useTranslations("home.thanks_section");
