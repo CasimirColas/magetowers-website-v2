@@ -22,7 +22,11 @@
     "chaos": "chaos",
     "arcane": "arcane",
     "order": "order",
-    "none": "none"
+    "none": "none",
+    "market": "market",
+    "street": "street",
+    "bench": "bench",
+    "player": "player"
   },
   "search": {
     "card_placeholder": "Search for a card..."

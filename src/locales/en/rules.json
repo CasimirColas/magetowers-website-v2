@@ -22,7 +22,11 @@
     "look_cards": "Look at all the cards here"
   },
   "setup": {
-    "title": "Setup"
+    "title": "Setup",
+    "intro": "To start a game of Mage Towers, you will need a base ||deck of Mage Towers|| with 72 cards, a ||counting sheet|| to keep track of the mana for each player and ||coin|| that you will need to flip en certain senarios. The base pack has every card you need for a ||duel between two players||. If you want to play with ||more players||, you will need to ||add more cards to the deck||.",
+    "look_deck": "You can find the deck composition needed for the amount of players you want to play with here",
+    "setup": "In the middle of the table, place a ||row of 6 cards facing down|| and below a ||row of 6 cards facing up||. The row of cards facing up is called the ||Market|| and the row with the cards facing down is called the ||Street||, the whole set is called the ||Bench||. The rest of the cards go in the draw pile.",
+    "distribution": "Choose the first player at random. The ||first player is given 5 cards||, and every other player is given an ||extra card depending on their place in the turn order||. So the second player gets 6 cards, the third 7 and so on."
   },
   "gameplay": {
     "title": "Gameplay"
@@ -37,7 +41,7 @@
     "title": "Incantations"
   },
   "composition": {
-    "title": "Composition"
+    "title": "Deck composition"
   },
   "faq": {
     "title": "FAQ"

@@ -22,7 +22,11 @@
     "chaos": "chaos",
     "arcane": "arcane",
     "order": "ordre",
-    "none": "aucun"
+    "none": "aucun",
+    "market": "marché",
+    "street": "rue",
+    "bench": "banc",
+    "player": "joueur"
   },
   "search": {
     "card_placeholder": "Rechercher une carte..."

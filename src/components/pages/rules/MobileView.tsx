@@ -15,13 +15,14 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Eye } from "lucide-react";
 import useMediaQuery from "@/utils/hooks/useMediaQuery";
+import { capitalizeFirstLetter as cfl } from "@/utils/functions/other";
 
 function MobileView() {
   const [currentSection, setCurrentSection] = useState<RulesSection>(
     sections[0]
   );
   const t = useTranslations("rules");
-
+  const ct = useTranslations("common.vocabulary");
   useIntersectionObserver([...sections], 0.5, (id: string) =>
     setCurrentSection(id as RulesSection)
   );
@@ -150,6 +151,55 @@ function MobileView() {
         </section>
         <section id={sections[2]} className={sectionStyle}>
           <H2 className={h2Style}>{t("setup.title")}</H2>
+          {pr("setup.intro")}
+          <Image
+            src="/compositions/countingSheetEmpty.png"
+            alt="counting sheet"
+            width={400}
+            height={300}
+          />
+          <Link href="#composition" className={linkStyle}>
+            {t("setup.look_deck")}
+          </Link>
+          {pr("setup.setup")}
+          <div className="flex flex-col gap-2 items-center w-full">
+            <b>{cfl(ct("street"))}</b>
+            <div className="flex w-full items-center gap-2">
+              <Image
+                src="/compositions/board.png"
+                alt="board"
+                className="grow w-0 h-auto"
+                width={400}
+                height={300}
+              />
+              <b className="pl-2 border-l-2 border-red-950 h-full flex items-center w-min">
+                {cfl(ct("bench"))}
+              </b>
+            </div>
+            <b>{cfl(ct("market"))}</b>
+          </div>
+          {pr("setup.distribution")}
+          <div className="flex items-center gap-2">
+            <div className="flex flex-col items-center h-full justify-between">
+              <Image
+                src="/compositions/openhand.png"
+                alt={`${ct("player")} 1`}
+                width={200}
+                height={200}
+              />
+              <p>{`${ct("player")} 1 - (5)`}</p>
+            </div>
+            <div className="flex flex-col items-center h-full justify-between">
+              <Image
+                src="/compositions/closehand.png"
+                alt={`${ct("player")} 2`}
+                width={200}
+                height={200}
+              />
+              <p>{`${ct("player")} 2 - (6)`}</p>
+              <p></p>
+            </div>
+          </div>
         </section>
         <section id={sections[3]} className={sectionStyle}>
           <H2 className={h2Style}>{t("gameplay.title")}</H2>
