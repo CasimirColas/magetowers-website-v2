@@ -4,8 +4,8 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 type Cursors =
-  | "/illustrations/pickStreet.png"
-  | "/illustrations/pickMarket.png"
+  | "/compositions/pickStreet.png"
+  | "/compositions/pickMarket.png"
   | "/images/void.png";
 
 interface HoverBenchProps {
@@ -33,20 +33,20 @@ function HoverBench({ className }: HoverBenchProps) {
         className="fixed h-[100px] w-[100px] object-contain z-50 pointer-events-none group-hover:opacity-100 opacity-0"
       />
       <Image
-        src="/illustrations/street.png"
+        src="/compositions/street.png"
         width={800}
         height={400}
         alt="street"
         className="w-full"
-        onMouseEnter={() => setCursorImage("/illustrations/pickStreet.png")}
+        onMouseEnter={() => setCursorImage("/compositions/pickStreet.png")}
       />
       <Image
-        src="/illustrations/market.png"
+        src="/compositions/market.png"
         width={800}
         height={400}
         alt="market"
         className="w-full"
-        onMouseEnter={() => setCursorImage("/illustrations/pickMarket.png")}
+        onMouseEnter={() => setCursorImage("/compositions/pickMarket.png")}
       />
     </div>
   );
