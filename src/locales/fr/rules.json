@@ -1,1 +1,45 @@
-{}
+{
+  "title": "Règles",
+  "history": {
+    "title": "Histoire et Objectif",
+    "lore": "Le nouveau roi couronné de Tavilia doit selon la tradition, nommer un nouvel mage impérial pour servir de conseiller. Mais à une époque où la magie et la technologie sont de plus en plus entrelacées, le roi a décidé d'organiser une compétition pour déterminer qui sera digne du titre de mage impérial. De nombreux mages sont venus de tout le pays jusqu'à la capitale pour concourir, serez-vous celui qui obtiendra ce titre prestigieux ?",
+    "goal": "L'objectif dans Mage Towers est de ||collecter suffisamment de mana|| pour être le premier joueur à utiliser avec succès une ||Incantation|| ou à la fin du tour après que le ||Deck|| soit épuisé, avoir le plus grand nombre de ||blocs de Catalyseur infusés|| dans votre Tour."
+  },
+  "cards": {
+    "title": "Les cartes de Mage Towers",
+    "text": "Il existe ||4 types de cartes|| dans Mage Towers:",
+    "blocks_title": "les Blocs",
+    "blocks": "Les ||Blocs||, comme leur nom l'indique, sont utilisés pour construire votre Tour. Vous ne pouvez en placer qu'un seul à chaque tour, alors choisissez judicieusement. Le ||Catalyseur|| est le bloc le plus important, car c'est le seul qui peut être utilisé pour ||produire du mana stable et cumullable||.",
+    "glyphs_title": "les Glyphes",
+    "glyphs": "Les ||Glyphes|| sont utilisés pour produire du mana. Soit en ||infusant|| des Catalyseurs, soit en les utilisant directement pour obtenir un seul mana du type approprié ||jusqu'à la fin de votre tour||.",
+    "learn_mana": "En savoir plus sur le mana",
+    "spells_title": "les Sorts",
+    "spells": "Les ||Sorts|| sont utilisés pour lancer des effets puissants. Ils peuvent vous aider ou entraver vos adversaires. Le premier niveau de chaque sort ne nécessite rien et peut être utilisé directement. Pour améliorer un sort, vous devez utiliser la ||quantité de mana requise|| ou ||sacrifier des glyphes et des sorts|| du même type de magie.",
+    "learn_spells": "En savoir plus sur les sorts",
+    "utilities_title": "les Utilitaires",
+    "utilities": "Les cartes ||Utilitaires|| ne nécessitent rien pour être utilisés et peuvent s'avérer utiles dans certaines circonstances.",
+    "look_cards_long": "Jetez un œil à toutes les cartes du jeu sur la page dédiée",
+    "look_cards": "Regardez toutes les cartes ici"
+  },
+  "setup": {
+    "title": "Mise en place"
+  },
+  "gameplay": {
+    "title": "Déroulement du jeu"
+  },
+  "mana": {
+    "title": "Mana"
+  },
+  "spells": {
+    "title": "Sorts"
+  },
+  "incantations": {
+    "title": "Incantations"
+  },
+  "composition": {
+    "title": "Composition"
+  },
+  "faq": {
+    "title": "FAQ"
+  }
+}

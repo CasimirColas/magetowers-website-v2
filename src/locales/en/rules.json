@@ -1,1 +1,45 @@
-{}
+{
+  "title": "Rules",
+  "history": {
+    "title": "History and Goal",
+    "lore": "The newly crownd king of Tavilia, per tradition must appoint a new Imperial mage to serve as his advisor. But in this era where magic and technology are becoming more and more intertwined, the king has decided to hold a competition to determine who will be worthy of Imperial mage title. So many mages have come across the land to the capital to compete, will you be the one to earn this prestigeous title?",
+    "goal": "The goal of Mage Towers is to ||collect enought mana|| to be the first player to successfully use an ||Incantation|| or by the end of the turn after the ||Deck|| has been depleted, to have the most amount of ||infused Catalyst blocks|| in your Tower."
+  },
+  "cards": {
+    "title": "The cards of Mage Towers",
+    "text": "There are ||4 type of cards|| in Mage Towers:",
+    "blocks_title": "Blocks",
+    "blocks": "||Blocks||, as the name implies, are used to build your Tower. You can only ||place one of them each turn|| so choose wisely. The ||Catalyst|| is the most important block, as it is the only one that can be used to produce stable and ||collectable mana||.",
+    "glyphs_title": "Glyphs",
+    "glyphs": "||Glyphs||, are used to produce mana. Either by ||infusing|| Catalysts or using them directly to gain a single mana of the appropriate type ||until the end of your turn||.",
+    "learn_mana": "Learn more about mana",
+    "spells_title": "Spells",
+    "spells": "||Spells||, are used to cast powerful effects. They can be used to help you or hinder your opponents. The first level of each spell does not require anything and can be used outright. To level up a spell, you must use the ||required amount of mana|| or ||sacrifice glyphs and spells|| of the same magic type.",
+    "learn_spells": "Learn more about spells",
+    "utilities_title": "Utilities",
+    "utilities": "||Utilities||, require nothing to be used and may come in handy in certain circomstances.",
+    "look_cards_long": "Take a look at all the cards in the game on the dedicated page",
+    "look_cards": "Look at all the cards here"
+  },
+  "setup": {
+    "title": "Setup"
+  },
+  "gameplay": {
+    "title": "Gameplay"
+  },
+  "mana": {
+    "title": "Mana"
+  },
+  "spells": {
+    "title": "Spells"
+  },
+  "incantations": {
+    "title": "Incantations"
+  },
+  "composition": {
+    "title": "Composition"
+  },
+  "faq": {
+    "title": "FAQ"
+  }
+}

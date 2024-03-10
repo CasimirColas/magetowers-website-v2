@@ -1,23 +1,23 @@
 {
   "destruction": {
     "name": "Glyph of Destruction",
-    "description": "Gain 1 mana of ||destruction|| for this turn"
+    "description": "Gain 1 mana of ||destruction|| until the end of your turn"
   },
   "arcane": {
     "name": "Glyph of Arcane",
-    "description": "Gain 1 mana of ||arcane|| for this turn"
+    "description": "Gain 1 mana of ||arcane|| until the end of your turn"
   },
   "order": {
     "name": "Glyph of Order",
-    "description": "Gain 1 mana of ||order|| for this turn"
+    "description": "Gain 1 mana of ||order|| until the end of your turn"
   },
   "chaos": {
     "name": "Glyph of Chaos",
-    "description": "Gain 1 mana of ||chaos|| for this turn"
+    "description": "Gain 1 mana of ||chaos|| until the end of your turn"
   },
   "creation": {
     "name": "Glyph of Creation",
-    "description": "Gain 1 mana of ||any|| type for this turn or ||level up a spell||"
+    "description": "Gain 1 mana of ||any|| type until the end of your turn or ||level up a spell||"
   },
   "catalyst": {
     "name": "Catalyst",

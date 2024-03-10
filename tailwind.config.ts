@@ -24,6 +24,7 @@ const config = {
         card: "63/110",
       },
       backgroundImage: {
+        book: "url('/backgrounds/book.png')",
         mobile: "url('/backgrounds/mobile.png')",
         iceland: "url('/backgrounds/iceland.jpg')",
         skyWithTower: "url('/backgrounds/skyWithTower.png')",
@@ -38,6 +39,9 @@ const config = {
         title: ["Vinque", "sans-serif"],
       },
       colors: {
+        golden: "#cf992c",
+        paper: "#f2ecdf",
+        paperGray: "#6d6854",
         cloud: "#b9ebf4",
         view: "#0698c5",
         brick: "#fa7307",

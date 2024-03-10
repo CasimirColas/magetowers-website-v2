@@ -30,7 +30,7 @@ function Glyph({ className, id, card }: GlyphProps) {
   });
   useEffect(() => {
     adjustFontSize(titleId, 0.06);
-    adjustFontSize(descriptionId, 0.055);
+    adjustFontSize(descriptionId, card.name === "creation" ? 0.046 : 0.055);
   }, []);
   return (
     <div

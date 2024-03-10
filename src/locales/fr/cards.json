@@ -1,23 +1,23 @@
 {
   "destruction": {
     "name": "Glyphe de Destruction",
-    "description": "Gagnez 1 mana de ||destruction|| pour ce tour"
+    "description": "Gagnez 1 mana de ||destruction|| jusqu'à la fin de votre tour"
   },
   "arcane": {
     "name": "Glyphe d'Arcane",
-    "description": "Gagnez 1 mana d'||arcane|| pour ce tour"
+    "description": "Gagnez 1 mana d'||arcane|| jusqu'à la fin de votre tour"
   },
   "order": {
     "name": "Glyphe d'Ordre",
-    "description": "Gagnez 1 mana d'||ordre|| pour ce tour"
+    "description": "Gagnez 1 mana d'||ordre|| jusqu'à la fin de votre tour"
   },
   "chaos": {
     "name": "Glyphe de Chaos",
-    "description": "Gagnez 1 mana de ||chaos|| pour ce tour"
+    "description": "Gagnez 1 mana de ||chaos|| jusqu'à la fin de votre tour"
   },
   "creation": {
     "name": "Glyphe de Création",
-    "description": "Gagnez 1 mana de ||n'importe quel|| type pour ce tour ou ||montez un sort de niveau||"
+    "description": "Gagnez 1 mana de ||n'importe quel|| type jusqu'à la fin de votre tour ou ||montez un sort de niveau||"
   },
   "catalyst": {
     "name": "Catalyseur",
