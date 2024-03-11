@@ -60,7 +60,7 @@ function GameplayMobileSection({
         }}
         plugins={[
           Autoplay({
-            delay: 6000,
+            delay: 5000,
           }),
         ]}
         setApi={setApi}

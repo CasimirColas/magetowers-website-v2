@@ -40,7 +40,13 @@
   },
   "mana": {
     "title": "Mana",
-    "intro": "There are ||5 types of mana|| in Mage Towers. The ||Creation mana|| is the most rare and powerfull of them, it can  be converted into any other type of mana and although it doesn't have an Incantation it can level up spells of any type. The other 4 types of mana are ||Destruction||, ||Arcane||, ||Chaos|| and ||Order||. They are far more common and can be used to level up spells of their respective type."
+    "intro": "Il y a ||5 types de mana|| dans Mage Towers. Le ||mana de Création|| est le plus rare et le plus puissant d'entre eux, il peut être converti en n'importe quel autre type de mana et bien qu'il n'ait pas d'Incantation, il peut améliorer les sorts de n'importe quel type de magie. Les 4 autres types de mana sont ||Destruction||, ||Arcane||, ||Chaos|| et ||Ordre||. Ils sont beaucoup plus courants et peuvent être utilisés pour améliorer les sorts de leur type respectif.",
+    "learn_incantations": "En savoir plus sur les Incantations",
+    "gain_mana": "Il existe 3 principales façons de gagner du mana dans Mage Towers :",
+    "catalysts": "||Blocs -|| À la fin de votre tour, chaque bloc ||Catalyseur|| dans votre tour produira ||un mana|| du type avec lequel il est infusé",
+    "spells": "||Sorts -|| Utiliser des sorts tels que ||Sacrifice|| vous donnera du mana permanent",
+    "glyphs": "||Glyphes -|| Utiliser un glyphe vous donnera du mana de son type jusqu'à la fin de votre tour",
+    "reminder": "N'oubliez pas que tout le mana que vous gagnez de vos ||Blocs et Sorts est permanent|| (n'oubliez pas de le noter), mais le mana que vous gagnez en utilisant des ||Glyphes n'est disponible que jusqu'à la fin de votre tour||."
   },
   "spells": {
     "title": "Sorts"

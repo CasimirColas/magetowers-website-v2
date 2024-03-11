@@ -40,7 +40,13 @@
   },
   "mana": {
     "title": "Mana",
-    "intro": "There are ||5 types of mana|| in Mage Towers. The ||Creation mana|| is the most rare and powerfull of them, it can  be converted into any other type of mana and although it doesn't have an Incantation it can level up spells of any type. The other 4 types of mana are ||Destruction||, ||Arcane||, ||Chaos|| and ||Order||. They are far more common and can be used to level up spells of their respective type."
+    "intro": "There are ||5 types of mana|| in Mage Towers. The ||Creation mana|| is the most rare and powerfull of them, it can  be converted into any other type of mana and although it doesn't have an Incantation it can level up spells of any type. The other 4 types of mana are ||Destruction||, ||Arcane||, ||Chaos|| and ||Order||. They are far more common and can be used to level up spells of their respective type.",
+    "learn_incantations": "Learn more about incantations",
+    "gain_mana": "There are 3 main ways to gain mana in Mage Towers:",
+    "catalysts": "||Block -|| At the end of your turn, each ||Catalyst|| block in your tower will produce ||one mana|| of the type they are infused with",
+    "spells": "||Spells -|| Using spells such as ||Sacrifice|| will give you permanent mana",
+    "glyphs": "||Glyphs -|| Using a glyph will give you mana of it's type until the end of your turn",
+    "reminder": "Remember that all the mana you gain from your ||Blocks and Spells is permanent|| (don't forget to write it down), but the mana you gain from using ||Glyphs is only available until the end of your turn||."
   },
   "spells": {
     "title": "Spells"

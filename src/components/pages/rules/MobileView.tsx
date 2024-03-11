@@ -102,6 +102,7 @@ function MobileView() {
           id={sections[4]}
           className={sectionStyle}
           h2Style={h2Style}
+          linkStyle={linkStyle}
           pr={pr}
         />
         <SpellsMobileSection
