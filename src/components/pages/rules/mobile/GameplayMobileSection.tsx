@@ -11,19 +11,20 @@ import Autoplay from "embla-carousel-autoplay";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { parseText } from "@/utils/functions/parseText";
-import { cn } from "@/lib/utils";
+import { MobileRulesSectionPr } from "../MobileView";
 
 interface GameplayMobileSectionProps {
   id: string;
   className: string;
   h2Style: string;
+  pr: MobileRulesSectionPr;
 }
 
 function GameplayMobileSection({
   id,
   className,
   h2Style,
+  pr,
 }: GameplayMobileSectionProps) {
   const t = useTranslations("rules.gameplay");
 
@@ -44,21 +45,6 @@ function GameplayMobileSection({
     });
   }, [api]);
 
-  function pr(
-    translationKey: string,
-    parentClassName?: string,
-    childClassName?: string
-  ) {
-    return parseText({
-      text: t(translationKey),
-      args: {
-        parentClassName: cn("w-full", parentClassName),
-        childClassName: cn("text-red-950", childClassName),
-      },
-      default: true,
-    });
-  }
-
   const carouselItemStyle =
     "flex justify-start flex-col items-center gap-2 h-72 sm:h-96";
   const carouselTitleStyle = "text-center text-red-950 py-4";
@@ -67,7 +53,7 @@ function GameplayMobileSection({
       <H2 className={h2Style} id={id}>
         {t("title")}
       </H2>
-      {pr("text")}
+      {pr("text", t)}
       <Carousel
         opts={{
           align: "start",

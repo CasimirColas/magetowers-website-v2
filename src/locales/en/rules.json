@@ -39,7 +39,8 @@
     "count": "Write down the mana points you gained on the counting sheet"
   },
   "mana": {
-    "title": "Mana"
+    "title": "Mana",
+    "intro": "There are ||5 types of mana|| in Mage Towers. The ||Creation mana|| is the most rare and powerfull of them, it can  be converted into any other type of mana and although it doesn't have an Incantation it can level up spells of any type. The other 4 types of mana are ||Destruction||, ||Arcane||, ||Chaos|| and ||Order||. They are far more common and can be used to level up spells of their respective type."
   },
   "spells": {
     "title": "Spells"

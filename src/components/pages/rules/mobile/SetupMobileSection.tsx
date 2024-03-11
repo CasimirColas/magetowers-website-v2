@@ -3,14 +3,14 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { capitalizeFirstLetter as cfl } from "@/utils/functions/other";
-import { parseText } from "@/utils/functions/parseText";
-import { cn } from "@/lib/utils";
+import { MobileRulesSectionPr } from "../MobileView";
 
 interface SetupMobileSectionProps {
   id: string;
   className: string;
   h2Style: string;
   linkStyle: string;
+  pr: MobileRulesSectionPr;
 }
 
 function SetupMobileSection({
@@ -18,29 +18,16 @@ function SetupMobileSection({
   className,
   h2Style,
   linkStyle,
+  pr,
 }: SetupMobileSectionProps) {
   const t = useTranslations("rules.setup");
   const ct = useTranslations("common.vocabulary");
-  function pr(
-    translationKey: string,
-    parentClassName?: string,
-    childClassName?: string
-  ) {
-    return parseText({
-      text: t(translationKey),
-      args: {
-        parentClassName: cn("w-full", parentClassName),
-        childClassName: cn("text-red-950", childClassName),
-      },
-      default: true,
-    });
-  }
   return (
     <section className={className}>
       <H2 className={h2Style} id={id}>
         {t("title")}
       </H2>
-      {pr("intro")}
+      {pr("intro", t)}
       <Image
         src="/compositions/countingSheetEmpty.png"
         alt="counting sheet"
@@ -51,7 +38,7 @@ function SetupMobileSection({
       <Link href="#composition" className={linkStyle}>
         {t("look_deck")}
       </Link>
-      {pr("setup")}
+      {pr("setup", t)}
       <div className="flex flex-col gap-2 items-center w-full">
         <b>{cfl(ct("street"))}</b>
         <div className="flex w-full items-center gap-2">
@@ -68,7 +55,7 @@ function SetupMobileSection({
         </div>
         <b>{cfl(ct("market"))}</b>
       </div>
-      {pr("distribution")}
+      {pr("distribution", t)}
       <div className="flex items-center gap-2 w-full">
         <div className="flex flex-col items-center h-full justify-between grow">
           <Image
