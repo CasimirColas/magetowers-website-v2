@@ -23,15 +23,18 @@ export const H1 = ({
 export const H2 = ({
   children,
   className,
+  id,
 }: {
   children: React.ReactNode;
   className?: string;
+  id?: string;
 }) => (
   <h2
     className={cn(
       "scroll-m-20 border-b pb-0 sm:pb-1 text-xl sm:text-3xl font-semibold tracking-tight first:mt-0",
       className
     )}
+    id={id}
   >
     {children}
   </h2>
