@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { useTranslations } from "next-intl";
 import SectionSelector from "./SectionSelector";
@@ -16,6 +16,15 @@ import { Button } from "@/components/ui/button";
 import { Eye } from "lucide-react";
 import useMediaQuery from "@/utils/hooks/useMediaQuery";
 import { capitalizeFirstLetter as cfl } from "@/utils/functions/other";
+import Autoplay from "embla-carousel-autoplay";
+import {
+  Carousel,
+  CarouselApi,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 function MobileView() {
   const [currentSection, setCurrentSection] = useState<RulesSection>(
@@ -73,6 +82,23 @@ function MobileView() {
     );
   }
 
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap() + 1);
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap() + 1);
+    });
+  }, [api]);
+
   const sectionStyle = "w-full pb-8 flex flex-col items-center gap-4";
   const h2Style = "border-red-950 text-red-950 w-full";
   const h3Style = "text-red-950";
@@ -80,6 +106,9 @@ function MobileView() {
     "w-full flex flex-col items-center justify-start gap-4 sm:border-none border-b border-paperGray pb-2 sm:pb-0 last:border-none";
   const linkStyle =
     "underline text-red-950 hover:text-red-950 hover:no-underline hover:font-semibold";
+  const carouselItemStyle =
+    "flex justify-start flex-col items-center gap-2 h-72 sm:h-96";
+  const carouselTitleStyle = "text-center text-red-950 py-4";
 
   return (
     <div className="w-full h-full bg-book overflow-auto bg-center bg-contain sm:bg-cover flex flex-col gap-4 items-center px-6 scroll-smooth">
@@ -91,10 +120,7 @@ function MobileView() {
         />
       </div>
       <div className="flex flex-col items-center w-[85%] sm:w-[80%] mt-20 bg-paper rounded-sm shadow-sm px-4">
-        <H1
-          className="font-title py-12 text-red-950 sm:text-5xl"
-          //style={{ textShadow: "1px -1px 1px #713f12" }}
-        >
+        <H1 className="font-title py-12 text-red-950 sm:text-5xl">
           {t("title")}
         </H1>
         <section id={sections[0]} className={sectionStyle}>
@@ -179,22 +205,24 @@ function MobileView() {
             <b>{cfl(ct("market"))}</b>
           </div>
           {pr("setup.distribution")}
-          <div className="flex items-center gap-2">
-            <div className="flex flex-col items-center h-full justify-between">
+          <div className="flex items-center gap-2 w-full">
+            <div className="flex flex-col items-center h-full justify-between grow">
               <Image
                 src="/compositions/openhand.png"
                 alt={`${ct("player")} 1`}
                 width={200}
                 height={200}
+                className="w-auto h-auto"
               />
               <p>{`${ct("player")} 1 - (5)`}</p>
             </div>
-            <div className="flex flex-col items-center h-full justify-between">
+            <div className="flex flex-col items-center h-full justify-between grow">
               <Image
                 src="/compositions/closehand.png"
                 alt={`${ct("player")} 2`}
                 width={200}
                 height={200}
+                className="w-auto h-auto"
               />
               <p>{`${ct("player")} 2 - (6)`}</p>
               <p></p>
@@ -203,6 +231,101 @@ function MobileView() {
         </section>
         <section id={sections[3]} className={sectionStyle}>
           <H2 className={h2Style}>{t("gameplay.title")}</H2>
+          {pr("gameplay.text")}
+          <Carousel
+            opts={{
+              align: "start",
+            }}
+            plugins={[
+              Autoplay({
+                delay: 6000,
+              }),
+            ]}
+            setApi={setApi}
+            className="w-2/3 h-full scroll-smooth"
+          >
+            <CarouselContent>
+              <CarouselItem className={carouselItemStyle}>
+                <b className={carouselTitleStyle}>{t("gameplay.pick_cards")}</b>
+                <div className="flex flex-col h-full rotate-[-45deg] w-9/12">
+                  <Image
+                    src={"/compositions/pickFromMarket.png"}
+                    alt={"picking"}
+                    width={200}
+                    height={200}
+                    className="h-1/2 rotate-180 w-auto object-contain"
+                  />
+
+                  <Image
+                    src={"/compositions/pickFromStreet.png"}
+                    alt={"picking"}
+                    width={200}
+                    height={200}
+                    className="h-1/2 w-auto object-contain"
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem className={carouselItemStyle}>
+                <b className={carouselTitleStyle}>{t("gameplay.play_cards")}</b>
+                <Image
+                  src={"/compositions/playCards.png"}
+                  alt={"play"}
+                  width={200}
+                  height={200}
+                  className="h-0 grow w-auto object-contain"
+                />
+              </CarouselItem>
+              <CarouselItem className={carouselItemStyle}>
+                <b className={carouselTitleStyle}>
+                  {t("gameplay.convert_mana")}
+                </b>
+                <Image
+                  src={"/compositions/convertMana.png"}
+                  alt={"convert"}
+                  width={200}
+                  height={200}
+                  className="h-0 grow w-auto object-contain"
+                />
+              </CarouselItem>
+              <CarouselItem className={carouselItemStyle}>
+                <b className={carouselTitleStyle}>
+                  {t("gameplay.place_block")}
+                </b>
+                <Image
+                  src={"/compositions/placeBlock.png"}
+                  alt={"block"}
+                  width={200}
+                  height={200}
+                  className="h-0 grow w-auto object-contain p-8"
+                />
+              </CarouselItem>
+              <CarouselItem className={carouselItemStyle}>
+                <b className={carouselTitleStyle}>{t("gameplay.end")}</b>
+                <Image
+                  src={"/compositions/drawFromPile.png"}
+                  alt={"draw"}
+                  width={200}
+                  height={200}
+                  className="h-0 grow w-auto object-contain"
+                />
+              </CarouselItem>
+              <CarouselItem className={carouselItemStyle}>
+                <b className={carouselTitleStyle}>{t("gameplay.count")}</b>
+                <Image
+                  src={"/compositions/counting.png"}
+                  alt={"counting"}
+                  width={200}
+                  height={200}
+                  className="h-0 grow w-auto object-contain"
+                />
+              </CarouselItem>
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+          <div className="py-2 text-center text-sm text-muted-foreground">
+            {current} / {count}
+          </div>
         </section>
         <section id={sections[4]} className={sectionStyle}>
           <H2 className={h2Style}>{t("mana.title")}</H2>

@@ -29,7 +29,14 @@
     "distribution": "Choose the first player at random. The ||first player is given 5 cards||, and every other player is given an ||extra card depending on their place in the turn order||. So the second player gets 6 cards, the third 7 and so on."
   },
   "gameplay": {
-    "title": "Gameplay"
+    "title": "Gameplay",
+    "text": "The game is played in turns. At the begining of your turn, start by picking a card from the ||Market|| or 2 from the ||Street||. Then, you can ||play as many cards as you want|| from your hand but you can only ||place one block|| per turn. During your turn can also convert 2 ||Creation mana|| into 1 mana of any type. ||When you are done, draw 1 card|| from the draw pile and pass the turn to the next player. Every time you pick cards from the ||Bench||, fill the empty spaces with cards from the draw pile.",
+    "pick_cards": "Pick a card from the Market or 2 from the Street",
+    "play_cards": "Play as many cards as you want",
+    "convert_mana": "Convert some Creation mana if needed",
+    "place_block": "Place one block",
+    "end": "Draw 1 card and pass the turn",
+    "count": "Write down the mana points you gained on the counting sheet"
   },
   "mana": {
     "title": "Mana"
