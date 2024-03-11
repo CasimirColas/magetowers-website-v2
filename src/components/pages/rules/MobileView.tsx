@@ -10,13 +10,18 @@ import HistoryMobileSection from "./mobile/HistoryMobileSection";
 import CardsMobileSection from "./mobile/CardsMobileSection";
 import SetupMobileSection from "./mobile/SetupMobileSection";
 import GameplayMobileSection from "./mobile/GameplayMobileSection";
+import ManaMobileSection from "./mobile/ManaMobileSection";
+import SpellsMobileSection from "./mobile/SpellsMobileSection";
+import IncantationsMobileSection from "./mobile/IncantationsMobileSection";
+import CompositionMobileSection from "./mobile/CompositionMobileSection";
+import FAQMobileSection from "./mobile/FAQMobileSection";
 
 function MobileView() {
   const [currentSection, setCurrentSection] = useState<RulesSection>(
     sections[0]
   );
   const t = useTranslations("rules");
-  const ct = useTranslations("common.vocabulary");
+
   useIntersectionObserver([...sections], 0.5, (id: string) =>
     setCurrentSection(id as RulesSection)
   );
@@ -86,21 +91,31 @@ function MobileView() {
           className={sectionStyle}
           h2Style={h2Style}
         />
-        <section id={sections[4]} className={sectionStyle}>
-          <H2 className={h2Style}>{t("mana.title")}</H2>
-        </section>
-        <section id={sections[5]} className={sectionStyle}>
-          <H2 className={h2Style}>{t("spells.title")}</H2>
-        </section>
-        <section id={sections[6]} className={sectionStyle}>
-          <H2 className={h2Style}>{t("incantations.title")}</H2>
-        </section>
-        <section id={sections[7]} className={sectionStyle}>
-          <H2 className={h2Style}>{t("composition.title")}</H2>
-        </section>
-        <section id={sections[8]} className={sectionStyle}>
-          <H2 className={h2Style}>{t("faq.title")}</H2>
-        </section>
+        <ManaMobileSection
+          id={sections[4]}
+          className={sectionStyle}
+          h2Style={h2Style}
+        />
+        <SpellsMobileSection
+          id={sections[5]}
+          className={sectionStyle}
+          h2Style={h2Style}
+        />
+        <IncantationsMobileSection
+          id={sections[6]}
+          className={sectionStyle}
+          h2Style={h2Style}
+        />
+        <CompositionMobileSection
+          id={sections[7]}
+          className={sectionStyle}
+          h2Style={h2Style}
+        />
+        <FAQMobileSection
+          id={sections[8]}
+          className={sectionStyle}
+          h2Style={h2Style}
+        />
       </div>
     </div>
   );
