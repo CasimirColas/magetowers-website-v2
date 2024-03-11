@@ -46,6 +46,7 @@ function SetupMobileSection({
         alt="counting sheet"
         width={400}
         height={300}
+        className="w-auto h-auto"
       />
       <Link href="#composition" className={linkStyle}>
         {t("look_deck")}
