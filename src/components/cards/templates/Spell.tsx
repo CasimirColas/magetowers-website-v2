@@ -28,10 +28,10 @@ function Spell({ className, id, card }: SpellProps) {
         className
       )}
       style={{
-        backgroundImage: `url(${card.cardImage}),url(/cards/spell_bkg.png)`,
-        backgroundSize: "cover, 100% 41%",
-        backgroundPosition: "center,top",
-        backgroundRepeat: "no-repeat,no-repeat",
+        backgroundImage: `url(${card.cardImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
       }}
     >
       <div

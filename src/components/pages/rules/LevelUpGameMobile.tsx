@@ -110,7 +110,7 @@ function LevelUpGameMobile({ h3Style }: LevelUpGameMobileProps) {
                     alt="crossed out card"
                     width={100}
                     height={100}
-                    className="h-20 sm:h-36 w-auto rounded-sm animate-jump-in"
+                    className="h-20 sm:h-36 w-auto rounded-sm animate-jump-in aspect-card"
                   />
                 </div>
               );
