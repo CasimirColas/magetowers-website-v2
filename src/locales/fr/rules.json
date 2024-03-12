@@ -105,6 +105,7 @@
     "warning": "Le jeu a été bien testé de ||2 à 4 joueurs||, quelques parties ont été jouées avec plus mais dépasser 6 joueurs n'est pas recommandé mais possible 😂."
   },
   "faq": {
-    "title": "FAQ"
+    "title": "FAQ",
+    "intro": "Voici quelques questions fréquemment posées sur Mage Towers. Si vous avez d'autres questions, n'hésitez pas à nous contacter sur les réseaux sociaux!"
   }
 }
