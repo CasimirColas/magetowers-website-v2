@@ -23,7 +23,7 @@
   },
   "setup": {
     "title": "Mise en place",
-    "intro": "Pour commencer une partie de Mage Towers, vous aurez besoin d'un ||deck Mage Towers|| de base avec 72 cartes, d'une ||feuille de comptage|| pour suivre le mana de chaque joueur et d'une ||pièce de monnaie|| dont vous aurez besoin pour certains scénarios. Le pack de base contient toutes les cartes dont vous avez besoin pour un ||duel entre deux joueurs||. Si vous voulez jouer avec ||plus de joueurs||, vous devrez ||ajouter plus de cartes au deck||.",
+    "intro": "Pour commencer une partie de Mage Towers, vous aurez besoin d'un ||deck Mage Towers|| de base avec 72 cartes et d'une ||feuille de comptage|| pour suivre le mana de chaque joueur. Le pack de base contient toutes les cartes dont vous avez besoin pour un ||duel entre deux joueurs||. Si vous voulez jouer avec ||plus de joueurs||, vous devrez ||ajouter plus de cartes au deck||.",
     "look_deck": "Vous pouvez trouver la composition du deck nécessaire en fonction du nombre de joueurs avec lequel vous voulez jouer ici",
     "setup": "Au milieu de la table, placez une ||rangée de 6 cartes face cachée|| et en dessous une ||rangée de 6 cartes face visible||. La rangée de cartes face visible s'appelle le ||Marché|| et la rangée de cartes face cachée s'appelle la ||Rue||, l'ensemble est appelé le ||Banc||. Le reste des cartes va dans la pioche.",
     "distribution": "Choisissez le premier joueur au hasard. Le ||premier joueur reçoit 5 cartes||, et chaque autre joueur reçoit une ||carte supplémentaire en fonction de sa place dans l'ordre du tour||. Ainsi, le deuxième joueur reçoit 6 cartes, le troisième 7, et ainsi de suite."
@@ -69,7 +69,29 @@
     }
   },
   "incantations": {
-    "title": "Incantations"
+    "title": "Incantations",
+    "intro": "Utiliser une ||Incantation|| est le principal moyen de gagner dans Mage Towers. Elle ne peut être utilisée que pendant votre tour et vous devez avoir suffisamment de mana pour l'utiliser et respecter ses ||exigences spécifiques||. Voici la liste des ||Incantations|| que vous pouvez utiliser :",
+    "destruction": {
+      "name": "Apocalypse",
+      "requirements": "Coûte ||13 mana de Destruction||",
+      "effect": "Lorsque vous l'utilisez, votre tour se termine, ||vous ne pouvez plus jouer de carte et votre tour est sauté||. Si, dans les ||2 prochains tours||, aucun autre joueur n'utilise d'Incantation ou si ||la pioche est vide||, ||vous remportez la partie||."
+    },
+    "arcane": {
+      "name": "Connexion Arcanique",
+      "requirements": "Coûte ||10 mana d'Arcane||, vous devez avoir un ||Observatoire|| dans votre tour depuis au moins un tour.",
+      "effect": "||Vous remportez la partie||"
+    },
+    "chaos": {
+      "name": "Manipulation de Masse",
+      "requirements": "Coûte ||7 mana de Chaos||, vous devez avoir un ||Observatoire|| dans votre tour depuis au moins un tour et avoir la ||tour avec le moins de Catalyseurs||.",
+      "effect": "||Vous remportez la partie||"
+    },
+    "order": {
+      "name": "Ordre Céleste",
+      "requirements": "Coûte ||12 mana d'Ordre||",
+      "effect": "Lorsque vous l'utilisez, votre tour se termine. Jusqu'à la fin de la partie, si aucun autre joueur n'utilise d'Incantation, vous gagnez lorsque ||votre quantité totale de mana correspond à celle d'un autre joueur|| ou si ||la pioche est vide||."
+    },
+    "addendum": "Dans le cas où une Incantation est utilisée après une ||Apocalypse|| ou un ||Ordre Céleste||, le vainqueur est l'utilisateur de l'Incantation avec ||le plus de blocs de Catalyseurs infusés|| dans sa tour."
   },
   "composition": {
     "title": "Composition du deck"

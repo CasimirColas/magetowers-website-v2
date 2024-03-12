@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 import SectionSelector from "./SectionSelector";
 import { RulesSection, sections } from "./sections";
 import useIntersectionObserver from "@/utils/hooks/useIntersectionObserver";
-import { H1, H2 } from "@/components/ui/typography";
+import { H1 } from "@/components/ui/typography";
 import { parseText } from "@/utils/functions/parseText";
 import { cn } from "@/lib/utils";
 import HistoryMobileSection from "./mobile/HistoryMobileSection";
@@ -40,9 +40,9 @@ function MobileView() {
   );
   const t = useTranslations("rules");
 
-  useIntersectionObserver([...sections], 0.5, (id: string) =>
-    setCurrentSection(id as RulesSection)
-  );
+  // useIntersectionObserver([...sections], 0.5, (id: string) =>
+  //   setCurrentSection(id as RulesSection)
+  // );
 
   function handleSectionChange(value: RulesSection) {
     setCurrentSection(value);
@@ -60,7 +60,7 @@ function MobileView() {
 
   return (
     <div className="w-full h-full bg-book overflow-auto bg-center bg-contain sm:bg-cover flex flex-col gap-4 items-center px-6 scroll-smooth">
-      <div className="absolute z-10 w-full p-4 bg-red-900 bg-opacity-90 drop-shadow-md">
+      <div className="absolute z-20 w-full p-4 bg-red-900 bg-opacity-90 drop-shadow-md">
         <SectionSelector
           className="w-full"
           value={currentSection}

@@ -23,7 +23,7 @@
   },
   "setup": {
     "title": "Setup",
-    "intro": "To start a game of Mage Towers, you will need a base ||deck of Mage Towers|| with 72 cards, a ||counting sheet|| to keep track of the mana for each player and ||coin|| that you will need to flip en certain senarios. The base pack has every card you need for a ||duel between two players||. If you want to play with ||more players||, you will need to ||add more cards to the deck||.",
+    "intro": "To start a game of Mage Towers, you will need a base ||deck of Mage Towers|| with 72 cards and a ||counting sheet|| to keep track of the mana for each player. The base pack has every card you need for a ||duel between two players||. If you want to play with ||more players||, you will need to ||add more cards to the deck||.",
     "look_deck": "You can find the deck composition needed for the amount of players you want to play with here",
     "setup": "In the middle of the table, place a ||row of 6 cards facing down|| and below a ||row of 6 cards facing up||. The row of cards facing up is called the ||Market|| and the row with the cards facing down is called the ||Street||, the whole set is called the ||Bench||. The rest of the cards go in the draw pile.",
     "distribution": "Choose the first player at random. The ||first player is given 5 cards||, and every other player is given an ||extra card depending on their place in the turn order||. So the second player gets 6 cards, the third 7 and so on."
@@ -69,7 +69,29 @@
     }
   },
   "incantations": {
-    "title": "Incantations"
+    "title": "Incantations",
+    "intro": "Using an ||Incantation|| is the main way to win in Mage Towers. It can only be used during your turn and, you must have enought mana to use it and meet its ||specific requirements||. Here is the list of ||Incantations|| you can use:",
+    "destruction": {
+      "name": "Apocalypse",
+      "requirements": "Costs ||13 Destruction mana||",
+      "effect": "On use your turn ends, you ||can no longer play any card and your turn is skipped||. If in the next ||2 turns|| no other player uses an Incantation or if the ||draw pile is emptied||, ||you win the game||."
+    },
+    "arcane": {
+      "name": "Arcane Atunement",
+      "requirements": "Costs ||10 Arcane mana||, you must have an ||Observatory|| in your tower for at least a turn.",
+      "effect": "||You win the game||"
+    },
+    "chaos": {
+      "name": "Mass Manipulation",
+      "requirements": "Costs ||7 Chaos mana||, you must have an ||Observatory|| in your tower for at least a turn and have the ||tower with the least amount of Catalysts||.",
+      "effect": "||You win the game||"
+    },
+    "order": {
+      "name": "Celestial Order",
+      "requirements": "Costs ||12 Order mana||",
+      "effect": "On use your turn ends. Until the end of the game, if no other player uses an Incantation, you win when your ||total amount of mana matches an other player|| or if the ||draw pile is emptied||."
+    },
+    "addendum": "In the case of an Incantaiton beeing used after an ||Apocalypse|| or a ||Celestial order||, the victor is the Incantation user with ||the most infused Catalyst blocks|| in his tower."
   },
   "composition": {
     "title": "Deck composition"
