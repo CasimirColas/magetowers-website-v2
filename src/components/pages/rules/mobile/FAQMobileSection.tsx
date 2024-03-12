@@ -1,6 +1,7 @@
 import { H2 } from "@/components/ui/typography";
 import { useTranslations } from "next-intl";
 import { MobileRulesSectionPr } from "../MobileView";
+import LinksRow from "../../home/components/LinksRow";
 
 interface FAQMobileSectionProps {
   id: string;
@@ -21,6 +22,8 @@ function FAQMobileSection({
       <H2 className={h2Style} id={id}>
         {t("title")}
       </H2>
+      <p className="text-center">{t("intro")}</p>
+      <LinksRow />
     </section>
   );
 }
