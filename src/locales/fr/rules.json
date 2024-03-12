@@ -94,7 +94,15 @@
     "addendum": "Dans le cas où une Incantation est utilisée après une ||Apocalypse|| ou un ||Ordre Céleste||, le vainqueur est l'utilisateur de l'Incantation avec ||le plus de blocs de Catalyseurs infusés|| dans sa tour."
   },
   "composition": {
-    "title": "Composition du deck"
+    "title": "Composition du deck",
+    "intro": "Le pack de base de Mage Towers contient 72 cartes et est conçu pour un duel entre deux joueurs. Si vous souhaitez jouer avec plus de joueurs, vous devrez ajouter plus de cartes au deck. Vous pouvez choisir d'utiliser la configuration ||rapide|| ou la configuration ||lente|| en fonction de la vitesse à laquelle vous souhaitez jouer. Mais nous vous encourageons à ||essayer les deux|| et à voir laquelle vous préférez, voire même à ||créer votre propre configuration||. Faites nous savoir sur les réseaux sociaux quelle est votre configuration favorite!",
+    "number_of_players": "Nombre de joueurs:",
+    "fast_config": "Configuration rapide:",
+    "number_of_pack": "Nombre de packs de base nécessaire:",
+    "card_names": "Nom de la carte",
+    "count": "Compte",
+    "total": "Total",
+    "warning": "Le jeu a été bien testé de ||2 à 4 joueurs||, quelques parties ont été jouées avec plus mais dépasser 6 joueurs n'est pas recommandé mais possible 😂."
   },
   "faq": {
     "title": "FAQ"

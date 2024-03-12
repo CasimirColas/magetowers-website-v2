@@ -91,10 +91,18 @@
       "requirements": "Costs ||12 Order mana||",
       "effect": "On use your turn ends. Until the end of the game, if no other player uses an Incantation, you win when your ||total amount of mana matches an other player|| or if the ||draw pile is emptied||."
     },
-    "addendum": "In the case of an Incantaiton beeing used after an ||Apocalypse|| or a ||Celestial order||, the victor is the Incantation user with ||the most infused Catalyst blocks|| in his tower."
+    "addendum": "In the case of an Incantaiton beeing used after an ||Apocalypse|| or a ||Celestial order||, the victor is the Incantation use r with ||the most infused Catalyst blocks|| in his tower."
   },
   "composition": {
-    "title": "Deck composition"
+    "title": "Deck composition",
+    "intro": "The base pack of Mage Towers has 72 cards and is designed for a duel between two players. If you want to play with more players, you will need to add more cards to the deck. You can choose to use the ||fast|| or the ||slow|| configuration depending how fast you want the game to. But we encourage you to ||try both|| and see which one you prefer and even ||create you own||. Let us know on social media what your favorite configuration is!",
+    "number_of_players": "Number of players:",
+    "fast_config": "Fast configuration:",
+    "number_of_pack": "Number of base packs needed:",
+    "card_names": "Name of the card",
+    "count": "Count",
+    "total": "Total",
+    "warning": "The game has been well tested from ||2 to 4 players||, few games have been played with more but going over 6 players is not recommended but possible 😂."
   },
   "faq": {
     "title": "FAQ"
