@@ -17,9 +17,10 @@ import { Minus, Plus } from "lucide-react";
 import { useState } from "react";
 import adaptCount from "@/components/cards/adaptCount";
 import { Switch } from "@/components/ui/switch";
+import { RulesSection } from "../sections";
 
 interface CompositionMobileSectionProps {
-  id: string;
+  id: RulesSection;
   className: string;
   h2Style: string;
   pr: MobileRulesSectionPr;
@@ -64,7 +65,7 @@ function CompositionMobileSection({
   }
 
   return (
-    <section className={className}>
+    <section className={className} id={"observerId-" + id}>
       <H2 className={h2Style} id={id}>
         {t("title")}
       </H2>

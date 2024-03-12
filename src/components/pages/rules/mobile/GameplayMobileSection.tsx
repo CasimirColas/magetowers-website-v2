@@ -12,9 +12,10 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { MobileRulesSectionPr } from "../MobileView";
+import { RulesSection } from "../sections";
 
 interface GameplayMobileSectionProps {
-  id: string;
+  id: RulesSection;
   className: string;
   h2Style: string;
   pr: MobileRulesSectionPr;
@@ -49,7 +50,7 @@ function GameplayMobileSection({
     "flex justify-start flex-col items-center gap-2 h-72 sm:h-96";
   const carouselTitleStyle = "text-center text-red-950 py-4";
   return (
-    <section className={className}>
+    <section className={className} id={"observerId-" + id}>
       <H2 className={h2Style} id={id}>
         {t("title")}
       </H2>

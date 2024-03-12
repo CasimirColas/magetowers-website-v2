@@ -2,9 +2,10 @@ import { Blockquote, H2 } from "@/components/ui/typography";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { MobileRulesSectionPr } from "../MobileView";
+import { RulesSection } from "../sections";
 
 interface HistoryMobileSectionProps {
-  id: string;
+  id: RulesSection;
   className: string;
   h2Style: string;
   pr: MobileRulesSectionPr;
@@ -18,7 +19,7 @@ function HistoryMobileSection({
 }: HistoryMobileSectionProps) {
   const t = useTranslations("rules.history");
   return (
-    <section className={className}>
+    <section className={className} id={"observerId-" + id}>
       <H2 className={h2Style} id={id}>
         {t("title")}
       </H2>

@@ -3,9 +3,10 @@ import { useTranslations } from "next-intl";
 import { MobileRulesSectionPr } from "../MobileView";
 import { manaType, manaTypeList } from "@/components/cards/types";
 import Image from "next/image";
+import { RulesSection } from "../sections";
 
 interface IncantationsMobileSectionProps {
-  id: string;
+  id: RulesSection;
   className: string;
   h2Style: string;
   pr: MobileRulesSectionPr;
@@ -37,7 +38,7 @@ function IncantationsMobileSection({
   }
 
   return (
-    <section className={className}>
+    <section className={className} id={"observerId-" + id}>
       <H2 className={h2Style} id={id}>
         {t("title")}
       </H2>

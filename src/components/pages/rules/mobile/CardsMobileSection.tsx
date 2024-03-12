@@ -8,9 +8,10 @@ import { Eye } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { MobileRulesSectionPr } from "../MobileView";
+import { RulesSection } from "../sections";
 
 interface CardsMobileSectionProps {
-  id: string;
+  id: RulesSection;
   className: string;
   h2Style: string;
   h3Style: string;
@@ -51,7 +52,7 @@ function CardsMobileSection({
   const cardsBlockStyle =
     "w-full flex flex-col items-center justify-start gap-4 sm:border-none border-b border-paperGray pb-2 sm:pb-0 last:border-none";
   return (
-    <section className={className}>
+    <section className={className} id={"observerId-" + id}>
       <H2 className={h2Style} id={id}>
         {t("title")}
       </H2>

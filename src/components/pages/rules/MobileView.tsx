@@ -40,8 +40,10 @@ function MobileView() {
   );
   const t = useTranslations("rules");
 
-  // useIntersectionObserver([...sections], 0.5, (id: string) =>
-  //   setCurrentSection(id as RulesSection)
+  // useIntersectionObserver(
+  //   [...sections].map((e) => "observerId-" + e),
+  //   0,
+  //   (id: string) => setCurrentSection(id.slice(11) as RulesSection)
   // );
 
   function handleSectionChange(value: RulesSection) {
@@ -72,60 +74,60 @@ function MobileView() {
           {t("title")}
         </H1>
         <HistoryMobileSection
-          id={sections[0]}
+          id={"history"}
           className={sectionStyle}
           h2Style={h2Style}
-          pr={pr}
-        />
-        <CardsMobileSection
-          id={sections[1]}
-          className={sectionStyle}
-          h2Style={h2Style}
-          h3Style={h3Style}
-          linkStyle={linkStyle}
           pr={pr}
         />
         <SetupMobileSection
-          id={sections[2]}
+          id={"setup"}
           className={sectionStyle}
           h2Style={h2Style}
           linkStyle={linkStyle}
           pr={pr}
         />
         <GameplayMobileSection
-          id={sections[3]}
+          id={"gameplay"}
           className={sectionStyle}
           h2Style={h2Style}
           pr={pr}
         />
+        <CardsMobileSection
+          id={"cards"}
+          className={sectionStyle}
+          h2Style={h2Style}
+          h3Style={h3Style}
+          linkStyle={linkStyle}
+          pr={pr}
+        />
         <ManaMobileSection
-          id={sections[4]}
+          id={"mana"}
           className={sectionStyle}
           h2Style={h2Style}
           linkStyle={linkStyle}
           pr={pr}
         />
         <SpellsMobileSection
-          id={sections[5]}
+          id={"spells"}
           className={sectionStyle}
           h2Style={h2Style}
           h3Style={h3Style}
           pr={pr}
         />
         <IncantationsMobileSection
-          id={sections[6]}
+          id={"incantations"}
           className={sectionStyle}
           h2Style={h2Style}
           pr={pr}
         />
         <CompositionMobileSection
-          id={sections[7]}
+          id={"composition"}
           className={sectionStyle}
           h2Style={h2Style}
           pr={pr}
         />
         <FAQMobileSection
-          id={sections[8]}
+          id={"faq"}
           className={sectionStyle}
           h2Style={h2Style}
           pr={pr}

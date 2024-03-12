@@ -4,9 +4,10 @@ import { MobileRulesSectionPr } from "../MobileView";
 import { manaTypeList } from "@/components/cards/types";
 import Image from "next/image";
 import Link from "next/link";
+import { RulesSection } from "../sections";
 
 interface ManaMobileSectionProps {
-  id: string;
+  id: RulesSection;
   className: string;
   h2Style: string;
   linkStyle: string;
@@ -23,7 +24,7 @@ function ManaMobileSection({
   const t = useTranslations("rules.mana");
   const ct = useTranslations("common.vocabulary");
   return (
-    <section className={className}>
+    <section className={className} id={"observerId-" + id}>
       <H2 className={h2Style} id={id}>
         {t("title")}
       </H2>

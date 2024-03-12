@@ -2,9 +2,10 @@ import { H2 } from "@/components/ui/typography";
 import { useTranslations } from "next-intl";
 import { MobileRulesSectionPr } from "../MobileView";
 import LevelUpGameMobile from "../LevelUpGameMobile";
+import { RulesSection } from "../sections";
 
 interface SpellsMobileSectionProps {
-  id: string;
+  id: RulesSection;
   className: string;
   h2Style: string;
   h3Style: string;
@@ -20,7 +21,7 @@ function SpellsMobileSection({
 }: SpellsMobileSectionProps) {
   const t = useTranslations("rules.spells");
   return (
-    <section className={className}>
+    <section className={className} id={"observerId-" + id}>
       <H2 className={h2Style} id={id}>
         {t("title")}
       </H2>

@@ -2,9 +2,10 @@ import { H2 } from "@/components/ui/typography";
 import { useTranslations } from "next-intl";
 import { MobileRulesSectionPr } from "../MobileView";
 import LinksRow from "../../home/components/LinksRow";
+import { RulesSection } from "../sections";
 
 interface FAQMobileSectionProps {
-  id: string;
+  id: RulesSection;
   className: string;
   h2Style: string;
   pr: MobileRulesSectionPr;
@@ -18,7 +19,7 @@ function FAQMobileSection({
 }: FAQMobileSectionProps) {
   const t = useTranslations("rules.faq");
   return (
-    <section className={className}>
+    <section className={className} id={"observerId-" + id}>
       <H2 className={h2Style} id={id}>
         {t("title")}
       </H2>
