@@ -52,7 +52,7 @@ function ManaMobileSection({
         {t("learn_incantations")}
       </Link>
       <p>{t("gain_mana")}</p>
-      <ul className=" ml-6 list-disc [&>li]:mt-2">
+      <ul className="ml-6 list-disc [&>li]:mt-2">
         <li>{pr("catalysts", t)}</li>
         <li>{pr("spells", t)}</li>
         <li>{pr("glyphs", t)}</li>

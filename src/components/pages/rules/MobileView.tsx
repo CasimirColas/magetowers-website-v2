@@ -109,6 +109,7 @@ function MobileView() {
           id={sections[5]}
           className={sectionStyle}
           h2Style={h2Style}
+          h3Style={h3Style}
           pr={pr}
         />
         <IncantationsMobileSection

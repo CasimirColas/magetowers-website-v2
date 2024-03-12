@@ -49,7 +49,24 @@
     "reminder": "Remember that all the mana you gain from your ||Blocks and Spells is permanent|| (don't forget to write it down), but the mana you gain from using ||Glyphs is only available until the end of your turn||."
   },
   "spells": {
-    "title": "Spells"
+    "title": "Spells",
+    "intro": "Each spell in Mage Towers has serveral levels of power. The first level of each spell does not require anything and can be used outright. To level up a spell you can:",
+    "addendum": "Any of those actions will level up the spell to the next level. They can be used in any order and in any amount, so you can mix and match them as you see fit.",
+    "mana": "||Use the a mana|| of the same type as the spell",
+    "sacrifice": "||Discard a spell|| of the same type",
+    "glyph": "||Use or discard a glyph|| of the same type",
+    "creation_glyph": "||Use or discard a Creation glyph||",
+    "level_up_game": {
+      "title": "Level up this spell!",
+      "msg0": "Use the buttons below to level up this spell.",
+      "msg1": "Almost there...",
+      "msg2": "Well done! Your spell has reach its full potential.",
+      "spell": "Spell",
+      "mana": "Mana",
+      "glyph": "Glyph",
+      "creation_glyph": "Creation glyph",
+      "reset": "Reset"
+    }
   },
   "incantations": {
     "title": "Incantations"

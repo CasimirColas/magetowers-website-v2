@@ -49,7 +49,24 @@
     "reminder": "N'oubliez pas que tout le mana que vous gagnez de vos ||Blocs et Sorts est permanent|| (n'oubliez pas de le noter), mais le mana que vous gagnez en utilisant des ||Glyphes n'est disponible que jusqu'à la fin de votre tour||."
   },
   "spells": {
-    "title": "Sorts"
+    "title": "Sorts",
+    "intro": "Chaque sort dans Mage Towers a plusieurs niveaux de puissance. Le premier niveau de chaque sort ne nécessite rien et peut être utilisé directement. Pour améliorer un sort, vous pouvez :",
+    "addendum": "Toutes ces actions feront monter le sort d'un niveau. Elles peuvent être utilisées dans n'importe quel ordre et en n'importe quelle quantité, vous pouvez donc les combiner comme bon vous semble.",
+    "mana": "||Utiliser un mana|| du même type que le sort",
+    "sacrifice": "||Défausser un sort|| du même type",
+    "glyph": "||Utiliser ou défausser un glyphe|| du même type",
+    "creation_glyph": "||Utiliser ou défausser un glyphe de Création||",
+    "level_up_game": {
+      "title": "Monte ce sort de niveau!",
+      "msg0": "Utilisez les boutons ci-dessous pour améliorer ce sort.",
+      "msg1": "On y est presque...",
+      "msg2": "Bien joué ! Votre sort a atteint son plein potentiel.",
+      "spell": "Sort",
+      "mana": "Mana",
+      "glyph": "Glyphe",
+      "creation_glyph": "Glyphe de Création",
+      "reset": "Réinitialiser"
+    }
   },
   "incantations": {
     "title": "Incantations"
