@@ -29,7 +29,7 @@ function IncantationsMobileSection({
           alt={mana}
           width={200}
           height={200}
-          className="w-[200px] h-auto"
+          className="w-[210px] h-auto"
         />
         {pr(mana + ".requirements", t, "text-center sm:w-3/4", `text-${mana}`)}
         {pr(mana + ".effect", t, "text-center sm:w-3/4")}
