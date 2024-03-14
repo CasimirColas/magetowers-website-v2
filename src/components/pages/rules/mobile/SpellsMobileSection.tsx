@@ -26,13 +26,13 @@ function SpellsMobileSection({
         {t("title")}
       </H2>
       <p>{t("intro")}</p>
-      <i>{t("addendum")}</i>
-      <ul className="ml-6 list-disc [&>li]:mt-2">
+      <ul className="ml-6 list-disc [&>li]:mt-2 w-11/12 sm:w-full sm:pl-4">
         <li>{pr("mana", t)}</li>
         <li>{pr("sacrifice", t)}</li>
         <li>{pr("glyph", t)}</li>
         <li>{pr("creation_glyph", t)}</li>
       </ul>
+      <i>{t("addendum")}</i>
       <LevelUpGameMobile h3Style={h3Style} />
     </section>
   );

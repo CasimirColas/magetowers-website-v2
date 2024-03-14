@@ -4,6 +4,7 @@ export const sections = [
   "setup",
   "gameplay",
   "mana",
+  "catalysts",
   "spells",
   "incantations",
   "composition",

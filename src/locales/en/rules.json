@@ -48,6 +48,13 @@
     "glyphs": "||Glyphs -|| Using a glyph will give you mana of it's type until the end of your turn",
     "reminder": "Remember that all the mana you gain from your ||Blocks and Spells is permanent|| (don't forget to write it down), but the mana you gain from using ||Glyphs is only available until the end of your turn||."
   },
+  "catalysts": {
+    "title": "Build your Mage Tower",
+    "intro": "||Once per turn|| you have the opportunity to ||place a block|| in your tower. Each block is ||placed on the table above the previous one|| in a column representing the construction of your tower. Each player can only build ||one tower||, so be carefull when planning your construction because ||some blocks have placement restrictions||.",
+    "catalyst": "The most essential block of your tower is the ||Catalyst|| as it is your primary way of getting mana. You can play it in combination with ||1 regular glyphs|| (Destruction, Arcane, Order, Chaos) or ||2 Creation glyphs|| to infuse it. If you do, place the glyphs above or next to the Catalyst on the table to indicate the type of mana it will produce. At the end of your turn, each Catalyst block in your tower will produce one mana of the type of mana they are infused with.",
+    "change_infusion": "During your turn, you can also choose to ||change or assign a new type of infusion|| to your Catalyst. To do this, place the previously infusing glyphs in the discard pile if there were any, and then place 2 identic glyphs on the Catalyst. ||This action cannot be performed with glyphs of Creation||.",
+    "tip": "As you might have understood, not imidiatly infusing a Catalyst with glyphs could cost you more ressources in the future so plan accordingly."
+  },
   "spells": {
     "title": "Spells",
     "intro": "Each spell in Mage Towers has serveral levels of power. The first level of each spell does not require anything and can be used outright. To level up a spell you can:",

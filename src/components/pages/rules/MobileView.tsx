@@ -15,6 +15,7 @@ import SpellsMobileSection from "./mobile/SpellsMobileSection";
 import IncantationsMobileSection from "./mobile/IncantationsMobileSection";
 import CompositionMobileSection from "./mobile/CompositionMobileSection";
 import FAQMobileSection from "./mobile/FAQMobileSection";
+import CatalystsMobileSection from "./mobile/CatalystsMobileSection";
 
 function pr(
   translationKey: string,
@@ -105,6 +106,12 @@ function MobileView() {
           className={sectionStyle}
           h2Style={h2Style}
           linkStyle={linkStyle}
+          pr={pr}
+        />
+        <CatalystsMobileSection
+          id={"catalysts"}
+          className={sectionStyle}
+          h2Style={h2Style}
           pr={pr}
         />
         <SpellsMobileSection

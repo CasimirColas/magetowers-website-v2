@@ -29,7 +29,7 @@ function DefaultLayout({
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover"
-        ></meta>
+        />
       </Head>
       <Navbar className="fixed top-0" />
       <main
