@@ -1,8 +1,8 @@
 export const sections = [
   "history",
-  "cards",
   "setup",
   "gameplay",
+  "cards",
   "mana",
   "catalysts",
   "spells",

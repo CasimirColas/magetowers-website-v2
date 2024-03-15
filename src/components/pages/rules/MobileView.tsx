@@ -1,8 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import SectionSelector from "./SectionSelector";
 import { RulesSection, sections } from "./sections";
-import useIntersectionObserver from "@/utils/hooks/useIntersectionObserver";
 import { H1 } from "@/components/ui/typography";
 import { parseText } from "@/utils/functions/parseText";
 import { cn } from "@/lib/utils";
@@ -36,16 +35,8 @@ function pr(
 export type MobileRulesSectionPr = typeof pr;
 
 function MobileView() {
-  const [currentSection, setCurrentSection] = useState<RulesSection>(
-    sections[0]
-  );
+  const [currentSection, setCurrentSection] = useState<RulesSection>("history");
   const t = useTranslations("rules");
-
-  // useIntersectionObserver(
-  //   [...sections].map((e) => "observerId-" + e),
-  //   0,
-  //   (id: string) => setCurrentSection(id.slice(11) as RulesSection)
-  // );
 
   function handleSectionChange(value: RulesSection) {
     setCurrentSection(value);
@@ -61,15 +52,68 @@ function MobileView() {
   const linkStyle =
     "underline text-red-950 hover:text-red-950 hover:no-underline hover:font-semibold";
 
+  const sectionsPositions = sections.map((section) =>
+    getPositionInScroll("observerId-" + section)
+  );
+
+  function scroll(id: string) {
+    if (typeof window === "undefined") return;
+    const div = document.getElementById(id);
+    if (!div) return;
+    const handleScroll = () => {
+      const end = div.scrollTop + div.clientHeight / 2;
+      updateProgressBar(Math.floor((end / div.scrollHeight) * 100));
+      setCurrentSection(
+        sectionsPositions.find(
+          (section) => section.bottom > end && section.top < end
+        )?.name as RulesSection
+      );
+    };
+    div.addEventListener("scroll", handleScroll);
+    return () => {
+      div.removeEventListener("scroll", handleScroll);
+    };
+  }
+
+  function getPositionInScroll(id: string) {
+    const fallback = { name: id, top: 0, bottom: 0 };
+    if (typeof window === "undefined") return fallback;
+    const div = document.getElementById(id);
+    if (!div) return fallback;
+    return {
+      name: id.slice(11),
+      top: div.offsetTop,
+      bottom: div.offsetTop + div.offsetHeight,
+    };
+  }
+
+  function updateProgressBar(progress: number) {
+    const div = document.getElementById("progress-bar");
+    if (!div) return;
+    div.style.setProperty("width", `${progress}%`);
+  }
+
+  useEffect(() => {
+    return scroll("testtest");
+  }, []);
+
   return (
-    <div className="w-full h-full bg-book overflow-auto bg-center bg-contain sm:bg-cover flex flex-col gap-4 items-center px-6 scroll-smooth">
-      <div className="absolute z-20 w-full p-4 bg-red-900 bg-opacity-90 drop-shadow-md">
-        <SectionSelector
-          className="w-full"
-          value={currentSection}
-          onChange={handleSectionChange}
-        />
+    <div
+      className="w-full h-full bg-book overflow-auto bg-center bg-contain sm:bg-cover flex flex-col gap-4 items-center px-6 scroll-smooth"
+      id="testtest"
+    >
+      <div className="absolute z-20 w-full bg-red-900 bg-opacity-90 drop-shadow-md flex flex-col justify-between">
+        <div className="w-full p-4">
+          <SectionSelector
+            className="w-full px-4"
+            value={currentSection}
+            onChange={handleSectionChange}
+          />
+        </div>
+
+        <div className="border-order border z-20" id="progress-bar" />
       </div>
+
       <div className="flex flex-col items-center w-[85%] sm:w-[80%] mt-20 bg-paper rounded-sm shadow-sm px-4">
         <H1 className="font-title py-12 text-red-950 sm:text-5xl">
           {t("title")}
