@@ -94,13 +94,13 @@ function MobileView() {
   }
 
   useEffect(() => {
-    return scroll("testtest");
+    return scroll("rules-mobile");
   }, []);
 
   return (
     <div
       className="w-full h-full bg-book overflow-auto bg-center bg-contain sm:bg-cover flex flex-col gap-4 items-center px-6 scroll-smooth"
-      id="testtest"
+      id="rules-mobile"
     >
       <div className="absolute z-20 w-full bg-red-900 bg-opacity-90 drop-shadow-md flex flex-col justify-between">
         <div className="w-full p-4">
