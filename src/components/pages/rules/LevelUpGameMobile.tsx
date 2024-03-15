@@ -31,7 +31,7 @@ function LevelUpGameMobile({ h3Style }: LevelUpGameMobileProps) {
 
   const framePositions = ["38%", "55.5%", "73%"];
   const buttonStyle =
-    "w-full flex items-center justify-center sm:justify-between gap-2 sm:w-[calc(50%-0.25rem)] border-red-900 border";
+    "w-full flex items-center justify-center sm:justify-between gap-2 border-red-900 border p-1 aspect-square sm:aspect-none";
   return (
     <>
       <H3
@@ -118,7 +118,7 @@ function LevelUpGameMobile({ h3Style }: LevelUpGameMobileProps) {
           </div>
         </div>
       </div>
-      <div className="flex items-center gap-2 sm:flex-wrap justify-center">
+      <div className="w-full grid grid-cols-2 grid-rows-3 gap-2">
         <Button
           className={buttonStyle}
           variant={"secondary"}
@@ -130,7 +130,7 @@ function LevelUpGameMobile({ h3Style }: LevelUpGameMobileProps) {
             alt="Destruction spell"
             width={25}
             height={25}
-            className="w-full h-auto sm:h-full sm:w-auto"
+            className="h-full w-auto object-contain"
           />
         </Button>
         <Button
@@ -142,9 +142,9 @@ function LevelUpGameMobile({ h3Style }: LevelUpGameMobileProps) {
           <Image
             src="/glyphs/stones/destruction.png"
             alt="Mana of destruction"
-            width={25}
-            height={25}
-            className="w-full h-auto sm:h-full sm:w-auto"
+            width={50}
+            height={50}
+            className="h-full w-auto object-contain"
           />
         </Button>
         <Button
@@ -158,7 +158,7 @@ function LevelUpGameMobile({ h3Style }: LevelUpGameMobileProps) {
             alt="Glyph of destruction"
             width={25}
             height={25}
-            className="w-full h-auto sm:h-full sm:w-auto"
+            className="h-full w-auto object-contain"
           />
         </Button>
         <Button
@@ -172,19 +172,19 @@ function LevelUpGameMobile({ h3Style }: LevelUpGameMobileProps) {
             alt="Glyph of creation"
             width={25}
             height={25}
-            className="w-full h-auto sm:h-full sm:w-auto"
+            className="h-full w-auto object-contain"
           />
         </Button>
         <Button
           className={cn(
             buttonStyle,
-            "sm:w-full  text-order bg-red-900 hover:bg-red-900"
+            "sm:w-full  text-order bg-red-900 hover:bg-red-900 col-span-2 p-2"
           )}
           variant={"secondary"}
           onClick={() => handleLevelUp("reset")}
         >
           {isSm ? t("reset") : null}
-          <RotateCcw className="w-full h-auto sm:h-full sm:w-auto sm:p-1" />
+          <RotateCcw className="h-full w-auto sm:p-1" />
         </Button>
       </div>
     </>
