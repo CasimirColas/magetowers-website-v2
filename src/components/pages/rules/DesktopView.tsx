@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { sections } from "./sections";
+import { RulesSection, sections } from "./sections";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import HistoryDesktopSection from "./desktop/HistoryDesktopSection";
@@ -14,6 +14,7 @@ import CompositionDesktopSection from "./desktop/CompositionDesktopSection";
 import FAQDesktopSection from "./desktop/FAQDesktopSection";
 import { parseText } from "@/utils/functions/parseText";
 import { cn } from "@/lib/utils";
+import { useEffect, useState } from "react";
 
 function pr(
   translationKey: string,
@@ -37,19 +38,83 @@ function DesktopView() {
   const t = useTranslations("rules");
   const sectionStyle = "w-full p-4 flex flex-col gap-2 items-center";
   const h2Style = "border-sky-900 text-left w-full";
+
+  function updateButtons(id: string) {
+    if (typeof window === "undefined") return;
+    sections.forEach((section) => {
+      const button = document.getElementById("button-" + section);
+      if (!button) return;
+      if (section === id) {
+        button.classList.add("bg-sky-900", "text-white");
+      } else {
+        button.classList.remove("bg-sky-900", "text-white");
+      }
+    });
+  }
+
+  function getPositionInScroll(id: string) {
+    const fallback = { name: id, top: 0, bottom: 0 };
+    if (typeof window === "undefined") return fallback;
+    const div = document.getElementById(id);
+    if (!div) return fallback;
+    return {
+      name: id,
+      top: div.offsetTop,
+      bottom: div.offsetTop + div.offsetHeight,
+    };
+  }
+
+  const sectionsPositions = sections.map((section) =>
+    getPositionInScroll(section)
+  );
+
+  function scroll(id: string) {
+    if (typeof window === "undefined") return;
+    const div = document.getElementById(id);
+    if (!div) return;
+    const handleScroll = () => {
+      const end = div.scrollTop + 100;
+      const currentSection = sectionsPositions.find(
+        (section) => section.bottom > end && section.top < end
+      )?.name;
+      updateButtons(currentSection ?? "");
+    };
+    div.addEventListener("scroll", handleScroll);
+    return () => {
+      div.removeEventListener("scroll", handleScroll);
+    };
+  }
+
+  useEffect(() => {
+    return scroll("rules-desktop");
+  }, []);
+
+  function handleSectionChange(value: RulesSection) {
+    const section = document.getElementById(value);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }
+
   return (
-    <div
-      className="w-full h-full bg-skyWithTower bg-center bg-cover flex justify-center"
-      id="desktop-rules"
-    >
+    <div className="w-full h-full bg-skyWithTower bg-center bg-cover flex justify-center">
       <div className="flex flex-col h-full p-4 bg-white bg-opacity-90 gap-2">
         {sections.map((section) => (
-          <Button key={section} variant={"outline"}>
-            <Link href={"#" + section}>{t(section + ".title")}</Link>
+          <Button
+            key={section}
+            variant={"outline"}
+            className="hover:bg-sky-600 hover:text-white"
+            id={"button-" + section}
+            onClick={() => handleSectionChange(section)}
+          >
+            {t(section + ".title")}
           </Button>
         ))}
       </div>
-      <div className="flex flex-col w-full xl:w-[50vw] overflow-auto scroll-smooth gap-2 bg-white bg-opacity-80">
+      <div
+        className="flex flex-col w-full xl:w-[50vw] overflow-auto scroll-smooth gap-2 bg-white bg-opacity-80"
+        id="rules-desktop"
+      >
         <HistoryDesktopSection
           id={"history"}
           pr={pr}
