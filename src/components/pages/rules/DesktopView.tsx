@@ -45,9 +45,9 @@ function DesktopView() {
       const button = document.getElementById("button-" + section);
       if (!button) return;
       if (section === id) {
-        button.classList.add("bg-sky-900", "text-white");
+        button.className = cn(button.className, "bg-sky-900 text-white");
       } else {
-        button.classList.remove("bg-sky-900", "text-white");
+        button.className = cn(button.className, "bg-white text-black");
       }
     });
   }
