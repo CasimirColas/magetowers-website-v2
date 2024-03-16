@@ -1,33 +1,23 @@
-import { H2 } from "@/components/ui/typography";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
-import Link from "next/link";
-import { capitalizeFirstLetter as cfl } from "@/utils/functions/other";
-import { MobileRulesSectionPr } from "../MobileView";
 import { RulesSection } from "../sections";
+import { H2 } from "@/components/ui/typography";
+import { DesktopRulesSectionPr } from "../DesktopView";
+import Image from "next/image";
+import { capitalizeFirstLetter as cfl } from "@/utils/functions/other";
+import Link from "next/link";
 
-interface SetupMobileSectionProps {
+interface SetupDesktopSectionProps {
   id: RulesSection;
+  pr: DesktopRulesSectionPr;
   className: string;
-  h2Style: string;
-  linkStyle: string;
-  pr: MobileRulesSectionPr;
 }
 
-function SetupMobileSection({
-  id,
-  className,
-  h2Style,
-  linkStyle,
-  pr,
-}: SetupMobileSectionProps) {
+function SetupDesktopSection({ id, pr, className }: SetupDesktopSectionProps) {
   const t = useTranslations("rules.setup");
   const ct = useTranslations("common.vocabulary");
   return (
-    <section className={className} id={"observerId-" + id}>
-      <H2 className={h2Style} id={id}>
-        {t("title")}
-      </H2>
+    <section className={className} id={id}>
+      <H2>{t("title")}</H2>
       {pr("intro", t)}
       <Image
         src="/compositions/countingSheetEmpty.png"
@@ -36,9 +26,7 @@ function SetupMobileSection({
         height={300}
         className="w-auto h-auto"
       />
-      <Link href="#composition" className={linkStyle}>
-        {t("look_deck")}
-      </Link>
+      <Link href="#composition">{t("look_deck")}</Link>
       {pr("setup", t)}
       <div className="flex flex-col gap-2 items-center w-full">
         <b>{cfl(ct("street"))}</b>
@@ -83,4 +71,4 @@ function SetupMobileSection({
   );
 }
 
-export default SetupMobileSection;
+export default SetupDesktopSection;
