@@ -6,43 +6,83 @@ import Link from "next/link";
 import { DesktopRulesSectionPr } from "../DesktopView";
 import { Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import DetailsDialog from "@/components/utility/DetailsDialog";
+import { CardNames, cardCategory } from "@/components/cards/types";
 
 interface CardsDesktopSectionProps {
   id: RulesSection;
   pr: DesktopRulesSectionPr;
   className: string;
+  h2Style: string;
 }
 
-function CardsDesktopSection({ id, pr, className }: CardsDesktopSectionProps) {
+function CardsDesktopSection({
+  id,
+  pr,
+  className,
+  h2Style,
+}: CardsDesktopSectionProps) {
   const t = useTranslations("rules.cards");
+
+  function GameCardPopup({ name }: { name: CardNames }) {
+    return (
+      <DetailsDialog
+        triggerClassName="w-56 flex justify-center"
+        trigger={
+          <GameCard
+            name={name}
+            id={name + "-cards-section-trigger"}
+            className="w-full h-auto rounded-md"
+          />
+        }
+      >
+        <GameCard
+          name={name}
+          id={name + "-cards-section-detail"}
+          className="w-auto h-[80vh] rounded-md"
+        />
+      </DetailsDialog>
+    );
+  }
+
   const cardsBlockStyle =
-    "w-full flex flex-col items-center justify-start gap-4 sm:border-none border-b border-paperGray pb-2 sm:pb-0 last:border-none";
+    "w-full flex items-center justify-start pb-4 border-b border-slate-400";
+  const textBlockStyle = "flex flex-col h-full w-full justify-end pl-4";
+  const blockNameStyle = "mb-4";
   return (
     <section className={className} id={id}>
-      <H2>{t("title")}</H2>
+      <H2 className={h2Style}>{t("title")}</H2>
       {pr("text", t)}
-      <div className="flex flex-col items-center w-full gap-4 sm:grid grid-cols-2 grid-rows-2 sm:items-start">
+      <div className="w-full flex flex-col gap-4">
         <div className={cardsBlockStyle}>
-          <H3>{t("blocks_title")}</H3>
-          <GameCard name="catalyst" id="desktop-catalyst" />
-          {pr("blocks", t, "px-4 ")}
+          <GameCardPopup name="catalyst" />
+          <div className={textBlockStyle}>
+            <H3 className={blockNameStyle}>{t("blocks_title")}</H3>
+            {pr("blocks", t)}
+          </div>
         </div>
         <div className={cardsBlockStyle}>
-          <H3>{t("glyphs_title")}</H3>
-          <GameCard name="creation" id="desktop-creation" />
-          <Link href="#mana">{t("learn_mana")}</Link>
-          {pr("glyphs", t, "px-4")}
+          <GameCardPopup name="creation" />
+          <div className={textBlockStyle}>
+            <H3 className={blockNameStyle}>{t("glyphs_title")}</H3>
+            {pr("glyphs", t)}
+            <Link href="#mana">{t("learn_mana")}</Link>
+          </div>
         </div>
         <div className={cardsBlockStyle}>
-          <H3>{t("spells_title")}</H3>
-          <GameCard name="ignite" id="desktop-ignite" />
-          <Link href="#spells">{t("learn_spells")}</Link>
-          {pr("spells", t, "px-4 ")}
+          <GameCardPopup name="ignite" />
+          <div className={textBlockStyle}>
+            <H3 className={blockNameStyle}>{t("spells_title")}</H3>
+            {pr("spells", t)}
+            <Link href="#spells">{t("learn_spells")}</Link>
+          </div>
         </div>
         <div className={cardsBlockStyle}>
-          <H3>{t("utilities_title")}</H3>
-          <GameCard name="renovation" id="desktop-renovation" />
-          {pr("utilities", t, "px-4 ")}
+          <GameCardPopup name="renovation" />
+          <div className={textBlockStyle}>
+            <H3 className={blockNameStyle}>{t("utilities_title")}</H3>
+            {pr("utilities", t)}
+          </div>
         </div>
       </div>
       <Button asChild variant={"outline"} className="mt-2 w-full">

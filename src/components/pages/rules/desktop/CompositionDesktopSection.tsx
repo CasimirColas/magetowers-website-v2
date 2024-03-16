@@ -23,12 +23,14 @@ interface CompositionDesktopSectionProps {
   id: RulesSection;
   pr: DesktopRulesSectionPr;
   className: string;
+  h2Style: string;
 }
 
 function CompositionDesktopSection({
   id,
   pr,
   className,
+  h2Style,
 }: CompositionDesktopSectionProps) {
   const [playerCount, setPlayerCount] = useState(2);
   const [isFast, setIsFast] = useState(true);
@@ -47,6 +49,9 @@ function CompositionDesktopSection({
       ),
     };
   });
+  const col1 = tableMapper.slice(0, Math.ceil(tableMapper.length / 2));
+  const col2 = tableMapper.slice(Math.ceil(tableMapper.length / 2));
+
   const totalCards = tableMapper.reduce(
     (accumulator, currentValue) => accumulator + currentValue.count,
     0
@@ -61,19 +66,61 @@ function CompositionDesktopSection({
       setPlayerCount(playerCount - 1);
     }
   }
+
+  function DesktopTable({
+    data,
+    className,
+    total,
+  }: {
+    total?: boolean;
+    className?: string;
+    data: { name: string; count: number }[];
+  }) {
+    return (
+      <Table className={className}>
+        <TableHeader>
+          <TableRow className="border-sky-900">
+            <TableHead className="font-bold text-sky-900">
+              {t("card_names")}
+            </TableHead>
+            <TableHead className="font-bold text-sky-900">
+              {t("count")}
+            </TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {data.map((line, i) => (
+            <TableRow key={"table_row-" + i} className="border-paperGray">
+              {Object.values(line).map((value, j) => (
+                <TableCell key={"table_row-" + i + "-cell-" + j}>
+                  {value}
+                </TableCell>
+              ))}
+            </TableRow>
+          ))}
+        </TableBody>
+        {total && (
+          <TableFooter>
+            <TableRow className="bg-sky-900 hover:bg-sky-900">
+              <TableCell className="text-white">{t("total")}</TableCell>
+              <TableCell className="text-white">{totalCards}</TableCell>
+            </TableRow>
+          </TableFooter>
+        )}
+      </Table>
+    );
+  }
+
   return (
     <section className={className} id={id}>
-      <H2>{t("title")}</H2>
+      <H2 className={h2Style}>{t("title")}</H2>
       {pr("intro", t)}
       <i>{pr("warning", t)}</i>
-      <div className="grid grid-cols-2 grid-rows-2 w-full p-2 gap-y-2 border border-paperGray rounded-md">
-        <label
-          htmlFor="player-count"
-          className="text-sm sm:text-base flex items-center"
-        >
+      <div className="grid grid-cols-2 grid-rows-2 w-full p-4 gap-y-2 border border-black rounded-md">
+        <label htmlFor="player-count" className="text-base flex items-center">
           {t("number_of_players")}
         </label>
-        <div className="flex justify-center items-center">
+        <div className="flex justify-end items-center">
           <Button
             variant={"link"}
             className="rounded-full aspect-square p-0"
@@ -103,58 +150,26 @@ function CompositionDesktopSection({
             <Plus className="h-4 w-4" />
           </Button>
         </div>
-        <label
-          htmlFor="game-speed"
-          className="text-sm sm:text-base flex items-center"
-        >
+        <label htmlFor="game-speed" className="text-base flex items-center">
           {t("fast_config")}
         </label>
-        <div className="flex justify-center items-center">
+        <div className="flex justify-end items-center mr-10">
           <Switch
-            className="data-[state=checked]:bg-red-950 data-[state=unchecked]:bg-slate-900"
+            className="data-[state=checked]:bg-sky-900 data-[state=unchecked]:bg-slate-900"
             checked={isFast}
             onCheckedChange={() => setIsFast((prev) => !prev)}
             id="game-speed"
           />
         </div>
       </div>
-      <p className="text-sm sm:text-base">
+      <p className="text-base">
         {t("number_of_pack")}{" "}
-        <b className="text-red-950">{Math.ceil(playerCount / 2)}</b>
+        <b className="text-sky-900">{Math.ceil(playerCount / 2)}</b>
       </p>
-      <Table>
-        <TableHeader>
-          <TableRow className="border-red-950">
-            <TableHead className="font-bold text-red-950">
-              {t("card_names")}
-            </TableHead>
-            <TableHead className="font-bold text-red-950">
-              {t("count")}
-            </TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {tableMapper.map((line, i) => (
-            <TableRow key={"table_row-" + i} className="border-paperGray">
-              {Object.values(line).map((value, j) => (
-                <TableCell key={"table_row-" + i + "-cell-" + j}>
-                  {value}
-                </TableCell>
-              ))}
-            </TableRow>
-          ))}
-        </TableBody>
-        <TableFooter>
-          <TableRow className="bg-red-900">
-            <TableCell className="text-order hover:text-black">
-              {t("total")}
-            </TableCell>
-            <TableCell className="text-order hover:text-black">
-              {totalCards}
-            </TableCell>
-          </TableRow>
-        </TableFooter>
-      </Table>
+      <div className="flex w-full gap-4">
+        <DesktopTable data={col1} />
+        <DesktopTable data={col2} total />
+      </div>
     </section>
   );
 }

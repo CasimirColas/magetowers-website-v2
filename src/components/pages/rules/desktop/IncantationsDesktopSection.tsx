@@ -9,38 +9,44 @@ interface IncantationsDesktopSectionProps {
   id: RulesSection;
   pr: DesktopRulesSectionPr;
   className: string;
+  h2Style: string;
 }
 
 function IncantationsDesktopSection({
   id,
   pr,
   className,
+  h2Style,
 }: IncantationsDesktopSectionProps) {
   const t = useTranslations("rules.incantations");
   function IncantationDiv({ mana }: { mana: manaType }) {
     return (
-      <div className="flex flex-col gap-2 w-full items-center border-t border-paperGray pt-4">
-        <H3 className={`text-${mana}`}>{t(mana + ".name")}</H3>
+      <div className="flex gap-2 w-full items-end p-4 justify-center border-b border-slate-400 last:border-none">
         <Image
           src={`/incantations/${mana}.png`}
           alt={mana}
           width={200}
           height={200}
-          className="w-[210px] h-auto"
+          className="w-[210px] h-auto p-4"
         />
-        {pr(mana + ".requirements", t, "text-center sm:w-3/4", `text-${mana}`)}
-        {pr(mana + ".effect", t, "text-center sm:w-3/4")}
+        <div className="w-full flex flex-col gap-2">
+          <H3 className={`text-${mana}`}>{t(mana + ".name")}</H3>
+          {pr(mana + ".requirements", t, "", `text-${mana}`)}
+          {pr(mana + ".effect", t, "", `text-${mana}`)}
+        </div>
       </div>
     );
   }
   return (
     <section className={className} id={id}>
-      <H2>{t("title")}</H2>
+      <H2 className={h2Style}>{t("title")}</H2>
       {pr("intro", t)}
-      <i>{pr("addendum", t)}</i>
-      {manaTypeList.slice(1, 5).map((mana) => (
-        <IncantationDiv key={mana} mana={mana} />
-      ))}
+      <i className="w-full">{pr("addendum", t)}</i>
+      <div className="flex flex-col">
+        {manaTypeList.slice(1, 5).map((mana) => (
+          <IncantationDiv key={mana} mana={mana} />
+        ))}
+      </div>
     </section>
   );
 }

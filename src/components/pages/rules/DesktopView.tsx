@@ -35,10 +35,11 @@ export type DesktopRulesSectionPr = typeof pr;
 
 function DesktopView() {
   const t = useTranslations("rules");
-  const sectionStyle = "w-full bg-white bg-opacity-80 p-4";
+  const sectionStyle = "w-full p-4 flex flex-col gap-2 items-center";
+  const h2Style = "border-sky-900 text-left w-full";
   return (
     <div
-      className="w-full h-full bg-skyWithTower bg-center bg-cover flex"
+      className="w-full h-full bg-skyWithTower bg-center bg-cover flex justify-center"
       id="desktop-rules"
     >
       <div className="flex flex-col h-full p-4 bg-white bg-opacity-90 gap-2">
@@ -48,37 +49,67 @@ function DesktopView() {
           </Button>
         ))}
       </div>
-      <div className="flex flex-col w-full overflow-auto scroll-smooth">
+      <div className="flex flex-col w-full xl:w-[50vw] overflow-auto scroll-smooth gap-2 bg-white bg-opacity-80">
         <HistoryDesktopSection
           id={"history"}
           pr={pr}
           className={sectionStyle}
+          h2Style={h2Style}
         />
-        <SetupDesktopSection id={"setup"} pr={pr} className={sectionStyle} />
+        <SetupDesktopSection
+          id={"setup"}
+          pr={pr}
+          className={sectionStyle}
+          h2Style={h2Style}
+        />
         <GameplayDesktopSection
           id={"gameplay"}
           pr={pr}
           className={sectionStyle}
+          h2Style={h2Style}
         />
-        <CardsDesktopSection id={"cards"} pr={pr} className={sectionStyle} />
-        <ManaDesktopSection id={"mana"} pr={pr} className={sectionStyle} />
+        <CardsDesktopSection
+          id={"cards"}
+          pr={pr}
+          className={sectionStyle}
+          h2Style={h2Style}
+        />
+        <ManaDesktopSection
+          id={"mana"}
+          pr={pr}
+          className={sectionStyle}
+          h2Style={h2Style}
+        />
         <CatalystsDesktopSection
           id={"catalysts"}
           pr={pr}
           className={sectionStyle}
+          h2Style={h2Style}
         />
-        <SpellsDesktopSection id={"spells"} pr={pr} className={sectionStyle} />
+        <SpellsDesktopSection
+          id={"spells"}
+          pr={pr}
+          className={sectionStyle}
+          h2Style={h2Style}
+        />
         <IncantationsDesktopSection
           id={"incantations"}
           pr={pr}
           className={sectionStyle}
+          h2Style={h2Style}
         />
         <CompositionDesktopSection
           id={"composition"}
           pr={pr}
           className={sectionStyle}
+          h2Style={h2Style}
         />
-        <FAQDesktopSection id={"faq"} pr={pr} className={sectionStyle} />
+        <FAQDesktopSection
+          id={"faq"}
+          pr={pr}
+          className={sectionStyle}
+          h2Style={h2Style}
+        />
       </div>
     </div>
   );

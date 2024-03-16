@@ -10,61 +10,71 @@ interface SetupDesktopSectionProps {
   id: RulesSection;
   pr: DesktopRulesSectionPr;
   className: string;
+  h2Style: string;
 }
 
-function SetupDesktopSection({ id, pr, className }: SetupDesktopSectionProps) {
+function SetupDesktopSection({
+  id,
+  pr,
+  className,
+  h2Style,
+}: SetupDesktopSectionProps) {
   const t = useTranslations("rules.setup");
   const ct = useTranslations("common.vocabulary");
   return (
     <section className={className} id={id}>
-      <H2>{t("title")}</H2>
+      <H2 className={h2Style}>{t("title")}</H2>
       {pr("intro", t)}
-      <Image
-        src="/compositions/countingSheetEmpty.png"
-        alt="counting sheet"
-        width={400}
-        height={300}
-        className="w-auto h-auto"
-      />
-      <Link href="#composition">{t("look_deck")}</Link>
+      <Link href="#composition" className="underline">
+        {t("look_deck")}
+      </Link>
       {pr("setup", t)}
-      <div className="flex flex-col gap-2 items-center w-full">
+      {pr("distribution", t)}
+      <div className="flex flex-col items-center w-full justify-center">
         <b>{cfl(ct("street"))}</b>
-        <div className="flex w-full items-center gap-2">
+        <div className="flex w-full items-center gap-2 h-min justify-center">
           <Image
             src="/compositions/board.png"
             alt="board"
-            className="grow w-0 h-auto"
-            width={400}
-            height={300}
+            className="w-full h-auto max-w-sm"
+            width={800}
+            height={600}
           />
-          <b className="pl-2 border-l-2 border-red-950 h-full flex items-center w-min">
+          <b className="pl-2 border-l-2 border-sky-900 h-full flex items-center">
             {cfl(ct("bench"))}
           </b>
         </div>
         <b>{cfl(ct("market"))}</b>
       </div>
-      {pr("distribution", t)}
-      <div className="flex items-center gap-2 w-full">
-        <div className="flex flex-col items-center h-full justify-between grow">
-          <Image
-            src="/compositions/openhand.png"
-            alt={`${ct("player")} 1`}
-            width={200}
-            height={200}
-            className="w-auto h-auto"
-          />
-          <p>{`${ct("player")} 1 - (5)`}</p>
-        </div>
-        <div className="flex flex-col items-center h-full justify-between grow">
-          <Image
-            src="/compositions/closehand.png"
-            alt={`${ct("player")} 2`}
-            width={200}
-            height={200}
-            className="w-auto h-auto"
-          />
-          <p>{`${ct("player")} 2 - (6)`}</p>
+      <div className="flex  items-center">
+        <Image
+          src="/compositions/countingSheetEmpty.png"
+          alt="counting sheet"
+          width={400}
+          height={300}
+          className="w-full h-auto p-12 max-w-xs"
+        />
+        <div className="flex items-center gap-2 w-full">
+          <div className="flex flex-col items-center h-full  grow justify-center">
+            <Image
+              src="/compositions/openhand.png"
+              alt={`${ct("player")} 1`}
+              width={300}
+              height={300}
+              className="w-auto h-auto"
+            />
+            <p>{`${ct("player")} 1 - (5)`}</p>
+          </div>
+          <div className="flex flex-col items-center h-full  grow justify-center">
+            <Image
+              src="/compositions/closehand.png"
+              alt={`${ct("player")} 2`}
+              width={300}
+              height={300}
+              className="w-auto h-auto"
+            />
+            <p>{`${ct("player")} 2 - (6)`}</p>
+          </div>
         </div>
       </div>
     </section>

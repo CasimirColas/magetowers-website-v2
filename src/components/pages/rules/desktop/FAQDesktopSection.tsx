@@ -8,13 +8,19 @@ interface FAQDesktopSectionProps {
   id: RulesSection;
   pr: DesktopRulesSectionPr;
   className: string;
+  h2Style: string;
 }
 
-function FAQDesktopSection({ id, pr, className }: FAQDesktopSectionProps) {
+function FAQDesktopSection({
+  id,
+  pr,
+  className,
+  h2Style,
+}: FAQDesktopSectionProps) {
   const t = useTranslations("rules.faq");
   return (
     <section className={className} id={id}>
-      <H2>{t("title")}</H2>
+      <H2 className={h2Style}>{t("title")}</H2>
       <p className="text-center">{t("intro")}</p>
       <LinksRow />
     </section>
