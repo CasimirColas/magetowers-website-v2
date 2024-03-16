@@ -52,11 +52,10 @@ function MobileView() {
   const linkStyle =
     "underline text-red-950 hover:text-red-950 hover:no-underline hover:font-semibold";
 
-  const sectionsPositions = sections.map((section) =>
-    getPositionInScroll("observerId-" + section)
-  );
-
-  function scroll(id: string) {
+  function scroll(
+    id: string,
+    sectionsPositions: { name: string; top: number; bottom: number }[]
+  ) {
     if (typeof window === "undefined") return;
     const div = document.getElementById(id);
     if (!div) return;
@@ -94,7 +93,10 @@ function MobileView() {
   }
 
   useEffect(() => {
-    return scroll("rules-mobile");
+    const sectionsPositions = sections.map((section) =>
+      getPositionInScroll("observerId-" + section)
+    );
+    return scroll("rules-mobile", sectionsPositions);
   }, []);
 
   return (

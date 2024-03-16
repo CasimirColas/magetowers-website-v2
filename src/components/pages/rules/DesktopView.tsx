@@ -64,11 +64,10 @@ function DesktopView() {
     };
   }
 
-  const sectionsPositions = sections.map((section) =>
-    getPositionInScroll(section)
-  );
-
-  function scroll(id: string) {
+  function scroll(
+    id: string,
+    sectionsPositions: { name: string; top: number; bottom: number }[]
+  ) {
     if (typeof window === "undefined") return;
     const div = document.getElementById(id);
     if (!div) return;
@@ -86,7 +85,10 @@ function DesktopView() {
   }
 
   useEffect(() => {
-    return scroll("rules-desktop");
+    const sectionsPositions = sections.map((section) =>
+      getPositionInScroll(section)
+    );
+    return scroll("rules-desktop", sectionsPositions);
   }, []);
 
   function handleSectionChange(value: RulesSection) {
