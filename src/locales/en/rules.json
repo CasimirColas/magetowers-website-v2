@@ -1,7 +1,7 @@
 {
   "title": "Rules",
   "history": {
-    "title": "History and Goal",
+    "title": "Story and Goal",
     "lore": "The newly crownd king of Tavilia, per tradition must appoint a new Imperial mage to serve as his advisor. But in this era where magic and technology are becoming more and more intertwined, the king has decided to hold a competition to determine who will be worthy of Imperial mage title. So many mages have come across the land to the capital to compete, will you be the one to earn this prestigeous title?",
     "goal": "The goal of Mage Towers is to ||collect enought mana|| to be the first player to successfully use an ||Incantation|| or by the end of the turn after the ||Deck|| has been depleted, to have the most amount of ||infused Catalyst blocks|| in your Tower."
   },
