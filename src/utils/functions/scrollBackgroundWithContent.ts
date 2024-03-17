@@ -1,12 +1,16 @@
-export default function scrollBackgroundWithContent(id: string) {
+export default function scrollBackgroundWithContent(
+  scrollId: string,
+  imageId: string
+) {
   if (typeof window === "undefined") return;
-  const div = document.getElementById(id);
-  if (!div) return;
+  const div = document.getElementById(scrollId);
+  const image = document.getElementById(imageId);
+  if (!div || !image) return;
   const handleScroll = () => {
     const scrollTotalHight = div.scrollHeight - div.clientHeight;
-    div.style.setProperty(
-      "background-position-y",
-      `${(div.scrollTop / scrollTotalHight) * 100}%`
+    image.style.setProperty(
+      "object-position",
+      `0% ${(div.scrollTop / scrollTotalHight) * 100}%`
     );
   };
   div.addEventListener("scroll", handleScroll);

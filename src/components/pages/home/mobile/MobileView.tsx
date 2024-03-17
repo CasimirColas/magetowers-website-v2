@@ -9,13 +9,29 @@ import MagicTypesCarousel from "./MagicTypesCarousel";
 
 function MobileView() {
   useEffect(() => {
-    return scrollBackgroundWithContent("main-text");
+    return scrollBackgroundWithContent("main-text", "background-image");
   }, []);
   return (
     <div
-      className="h-full w-full bg-mobile overflow-auto bg-right-top bg-cover flex flex-col gap-4 bg-no-repeat"
+      className="h-full w-full overflow-auto flex flex-col gap-4"
       id="main-text"
     >
+      <Image
+        src={"/backgrounds/mobile.png"}
+        alt="Background Image"
+        layout="fill"
+        quality={100}
+        priority
+        style={{
+          top: 0,
+          left: 0,
+          zIndex: -1,
+          position: "absolute",
+          objectFit: "cover",
+          objectPosition: "0% 0%",
+        }}
+        id="background-image"
+      />
       <LandingSection />
       <VideoSection />
       <MobileSimpleSection

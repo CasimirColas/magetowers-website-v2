@@ -15,6 +15,7 @@ import IncantationsMobileSection from "./mobile/IncantationsMobileSection";
 import CompositionMobileSection from "./mobile/CompositionMobileSection";
 import FAQMobileSection from "./mobile/FAQMobileSection";
 import CatalystsMobileSection from "./mobile/CatalystsMobileSection";
+import Image from "next/image";
 
 function pr(
   translationKey: string,
@@ -101,9 +102,22 @@ function MobileView() {
 
   return (
     <div
-      className="w-full h-full bg-book overflow-auto bg-center bg-contain sm:bg-cover flex flex-col gap-4 items-center px-6 scroll-smooth"
+      className="w-full h-full overflow-auto flex flex-col gap-4 items-center px-6 scroll-smooth"
       id="rules-mobile"
     >
+      <Image
+        src={"/backgrounds/book.png"}
+        alt="Background Image"
+        layout="fill"
+        quality={100}
+        priority
+        style={{
+          zIndex: -1,
+          position: "absolute",
+          objectFit: "cover",
+        }}
+        id="background-image"
+      />
       <div className="absolute z-20 w-full bg-red-900 bg-opacity-90 drop-shadow-md flex flex-col justify-between">
         <div className="w-full p-4">
           <SectionSelector
@@ -113,7 +127,7 @@ function MobileView() {
           />
         </div>
 
-        <div className="border-order border z-20" id="progress-bar" />
+        <div className="border-order border z-20 w-4" id="progress-bar" />
       </div>
 
       <div className="flex flex-col items-center w-[85%] sm:w-[80%] mt-20 bg-paper rounded-sm shadow-sm px-4">
