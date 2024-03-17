@@ -110,6 +110,7 @@ function MobileView() {
         alt="Background Image"
         layout="fill"
         quality={100}
+        placeholder="blur"
         priority
         style={{
           zIndex: -1,

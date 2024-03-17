@@ -22,6 +22,7 @@ function MobileView() {
         layout="fill"
         quality={100}
         priority
+        placeholder="blur"
         style={{
           top: 0,
           left: 0,
