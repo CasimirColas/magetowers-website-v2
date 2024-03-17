@@ -1,4 +1,3 @@
-import { useTranslations } from "next-intl";
 import getStaticPropsI18n from "@/utils/next-intl/getStaticPropsI18n";
 import { GetStaticPropsContext } from "next";
 import DefaultLayout from "@/components/layout/DefaultLayout";
@@ -10,18 +9,13 @@ import useMediaQuery from "@/utils/hooks/useMediaQuery";
 import DesktopView from "@/components/pages/home/desktop/DesktopView";
 
 export default function Home() {
-  const t = useTranslations("home");
-  const c = useTranslations("common");
   const isLg = useMediaQuery("lg");
 
   useEffect(() => {
     return scrollBackgroundWithContent("main-text");
   }, []);
   return (
-    <DefaultLayout
-      title={c("routes.")}
-      className="snap-y snap-mandatory overflow-scroll sm:overflow-visible"
-    >
+    <DefaultLayout className="snap-y snap-mandatory overflow-scroll sm:overflow-visible">
       {isLg ? <DesktopView /> : <MobileView />}
       <Toaster />
     </DefaultLayout>
