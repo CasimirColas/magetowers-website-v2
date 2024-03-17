@@ -20,7 +20,6 @@ function MobileView() {
         src={"/backgrounds/mobile.png"}
         alt="Background Image"
         layout="fill"
-        quality={100}
         priority
         placeholder="blur"
         style={{
