@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-type Breakpoint = keyof typeof defaultBreakpoints;
+export type Breakpoint = keyof typeof defaultBreakpoints;
 
 const defaultBreakpoints = {
   sm: "640px",
@@ -11,7 +11,7 @@ const defaultBreakpoints = {
 };
 
 export default function useMediaQuery(query: Breakpoint) {
-  const [matches, setMatches] = useState(true);
+  const [matches, setMatches] = useState<boolean | undefined>(undefined);
 
   useEffect(() => {
     const media = window.matchMedia(`(min-width:${defaultBreakpoints[query]})`);
