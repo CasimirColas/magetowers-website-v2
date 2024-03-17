@@ -28,7 +28,7 @@ function LanguageSelector() {
         push({ pathname, query }, asPath, { locale: newLocale });
       }}
     >
-      <SelectTrigger className="w-[180px]">
+      <SelectTrigger className="w-[180px]" aria-label="language selector">
         <SelectValue placeholder={t("select_a_language")} />
       </SelectTrigger>
       <SelectContent>

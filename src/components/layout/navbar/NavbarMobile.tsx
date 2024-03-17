@@ -49,7 +49,7 @@ function NavbarMobile({ className, pathname }: NavbarMobileProps) {
     >
       <span className="flex gap-6 justify-center items-center">
         <Sheet>
-          <SheetTrigger>
+          <SheetTrigger aria-label="open navigation menu">
             <Menu />
           </SheetTrigger>
           <SheetContent side={"left"} className="p-0">

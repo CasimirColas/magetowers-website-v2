@@ -2,7 +2,7 @@ import DefaultLayout from "@/components/layout/DefaultLayout";
 import getStaticPropsI18n from "@/utils/next-intl/getStaticPropsI18n";
 import { GetStaticPropsContext } from "next";
 import { useTranslations } from "next-intl";
-import LinksCard from "@/components/pages/ressources/LinksCard";
+import LinksCard from "@/components/utility/LinksCard";
 
 export default function Ressources() {
   const c = useTranslations("common");
