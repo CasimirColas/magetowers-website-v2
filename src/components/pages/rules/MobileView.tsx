@@ -109,7 +109,6 @@ function MobileView() {
         src={"/backgrounds/book.png"}
         alt="Background Image"
         layout="fill"
-        placeholder="blur"
         priority
         style={{
           zIndex: -1,

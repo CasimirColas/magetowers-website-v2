@@ -21,7 +21,6 @@ function MobileView() {
         alt="Background Image"
         layout="fill"
         priority
-        placeholder="blur"
         style={{
           top: 0,
           left: 0,
