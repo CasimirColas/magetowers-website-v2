@@ -60,12 +60,12 @@ function MobileView() {
     const div = document.getElementById(id);
     if (!div) return;
     const handleScroll = () => {
-      const end = div.scrollTop + div.clientHeight / 2;
+      const end = div.scrollTop + screen.height - 80;
       updateProgressBar(Math.floor((end / div.scrollHeight) * 100));
       setCurrentSection(
-        sectionsPositions.find(
+        (sectionsPositions.find(
           (section) => section.bottom > end && section.top < end
-        )?.name as RulesSection
+        )?.name as RulesSection) || "faq"
       );
     };
     div.addEventListener("scroll", handleScroll);
