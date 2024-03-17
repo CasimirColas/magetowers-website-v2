@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import { NextIntlClientProvider } from "next-intl";
 import { useRouter } from "next/router";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -14,6 +15,7 @@ export default function App({ Component, pageProps }: AppProps) {
     >
       <Component {...pageProps} />
       <SpeedInsights />
+      <Analytics />
     </NextIntlClientProvider>
   );
 }
