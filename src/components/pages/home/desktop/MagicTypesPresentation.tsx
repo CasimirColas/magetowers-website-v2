@@ -80,14 +80,18 @@ function Item({
             className
           )}
         >
-          <div
-            className="flex flex-col justify-center items-center h-[150%] w-auto rotate-[-45deg] aspect-square"
-            style={{
-              backgroundImage: `url(/backgrounds/theme/${type}.png)`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          >
+          <div className="relative flex flex-col justify-center items-center h-[150%] w-auto rotate-[-45deg] aspect-square">
+            <Image
+              src={`/backgrounds/theme/${type}.png`}
+              alt={`${type} background`}
+              layout="fill"
+              style={{
+                zIndex: -1,
+                position: "absolute",
+                objectFit: "cover",
+                objectPosition: "center",
+              }}
+            />
             <h3
               className={cn(
                 `font-title text-2xl text-white pt-4`,

@@ -13,7 +13,17 @@ function VideoSection() {
     return parseText({ default: true, text: textToParse });
   };
   return (
-    <ScreenSection className="flex flex-col items-center sm:flex-row bg-lakeSetup bg-cover bg-center gap-8">
+    <ScreenSection className="relative flex flex-col items-center sm:flex-row gap-8">
+      <Image
+        src={"/backgrounds/lakeSetup.jpg"}
+        alt="Background Image"
+        layout="fill"
+        style={{
+          zIndex: -1,
+          position: "absolute",
+          objectFit: "cover",
+        }}
+      />
       <div className="sm:w-1/2 sm:p-12">
         <YoutubeVideoPlayer url={urls.videoTrailer} className="w-full" />
       </div>

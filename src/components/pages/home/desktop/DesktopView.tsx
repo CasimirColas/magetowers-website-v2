@@ -20,7 +20,8 @@ function DesktopView() {
       <LandingSection />
       <VideoSection />
       <DesktopSimpleSection
-        className="bg-snowyWaterfall gap-8"
+        className="gap-8"
+        background="/backgrounds/snowyWaterfall.jpg"
         translationsKey="expectations_section"
         classNameCard="h-full"
         addonBottom={
@@ -35,7 +36,8 @@ function DesktopView() {
         addonRight={<MagicTypesPresentation />}
       />
       <DesktopSimpleSection
-        className="bg-mossyWall gap-8"
+        className="gap-8"
+        background="/backgrounds/mossyWall.jpg"
         translationsKey="power_section"
         classNameCard="h-full"
         addonBottom={
@@ -62,7 +64,8 @@ function DesktopView() {
         }
       />
       <DesktopSimpleSection
-        className="bg-setupOnStump gap-8"
+        className="gap-8"
+        background="/backgrounds/setupOnStump.jpg"
         classNameCard="h-full"
         translationsKey="future_section"
         addonBottom={

@@ -2,9 +2,11 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { parseText } from "@/utils/functions/parseText";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 interface DesktopSimpleSectionProps {
   className?: string;
+  background?: string;
   classNameCard?: string;
   translationsKey: string;
   addonTop?: JSX.Element;
@@ -14,6 +16,7 @@ interface DesktopSimpleSectionProps {
 
 function DesktopSimpleSection({
   className,
+  background,
   classNameCard,
   translationsKey,
   addonTop,
@@ -28,10 +31,20 @@ function DesktopSimpleSection({
   return (
     <section
       className={cn(
-        "w-full h-full p-6 flex bg-cover bg-center justify-between items-center",
+        "relative w-full h-full p-6 flex bg-cover bg-center justify-between items-center",
         className
       )}
     >
+      <Image
+        src={background ?? "/backgrounds/skyWithTower.png"}
+        alt="Background Image"
+        layout="fill"
+        style={{
+          zIndex: -1,
+          position: "absolute",
+          objectFit: "cover",
+        }}
+      />
       <Card
         className={cn(
           "bg-opacity-95 rounded-lg flex flex-col items-center w-1/2 max-w-xl border-b-0 max-h-[800px]",

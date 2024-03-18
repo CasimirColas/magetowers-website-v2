@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 import LinksRow from "../../components/LinksRow";
+import Image from "next/image";
 
 interface LandingSectionProps {
   className?: string;
@@ -11,10 +12,20 @@ function LandingSection({ className }: LandingSectionProps) {
   return (
     <section
       className={cn(
-        "w-full flex items-center flex-col sm:justify-center sm:gap-32 bg-skyWithTower sm:bg-center bg-right-bottom bg-cover h-full sm:py-10 snap-center justify-end pt-10 gap-4",
+        "realtive w-full flex items-center flex-col sm:justify-center sm:gap-32 h-full sm:py-10 snap-center justify-end pt-10 gap-4",
         className
       )}
     >
+      <Image
+        src={"/backgrounds/skyWithTower.png"}
+        alt="Background Image"
+        layout="fill"
+        style={{
+          zIndex: -1,
+          position: "absolute",
+          objectFit: "cover",
+        }}
+      />
       <h1
         className="font-title font-extrabold sm:text-8xl text-white text-center text-6xl mb-auto sm:mb-0"
         style={{

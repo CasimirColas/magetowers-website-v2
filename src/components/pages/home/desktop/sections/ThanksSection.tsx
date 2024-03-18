@@ -2,11 +2,22 @@ import ScreenSection from "../../../../layout/ScreenSection";
 import ThanksCard from "../../components/ThanksCard";
 import { useTranslations } from "next-intl";
 import ThxCardsData from "@/components/pages/home/ThxCardsData";
+import Image from "next/image";
 
 function FutureSection() {
   const t = useTranslations("home.thanks_section");
   return (
-    <ScreenSection className="flex flex-col items-end bg-white gap-8 justify-around bg-lakeBox bg-cover bg-center">
+    <ScreenSection className="relative flex flex-col items-end gap-8 justify-around">
+      <Image
+        src={"/backgrounds/lakeBox.jpg"}
+        alt="Background Image"
+        layout="fill"
+        style={{
+          zIndex: -1,
+          position: "absolute",
+          objectFit: "cover",
+        }}
+      />
       <div className="flex flex-col gap-4 h-full justify-center mr-4">
         <h3
           className="text-3xl font-title text-center text-white sm:text-5xl sm:pb-12 pb-4"
