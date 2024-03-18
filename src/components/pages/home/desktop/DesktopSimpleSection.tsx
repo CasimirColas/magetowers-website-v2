@@ -38,7 +38,7 @@ function DesktopSimpleSection({
       <Image
         src={background ?? "/backgrounds/skyWithTower.png"}
         alt="Background Image"
-        layout="fill"
+        fill
         style={{
           zIndex: -1,
           position: "absolute",

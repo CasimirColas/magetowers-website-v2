@@ -15,7 +15,8 @@ export default function Ressources() {
       <Image
         src={"/backgrounds/skyWithTower.png"}
         alt="Background Image"
-        layout="fill"
+        fill
+        priority
         style={{
           zIndex: -1,
           position: "absolute",

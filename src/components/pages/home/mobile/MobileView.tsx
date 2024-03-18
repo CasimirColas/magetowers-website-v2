@@ -19,7 +19,7 @@ function MobileView() {
       <Image
         src={"/backgrounds/mobile.png"}
         alt="Background Image"
-        layout="fill"
+        fill
         priority
         style={{
           top: 0,

@@ -17,7 +17,7 @@ function VideoSection() {
       <Image
         src={"/backgrounds/lakeSetup.jpg"}
         alt="Background Image"
-        layout="fill"
+        fill
         style={{
           zIndex: -1,
           position: "absolute",

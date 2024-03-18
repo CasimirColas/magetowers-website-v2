@@ -84,7 +84,7 @@ function Item({
             <Image
               src={`/backgrounds/theme/${type}.png`}
               alt={`${type} background`}
-              layout="fill"
+              fill
               style={{
                 zIndex: -1,
                 position: "absolute",

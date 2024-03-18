@@ -11,7 +11,7 @@ function FutureSection() {
       <Image
         src={"/backgrounds/lakeBox.jpg"}
         alt="Background Image"
-        layout="fill"
+        fill
         style={{
           zIndex: -1,
           position: "absolute",
