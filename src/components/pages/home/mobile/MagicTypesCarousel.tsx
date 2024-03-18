@@ -14,6 +14,7 @@ import { parseText as pt } from "@/utils/functions/parseText";
 import DetailsDialog from "@/components/utility/DetailsDialog";
 import GameCard from "@/components/cards/GameCard";
 import { cardsDictionary as d } from "@/components/cards/dictionary";
+import Image from "next/image";
 
 function MagicTypesCarousel() {
   const t = useTranslations("home.manatypes_carousel");
@@ -122,14 +123,18 @@ function Item({
   return (
     <CarouselItem className="md:basis-full">
       <div className="p-1 h-full">
-        <Card
-          className="h-full"
-          style={{
-            backgroundImage: `url(/backgrounds/theme/${type}-inc.png)`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
+        <Card className="relative h-full bg-opacity-0 overflow-hidden">
+          <Image
+            src={`/backgrounds/theme/${type}-inc.png`}
+            alt={`${type} background image`}
+            layout="fill"
+            style={{
+              zIndex: -1,
+              position: "absolute",
+              objectFit: "cover",
+              backgroundPosition: "center",
+            }}
+          />
           <CardContent className="flex items-center justify-between p-6 flex-col h-full gap-52 px-4 pb-0">
             <h3
               className={cn(
