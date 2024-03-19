@@ -79,6 +79,7 @@ function Item({
             "rotate-45 rounded-lg overflow-hidden relative w-2/3 h-2/3 cursor-pointer flex items-center justify-center",
             className
           )}
+          asChild
         >
           <div className="relative flex flex-col justify-center items-center h-[150%] w-auto rotate-[-45deg] aspect-square">
             <Image
