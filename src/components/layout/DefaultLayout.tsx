@@ -10,7 +10,7 @@ interface DefaultLayoutProps {
 
 const defaultTitle = "Mage Towers";
 const defaultDescription =
-  "Strategic card game for  2-4 players comming soon to Kickstarter!";
+  "Strategic card game for  2-4 players coming soon to Kickstarter!";
 
 function DefaultLayout({
   children,

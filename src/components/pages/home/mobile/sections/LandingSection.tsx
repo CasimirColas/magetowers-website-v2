@@ -17,7 +17,7 @@ function LandingSection() {
 
       <div className="flex flex-col justify-center items-center gap-4 mb-2">
         <h2 className="p-4 rounded-full bg-white text-xl font-bold text-view shadow-lg mb-2">
-          {t("comming_soon")}
+          {t("coming_soon")}
         </h2>
         <LinksRow />
       </div>

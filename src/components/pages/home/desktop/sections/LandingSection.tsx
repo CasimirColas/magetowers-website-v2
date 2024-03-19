@@ -38,7 +38,7 @@ function LandingSection({ className }: LandingSectionProps) {
 
       <div className="flex flex-col justify-center items-center sm:gap-6 gap-4">
         <p className="p-4 rounded-full bg-white text-xl font-bold text-view shadow-lg sm:mb-8">
-          {t("comming_soon")}
+          {t("coming_soon")}
         </p>
         <h2
           className="scroll-m-20  text-xl font-semibold tracking-tight first:mt-0 text-white  underline-offset-8 w-10/12 text-center hidden sm:block"
