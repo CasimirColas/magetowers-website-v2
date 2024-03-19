@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { RulesSection, sections } from "./sections";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 import HistoryDesktopSection from "./desktop/HistoryDesktopSection";
 import SetupDesktopSection from "./desktop/SetupDesktopSection";
 import GameplayDesktopSection from "./desktop/GameplayDesktopSection";
@@ -14,7 +13,8 @@ import CompositionDesktopSection from "./desktop/CompositionDesktopSection";
 import FAQDesktopSection from "./desktop/FAQDesktopSection";
 import { parseText } from "@/utils/functions/parseText";
 import { cn } from "@/lib/utils";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import Image from "next/image";
 
 function pr(
   translationKey: string,
@@ -99,7 +99,18 @@ function DesktopView() {
   }
 
   return (
-    <div className="w-full h-full bg-skyWithTower bg-center bg-cover flex justify-center">
+    <div className="relative w-full h-full flex justify-center">
+      <Image
+        src={"/backgrounds/skyWithTower.png"}
+        alt="Background Image"
+        fill
+        priority
+        style={{
+          zIndex: -1,
+          position: "absolute",
+          objectFit: "cover",
+        }}
+      />
       <div className="flex flex-col h-full p-4 bg-white bg-opacity-90 gap-2">
         {sections.map((section) => (
           <Button

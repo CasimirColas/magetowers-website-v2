@@ -55,10 +55,18 @@ export default function Cards() {
   }, [filters]);
 
   return (
-    <DefaultLayout
-      title={c("routes.cards")}
-      className="flex flex-col bg-iceland bg-cover bg-center bg-fixed"
-    >
+    <DefaultLayout title={c("routes.cards")} className="flex flex-col relative">
+      <Image
+        src={"/backgrounds/iceland.jpg"}
+        alt="Background Image"
+        fill
+        priority
+        style={{
+          zIndex: -1,
+          position: "absolute",
+          objectFit: "cover",
+        }}
+      />
       <CardFilters setFilters={setFilters} filters={filters} />
       <div className="overflow-auto flex gap-8 sm:px-0 sm:gap-4 flex-wrap justify-center h-full sm:pt-28 pb-6 pt-56">
         {displayedCardNames.length === 0 ? (
