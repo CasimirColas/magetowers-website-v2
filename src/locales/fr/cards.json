@@ -95,7 +95,7 @@
   },
   "spellcatcher": {
     "name": "Capteur de Sorts",
-    "description": "Chaque fois qu'un sort ou un capteur de sorts est joué, vous pouvez utiliser cette carte pour le contrer. Si à la fin un sort est contré, il est défaussé et le mana utilisé pour le jouer est perdu",
+    "description": "Chaque fois qu'un sort ou un capteur de sorts est joué, vous pouvez utiliser cette carte pour le contrer. Si en fin de compte un sort est contré, il est défaussé et le mana utilisé pour le jouer est perdu",
     "warning": "Vous ne pouvez pas jouer cette carte pendant une incantation"
   },
   "renovation": {
