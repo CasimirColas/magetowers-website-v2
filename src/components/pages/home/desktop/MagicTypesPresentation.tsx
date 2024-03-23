@@ -3,142 +3,180 @@ import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { capitalizeFirstLetter as cfl } from "@/utils/functions/other";
-import {
-  HoverCardContent,
-  HoverCardTrigger,
-  HoverCard,
-} from "@/components/ui/hover-card";
 import { parseText as pt } from "@/utils/functions/parseText";
 import GameCard from "@/components/cards/GameCard";
 import { cardsDictionary as d } from "@/components/cards/dictionary";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card, CardDescription } from "@/components/ui/card";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
+import Link from "next/link";
 
 function MagicTypesPresentation() {
   const t = useTranslations("home.manatypes_carousel");
   const ct = useTranslations("common.vocabulary");
-  return (
-    <div className="relative grid grid-cols-2 grid-rows-2 h-3/4 aspect-square items-center justify-center">
-      <Item
-        className="top-1/2 hover:z-1"
-        title={cfl(ct("arcane"))}
-        type="arcane"
-        classNameTitle="text-[#122855]"
-        shadowColor="#38b6ff"
-        hoverContent={t("arcane")}
-      />
-      <Item
-        className="right-1/2 hover:z-1"
-        title={cfl(ct("chaos"))}
-        type="chaos"
-        classNameTitle="text-[#8b57bf]"
-        shadowColor="#34014c"
-        hoverContent={t("chaos")}
-      />
-      <Item
-        className="left-1/2 hover:z-1"
-        title={cfl(ct("destruction"))}
-        type="destruction"
-        classNameTitle="text-[#f99e53]"
-        shadowColor="#ac2430"
-        hoverContent={t("destruction")}
-      />
-      <Item
-        className="bottom-1/2 hover:z-1"
-        title={cfl(ct("order"))}
-        type="order"
-        classNameTitle="text-[#793600]"
-        shadowColor="#79360066"
-        hoverContent={t("order")}
-      />
-    </div>
-  );
-}
-
-function Item({
-  className,
-  title,
-  type,
-  classNameTitle,
-  shadowColor,
-  hoverContent,
-}: {
-  className?: string;
-  title?: string;
-  type: manaType;
-  classNameTitle?: string;
-  shadowColor?: string;
-  hoverContent: string;
-}) {
-  const cards = Object.values(d).filter(
-    (card) => card.category === "spell" && card.manaType === type
-  );
-  return (
-    <div className="w-full h-full flex flex-col justify-center items-center">
-      <HoverCard openDelay={100} closeDelay={100}>
-        <HoverCardTrigger
-          className={cn(
-            "rotate-45 rounded-lg overflow-hidden relative w-2/3 h-2/3 cursor-pointer flex items-center justify-center",
-            className
-          )}
-          asChild
-        >
-          <div className="relative flex flex-col justify-center items-center h-[150%] w-auto rotate-[-45deg] aspect-square">
+  function Item({
+    type,
+    classNameTitle,
+    shadowColor,
+  }: {
+    type: manaType;
+    classNameTitle?: string;
+    shadowColor?: string;
+  }) {
+    const cards = Object.values(d).filter(
+      (card) => card.category === "spell" && card.manaType === type
+    );
+    return (
+      <TabsContent value={type} className="h-full">
+        <div className="w-full h-full flex flex-col justify-start items-center gap-4">
+          <div className="relative flex flex-col w-full aspect-square items-center rounded-md overflow-hidden justify-between p-4">
             <Image
-              src={`/backgrounds/theme/${type}.png`}
+              src={`/backgrounds/theme/${type}-inc.png`}
               alt={`${type} background`}
               fill
               style={{
-                zIndex: -1,
-                position: "absolute",
+                zIndex: 0,
                 objectFit: "cover",
                 objectPosition: "center",
               }}
             />
+
             <h3
               className={cn(
-                `font-title text-2xl text-white pt-4`,
+                `font-title text-6xl text-white z-10 mt-4`,
                 classNameTitle
               )}
               style={{
                 textShadow: `-1px 2px 2px ${shadowColor || "#000"}`,
               }}
             >
-              {title}
+              {cfl(ct(type))}
             </h3>
-            <Image
-              src={`/glyphs/stones/${type}.png`}
-              alt="Mana stone"
-              width={200}
-              height={200}
-              className="w-1/4"
-            />
+            <div className="flex justify-between gap-4 h-1/2 w-full">
+              {cards.map((card, index) => (
+                <HoverCard key={index} openDelay={100} closeDelay={100}>
+                  <HoverCardTrigger asChild className="cursor-pointer">
+                    <div className="h-full aspect-card">
+                      <GameCard
+                        name={card.name}
+                        id={`${type}-trigger-card${index}`}
+                        className="rounded-md h-full w-auto"
+                      />
+                    </div>
+                  </HoverCardTrigger>
+                  <HoverCardContent
+                    side="left"
+                    align="center"
+                    className="w-fit"
+                  >
+                    <GameCard
+                      name={card.name}
+                      id={`${type}-popup-card${index}`}
+                      className="rounded-md h-[60vh] w-auto"
+                    />
+                  </HoverCardContent>
+                </HoverCard>
+              ))}
+            </div>
           </div>
-        </HoverCardTrigger>
-        <HoverCardContent
-          className="flex flex-col items-center justify-between border-none gap-2 w-[40vw] mb-12 mt-28"
-          side="left"
-          align="center"
-        >
-          <div className="flex justify-around w-full gap-2">
-            {cards.map((card, index) => (
-              <GameCard
-                key={index}
-                name={card.name}
-                id={`${type}-popup-card${index}`}
-                className="rounded-md"
-              />
-            ))}
-          </div>
+          <CardDescription className="text-md">
+            {t("hover")}{" "}
+            <Link href="/cards" className="underline">
+              {ct("here")}
+            </Link>
+            .
+          </CardDescription>
           {pt({
-            text: hoverContent,
+            text: t(type),
             default: true,
             args: {
               childClassName: `text-${type}`,
-              parentClassName: "text-center text-xl",
+              parentClassName: "text-xl w-full",
             },
           })}
-        </HoverCardContent>
-      </HoverCard>
-    </div>
+        </div>
+      </TabsContent>
+    );
+  }
+  return (
+    <Card className="bg-opacity-95 rounded-lg flex flex-col items-center w-1/2 max-w-xl border-0 max-h-[800px] p-6 h-full">
+      <Tabs defaultValue="destruction" className="w-full">
+        <TabsList className="w-full justify-evenly">
+          <TabsTrigger
+            value="destruction"
+            className="w-full flex justify-center gap-2 text-lg"
+          >
+            {cfl(ct("destruction"))}
+            <Image
+              src="/glyphs/activated-icons/destruction.png"
+              alt="Destruction"
+              width={20}
+              height={20}
+            />
+          </TabsTrigger>
+          <TabsTrigger
+            value="arcane"
+            className="w-full flex justify-center gap-2 text-lg"
+          >
+            {cfl(ct("arcane"))}
+            <Image
+              src="/glyphs/activated-icons/arcane.png"
+              alt="Arcane"
+              width={20}
+              height={20}
+            />
+          </TabsTrigger>
+          <TabsTrigger
+            value="chaos"
+            className="w-full flex justify-center gap-2 text-lg"
+          >
+            {cfl(ct("chaos"))}
+            <Image
+              src="/glyphs/activated-icons/chaos.png"
+              alt="Chaos"
+              width={20}
+              height={20}
+            />
+          </TabsTrigger>
+          <TabsTrigger
+            value="order"
+            className="w-full flex justify-center gap-2 text-lg"
+          >
+            {cfl(ct("order"))}
+            <Image
+              src="/glyphs/activated-icons/order.png"
+              alt="Order"
+              width={20}
+              height={20}
+            />
+          </TabsTrigger>
+        </TabsList>
+        <Item
+          type="destruction"
+          classNameTitle="text-[#f99e53]"
+          shadowColor="#ac2430"
+        />
+        <Item
+          type="arcane"
+          classNameTitle="text-[#122855]"
+          shadowColor="#38b6ff"
+        />
+        <Item
+          type="chaos"
+          classNameTitle="text-[#8b57bf]"
+          shadowColor="#34014c"
+        />
+        <Item
+          type="order"
+          classNameTitle="text-[#793600]"
+          shadowColor="#79360066"
+        />
+      </Tabs>
+    </Card>
   );
 }
 

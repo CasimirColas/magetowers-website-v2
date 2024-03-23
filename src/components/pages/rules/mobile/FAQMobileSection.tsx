@@ -1,7 +1,7 @@
 import { H2 } from "@/components/ui/typography";
 import { useTranslations } from "next-intl";
 import { MobileRulesSectionPr } from "../MobileView";
-import LinksRow from "../../home/components/LinksRow";
+import LinksRow from "../../../utility/LinksRow";
 import { RulesSection } from "../sections";
 
 interface FAQMobileSectionProps {

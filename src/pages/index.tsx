@@ -2,8 +2,8 @@ import getStaticPropsI18n from "@/utils/next-intl/getStaticPropsI18n";
 import { GetStaticPropsContext } from "next";
 import DefaultLayout from "@/components/layout/DefaultLayout";
 import { Toaster } from "@/components/ui/toaster";
-import MobileView from "@/components/pages/home/mobile/MobileView";
-import DesktopView from "@/components/pages/home/desktop/DesktopView";
+import MobileView from "@/components/pages/home/MobileView";
+import DesktopView from "@/components/pages/home/DesktopView";
 import { RenderView } from "@/components/utility/RenderView";
 
 export default function Home() {

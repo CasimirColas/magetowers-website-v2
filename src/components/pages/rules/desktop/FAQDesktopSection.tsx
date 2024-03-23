@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import { RulesSection } from "../sections";
 import { H2 } from "@/components/ui/typography";
-import LinksRow from "../../home/components/LinksRow";
+import LinksRow from "../../../utility/LinksRow";
 import { DesktopRulesSectionPr } from "../DesktopView";
 
 interface FAQDesktopSectionProps {

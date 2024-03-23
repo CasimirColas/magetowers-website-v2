@@ -10,7 +10,7 @@
   },
   "expectations_section": {
     "title": "What to expect?",
-    "text_full": "Mage Towers is a card game centered around ||building you mage tower|| and collecting different types of mana to ||empower your spells|| and use ||powerful incantations||. You gain mana by adding ||Catalyst|| blocks to your tower and infusing them with the power of ||glyphs||, at the end of your turn you will receive mana of the appropriate type for each Catalyst block in your tower. ||Each mana type has it's own play style||."
+    "text_full": "Mage Towers is a card game centered around ||building you mage tower|| and collecting different types of mana to ||empower your spells|| and use ||powerful incantations||. You gain mana by adding ||Catalyst|| blocks to your tower and infusing them with the power of ||glyphs||. ||Each mana type has it's own play style||."
   },
   "power_section": {
     "title": "Show off your skills and tactics!",
@@ -20,21 +20,14 @@
     "title": "What's next?",
     "text_full": "Currently our base ||1v1 pack is ready an waiting to be shipped||. But there is much more to come! If the game gets fully funded, ||2 expansions are already planned!|| They will bring artefacts and unseen kinds of magic. ||The ultimate goal|| would be to release a ||deluxe edition|| box containing both expansions, enought cards for 4 players with items like a ||player mat|| and tokens to provide the ||best playing experience possible||. ||Any excess from the crowdfunding campaign|| will go towards making a ||video game||!"
   },
-  "thanks_section": {
-    "title": "Special thanks to...",
-    "santiago": "The artist behind the illustrations for the game.",
-    "cardboardnaut": "The creator of the teaser and the trailler for the game.",
-    "trash_cat_music": "The composer of the main track.",
-    "community": "The community",
-    "community_text": "Who playtested and help make the game along the way."
-  },
   "manatypes_carousel": {
     "destruction": "||Discarding|| cards. Whether it's your own or your opponent's, there is always a way to make the most of it.",
     "arcane": "||Drawing|| cards to craft the perfect hand and ||magnify the output|| of your cards",
     "chaos": "||Randomness and unpredictability||. You never know what you are going to get.",
     "order": "||Close the gap|| between players and ||control|| the board.",
     "look": "Look at the cards",
-    "more": "Click to know more"
+    "more": "Click to know more",
+    "hover": "Hover the cards to see them up close. You can also take a look at all the cards in the game by going"
   },
   "bench": {
     "title": "Will you chose luck over a guaranteed reward?",

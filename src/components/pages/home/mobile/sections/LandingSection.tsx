@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import LinksRow from "../../components/LinksRow";
+import LinksRow from "../../../../utility/LinksRow";
 
 function LandingSection() {
   const t = useTranslations("home.landing_section");

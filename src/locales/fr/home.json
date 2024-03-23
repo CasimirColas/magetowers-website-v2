@@ -10,7 +10,7 @@
   },
   "expectations_section": {
     "title": "À quoi vous attendre?",
-    "text_full": "Mage Towers est un jeu de carte centré sur la ||construction de votre tour de mage|| et la collecte de différents types de mana pour ||renforcer vos sorts|| et utiliser de ||puissantes incantations||. Vous gagnez du mana en ajoutant des blocs ||Catalyseur|| à votre tour et en les imprégnant du pouvoir des ||glyphes||, à la fin de votre tour, vous recevrez du mana du type approprié pour chaque bloc Catalyseur dans votre tour. Chaque type de mana repose sur un ||style de jeu différents||."
+    "text_full": "Mage Towers est un jeu de carte centré sur la ||construction de votre tour de mage|| et la collecte de différents types de mana pour ||renforcer vos sorts|| et utiliser de ||puissantes incantations||. Vous gagnez du mana en ajoutant des blocs ||Catalyseur|| à votre tour et en les imprégnant du pouvoir des ||glyphes||. Chaque type de mana repose sur un ||style de jeu différents||."
   },
   "power_section": {
     "title": "Montrez vos compétences tactiques!",
@@ -20,21 +20,14 @@
     "title": "Qu'est-ce qui vient ensuite?",
     "text_full": "Actuellement, notre ||pack de base 1 contre 1 est prêt et attend d'être expédié||. Mais il y a beaucoup plus à venir ! Si le jeu est entièrement financé, ||2 extensions sont sont déjà prévues!|| Elles apporteront des artéfacts et des types de magie inédits. ||L'objectif ultime|| serait de sortir une boîte d'||édition deluxe|| contenant les deux extensions, suffisamment de cartes pour 4 joueurs et des éléments tels qu'||un tapis de jeu|| et des jetons pour offrir la ||meilleure expérience de jeu possible||. ||Tout excédent de la campagne de financement|| participatif sera utilisé pour créer un ||jeu vidéo||!"
   },
-  "thanks_section": {
-    "title": "Grand merci à...",
-    "santiago": "L'artiste derrière les illustrations du jeu.",
-    "cardboardnaut": "Le créateur du teaser et de la bande-annonce.",
-    "trash_cat_music": "La compositrice de la musique principale.",
-    "community": "La communauté",
-    "community_text": "Qui a testé le jeu et a aidé à l'améliorer."
-  },
   "manatypes_carousel": {
     "destruction": "||Défausser|| des cartes. Que ce soit les vôtres ou celles de votre adversaire, il y a toujours un moyen d'en tirer le meilleur parti.",
     "arcane": "||Piocher|| pour créer la main parfaite et ||amplifier les effets|| de vos cartes.",
     "chaos": "||Hasard et imprévisibilité||. Vous ne savez jamais sur quoi vous allez tomber.",
     "order": "||Combler l'écart|| entre les joueurs et ||contrôler|| le plateau.",
     "look": "Regarder les cartes",
-    "more": "Cliquez pour plus de détails"
+    "more": "Cliquez pour plus de détails",
+    "hover": "Survolez les cartes pour les voir de près. Vous pouvez également jeter un œil à toutes les cartes du jeu en allant"
   },
   "bench": {
     "title": "Choisirez-vous la chance plutôt qu'une récompense garantie?",

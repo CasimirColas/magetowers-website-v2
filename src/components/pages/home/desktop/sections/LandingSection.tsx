@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
-import LinksRow from "../../components/LinksRow";
+import LinksRow from "../../../../utility/LinksRow";
 import Image from "next/image";
 
 interface LandingSectionProps {

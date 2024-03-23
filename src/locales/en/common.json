@@ -26,7 +26,8 @@
     "market": "market",
     "street": "street",
     "bench": "bench",
-    "player": "player"
+    "player": "player",
+    "here": "here"
   },
   "search": {
     "card_placeholder": "Search for a card..."
