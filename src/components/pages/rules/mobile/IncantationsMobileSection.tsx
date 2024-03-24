@@ -1,9 +1,10 @@
 import { H2, H3 } from "@/components/ui/typography";
 import { useTranslations } from "next-intl";
 import { MobileRulesSectionPr } from "../MobileView";
-import { manaType, manaTypeList } from "@/components/cards/types";
 import Image from "next/image";
 import { RulesSection } from "../sections";
+import { manaType } from "@/components/cards/types";
+import { useCallback } from "react";
 
 interface IncantationsMobileSectionProps {
   id: RulesSection;
@@ -20,10 +21,12 @@ function IncantationsMobileSection({
 }: IncantationsMobileSectionProps) {
   const t = useTranslations("rules.incantations");
 
+  const manaTypeList = ["destruction", "arcane", "chaos", "order"];
+
   function IncantationDiv({ mana }: { mana: manaType }) {
     return (
       <div className="flex flex-col gap-2 w-full items-center border-t border-paperGray pt-4">
-        <H3 className={`text-${mana}`}>{t(mana + ".name")}</H3>
+        <H3 className={`text-${mana} text-center`}>{t(mana + ".name")}</H3>
         <Image
           src={`/incantations/${mana}.png`}
           alt={mana}
@@ -37,6 +40,14 @@ function IncantationsMobileSection({
     );
   }
 
+  const incantations = useCallback(
+    () =>
+      manaTypeList.map((mana) => (
+        <IncantationDiv key={mana} mana={mana as manaType} />
+      )),
+    []
+  );
+
   return (
     <section className={className} id={"observerId-" + id}>
       <H2 className={h2Style} id={id}>
@@ -44,9 +55,7 @@ function IncantationsMobileSection({
       </H2>
       {pr("intro", t)}
       <i>{pr("addendum", t)}</i>
-      {manaTypeList.slice(1, 5).map((mana) => (
-        <IncantationDiv key={mana} mana={mana} />
-      ))}
+      {incantations()}
     </section>
   );
 }
