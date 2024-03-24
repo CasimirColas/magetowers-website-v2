@@ -1,22 +1,21 @@
-import { useEffect, useMemo, useState } from "react";
-import { useTranslations } from "next-intl";
-import SectionSelector from "./SectionSelector";
-import { RulesSection, sections } from "./sections";
 import { H1 } from "@/components/ui/typography";
-import { parseText } from "@/utils/functions/parseText";
 import { cn } from "@/lib/utils";
-import HistoryMobileSection from "./mobile/HistoryMobileSection";
+import { getOptimizedImage } from "@/utils/functions/getOptimizedImage";
+import { parseText } from "@/utils/functions/parseText";
+import { useTranslations } from "next-intl";
+import { useEffect, useState } from "react";
+import SectionSelector from "./SectionSelector";
 import CardsMobileSection from "./mobile/CardsMobileSection";
-import SetupMobileSection from "./mobile/SetupMobileSection";
-import GameplayMobileSection from "./mobile/GameplayMobileSection";
-import ManaMobileSection from "./mobile/ManaMobileSection";
-import SpellsMobileSection from "./mobile/SpellsMobileSection";
-import IncantationsMobileSection from "./mobile/IncantationsMobileSection";
+import CatalystsMobileSection from "./mobile/CatalystsMobileSection";
 import CompositionMobileSection from "./mobile/CompositionMobileSection";
 import FAQMobileSection from "./mobile/FAQMobileSection";
-import CatalystsMobileSection from "./mobile/CatalystsMobileSection";
-import Image from "next/image";
-import { getOptimizedImage } from "@/utils/functions/getOptimizedImage";
+import GameplayMobileSection from "./mobile/GameplayMobileSection";
+import HistoryMobileSection from "./mobile/HistoryMobileSection";
+import IncantationsMobileSection from "./mobile/IncantationsMobileSection";
+import ManaMobileSection from "./mobile/ManaMobileSection";
+import SetupMobileSection from "./mobile/SetupMobileSection";
+import SpellsMobileSection from "./mobile/SpellsMobileSection";
+import { RulesSection, sections } from "./sections";
 
 function pr(
   translationKey: string,
