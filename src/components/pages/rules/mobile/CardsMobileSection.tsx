@@ -9,6 +9,7 @@ import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { MobileRulesSectionPr } from "../MobileView";
 import { RulesSection } from "../sections";
+import { useCallback } from "react";
 
 interface CardsMobileSectionProps {
   id: RulesSection;
@@ -49,6 +50,7 @@ function CardsMobileSection({
       </DetailsDialog>
     );
   }
+  const spell = useCallback(() => <GameCardPopup name="ignite" />, []);
   const cardsBlockStyle =
     "w-full flex flex-col items-center justify-start gap-4 sm:border-none border-b border-paperGray pb-2 sm:pb-0 last:border-none";
   return (
@@ -73,7 +75,7 @@ function CardsMobileSection({
         </div>
         <div className={cardsBlockStyle}>
           <H3 className={h3Style}>{t("spells_title")}</H3>
-          <GameCardPopup name="ignite" />
+          {spell()}
           <Link href="#spells" className={linkStyle}>
             {t("learn_spells")}
           </Link>
