@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
 import SectionSelector from "./SectionSelector";
 import { RulesSection, sections } from "./sections";
@@ -16,6 +16,7 @@ import CompositionMobileSection from "./mobile/CompositionMobileSection";
 import FAQMobileSection from "./mobile/FAQMobileSection";
 import CatalystsMobileSection from "./mobile/CatalystsMobileSection";
 import Image from "next/image";
+import { getOptimizedImage } from "@/utils/functions/getOptimizedImage";
 
 function pr(
   translationKey: string,
@@ -100,23 +101,22 @@ function MobileView() {
     return scroll("rules-mobile", sectionsPositions);
   }, []);
 
+  const backgroundImage = getOptimizedImage({
+    src: "/backgrounds/book.png",
+    width: screen.width,
+    height: Math.floor((screen.width * 1469) / 1125),
+  });
+
   return (
     <div
       className="w-full h-full overflow-auto flex flex-col gap-4 items-center px-6 scroll-smooth"
       id="rules-mobile"
+      style={{
+        backgroundImage: backgroundImage,
+        backgroundSize: "contain  ",
+        backgroundPosition: "bottom center",
+      }}
     >
-      <Image
-        src={"/backgrounds/book.png"}
-        alt="Background Image"
-        fill
-        priority
-        style={{
-          zIndex: -1,
-          position: "absolute",
-          objectFit: "cover",
-        }}
-        id="background-image"
-      />
       <div className="absolute z-20 w-full bg-red-900 bg-opacity-90 drop-shadow-md flex flex-col justify-between">
         <div className="w-full p-4">
           <SectionSelector

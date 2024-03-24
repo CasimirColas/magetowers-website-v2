@@ -125,7 +125,7 @@ function DesktopView() {
         ))}
       </div>
       <div
-        className="flex flex-col w-full xl:w-[50vw] overflow-auto scroll-smooth gap-2 bg-white bg-opacity-80"
+        className="flex flex-col w-full xl:w-[50vw] overflow-auto scroll-smooth gap-2 bg-white border-l"
         id="rules-desktop"
       >
         <HistoryDesktopSection
