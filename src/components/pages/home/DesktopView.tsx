@@ -15,7 +15,7 @@ import { useTranslations } from "next-intl";
 function DesktopView() {
   const t = useTranslations("home.bench");
   return (
-    <>
+    <div className="w-full h-full overflow-auto">
       <LandingSection />
       <VideoSection />
       <DesktopSimpleSection
@@ -78,7 +78,7 @@ function DesktopView() {
         }
         addonRight={<span className="w-1/2" />}
       />
-    </>
+    </div>
   );
 }
 

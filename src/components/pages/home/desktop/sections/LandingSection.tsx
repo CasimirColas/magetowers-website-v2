@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 import LinksRow from "../../../../utility/LinksRow";
 import Image from "next/image";
+import { getOptimizedImage } from "@/utils/functions/getOptimizedImage";
 
 interface LandingSectionProps {
   className?: string;
@@ -9,24 +10,23 @@ interface LandingSectionProps {
 
 function LandingSection({ className }: LandingSectionProps) {
   const t = useTranslations("home.landing_section");
+  const backgroundImage = getOptimizedImage({
+    src: "/backgrounds/skyWithTower.png",
+    width: screen.availWidth,
+    height: screen.availHeight,
+    priority: true,
+  });
   return (
     <section
       className={cn(
         "realtive w-full flex items-center flex-col sm:justify-center sm:gap-32 h-full sm:py-10 snap-center justify-end pt-10 gap-4",
         className
       )}
+      style={{
+        backgroundImage: backgroundImage,
+        backgroundSize: "cover",
+      }}
     >
-      <Image
-        src={"/backgrounds/skyWithTower.png"}
-        alt="Background Image"
-        fill
-        priority
-        style={{
-          zIndex: -1,
-          position: "absolute",
-          objectFit: "cover",
-        }}
-      />
       <h1
         className="font-title font-extrabold sm:text-8xl text-white text-center text-6xl mb-auto sm:mb-0"
         style={{

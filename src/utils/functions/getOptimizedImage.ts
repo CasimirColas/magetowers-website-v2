@@ -17,16 +17,19 @@ export function getOptimizedImage({
   height,
   alt,
   quality,
+  priority,
 }: {
   src: string;
   width: number;
   height: number;
   alt?: string;
   quality?: number;
+  priority?: boolean;
 }) {
   const {
     props: { srcSet, sizes },
   } = getImageProps({
+    priority: priority,
     src,
     width: width,
     height: height,
