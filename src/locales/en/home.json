@@ -10,11 +10,11 @@
   },
   "expectations_section": {
     "title": "What to expect?",
-    "text_full": "Mage Towers is a card game centered around ||building you mage tower|| and collecting different types of mana to ||empower your spells|| and use ||powerful incantations||. You gain mana by adding ||Catalyst|| blocks to your tower and infusing them with the power of ||glyphs||. ||Each mana type has it's own play style||."
+    "text_full": "Mage Towers is a card game centered around ||building you mage tower|| and collecting different types of Mana to ||empower your spells|| and use ||powerful Incantations||. You gain Mana by adding ||Catalyst|| blocks to your tower and infusing them with the power of ||Glyphs||. Each Mana type has it's own ||play style||, will you find a way to combine them to your advantage?"
   },
   "power_section": {
     "title": "Show off your skills and tactics!",
-    "text_full": "Use your cards wisely to ||outsmart your opponent|| and think ahead to predict his moves. The game is ||easy to learn but hard to master||. The key to victory is to ||master all the spells and their interactions||. Shift and adapt your strategy to the ||ever changing battlefield|| and become the ultimate mage! ||Create devastating combos!|| Win by using powerful incantations or ending the game having ||the greatest mage tower|| in the realm."
+    "text_full": "Use your cards wisely to ||outsmart your opponent|| and think ahead to predict his moves. The game is ||easy to learn but hard to master||. The key to victory is to ||master all the spells and their interactions||. Shift and adapt your strategy to the ||ever changing battlefield|| and become the ultimate mage! ||Create devastating combos!|| Win by using powerful Incantations or ending the game having ||the greatest mage tower|| in the realm."
   },
   "future_section": {
     "title": "What's next?",
@@ -25,6 +25,7 @@
     "arcane": "||Drawing|| cards to craft the perfect hand and ||magnify the output|| of your cards",
     "chaos": "||Randomness and unpredictability||. You never know what you are going to get.",
     "order": "||Close the gap|| between players and ||control|| the board.",
+    "speciality": "Speciality",
     "look": "Look at the cards",
     "more": "Click to know more",
     "hover": "Hover the cards to see them up close. You can also take a look at all the cards in the game by going"

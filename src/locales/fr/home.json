@@ -6,19 +6,19 @@
   },
   "video_section": {
     "title": "Jettez un œil à notre trailer!",
-    "text_full": "Vous aimez Hearthstone, Magic the Gathering ou Yu-Gi-Oh! ||Essayez Mage Towers!|| Il peut être joué avec ||jusqu'à 4 joueurs|| (ou peut-être même plus 🤔) et il est très facile à prendre en main. La ||variété de styles de jeu|| et les conditions de victoire garantiront qu'aucune partie ne se ressemblera jamais."
+    "text_full": "Vous aimez Hearthstone, Magic the Gathering ou Yu-Gi-Oh! ||essayez Mage Towers!|| Un jeu qui peut se jouer ||jusqu'à 4 joueurs|| (voire même davantage 🤔) et est très facile à prendre en main. La ||variété de styles de jeu|| et les conditions de victoire garantiront qu'aucune partie ne ressemblera à une autre."
   },
   "expectations_section": {
     "title": "À quoi vous attendre?",
-    "text_full": "Mage Towers est un jeu de carte centré sur la ||construction de votre tour de mage|| et la collecte de différents types de mana pour ||renforcer vos sorts|| et utiliser de ||puissantes incantations||. Vous gagnez du mana en ajoutant des blocs ||Catalyseur|| à votre tour et en les imprégnant du pouvoir des ||glyphes||. Chaque type de mana repose sur un ||style de jeu différents||."
+    "text_full": "Mage Towers est un jeu de cartes centré sur la ||construction d'une Tour de mage|| et la collecte de différents types de Mana pour ||renforcer vos sorts|| et utiliser de ||puissantes Incantations||. Vous gagnez du Mana en ajoutant des blocs ||Catalyseur|| à votre tour et en les imprégnant du pouvoir des ||Glyphes||. Chaque type de Mana repose sur un ||style de jeu différent||, sauras-tu les combiner à ton avantage?"
   },
   "power_section": {
     "title": "Montrez vos compétences tactiques!",
-    "text_full": "Utilisez vos cartes judicieusement pour ||déjouer votre adversaire|| et anticipez ses mouvements. Le jeu est ||facile à prendre en main mais difficile à maîtriser||. La clé de la victoire est de ||maîtriser tous les sorts et leurs interactions||. Changez et adaptez votre stratégie au ||champ de bataille en constante évolution|| et devenez le mage ultime ! ||Créez des combos dévastatrices!|| Gagnez en utilisant de puissantes incantations ou en ayant ||la plus impressionante tour de mage|| du royaume à la fin de la partie."
+    "text_full": "Utilisez vos cartes judicieusement pour ||déjouer votre adversaire|| et anticipez ses mouvements. Le jeu est ||facile à prendre en main mais difficile à maîtriser||. La clé de la victoire est de ||maîtriser tous les sorts et leurs interactions||. Changez et adaptez votre stratégie au ||champ de bataille en constante évolution|| et devenez le Mage ultime ! ||Créez des combos dévastatrices !|| Gagnez en utilisant de puissantes Incantations ou en ayant ||la plus impressionnante Tour de Mage|| du royaume à la fin de la partie."
   },
   "future_section": {
-    "title": "Qu'est-ce qui vient ensuite?",
-    "text_full": "Actuellement, notre ||pack de base 1 contre 1 est prêt et attend d'être expédié||. Mais il y a beaucoup plus à venir ! Si le jeu est entièrement financé, ||2 extensions sont sont déjà prévues!|| Elles apporteront des artéfacts et des types de magie inédits. ||L'objectif ultime|| serait de sortir une boîte d'||édition deluxe|| contenant les deux extensions, suffisamment de cartes pour 4 joueurs et des éléments tels qu'||un tapis de jeu|| et des jetons pour offrir la ||meilleure expérience de jeu possible||. ||Tout excédent de la campagne de financement|| participatif sera utilisé pour créer un ||jeu vidéo||!"
+    "title": "Et maintenant ?",
+    "text_full": "Actuellement, notre ||pack de base 1 contre 1 est prêt et attend pour vous être expédié||. Mais il y a beaucoup plus à venir ! Si le jeu est entièrement financé, ||2 extensions sont sont déjà prévues!|| Elles apporteront des artéfacts et des types de magie inédits. ||L'objectif ultime|| serait de sortir une boîte d'||édition deluxe|| contenant les deux extensions, suffisamment de cartes pour 4 joueurs et des éléments tels qu'||un tapis de jeu|| et des jetons, afin d'offrir la ||meilleure expérience de jeu possible||. ||Tout excédent de la campagne de financement|| participatif sera utilisé pour créer un ||jeu vidéo||!"
   },
   "manatypes_carousel": {
     "destruction": "||Défausser|| des cartes. Que ce soit les vôtres ou celles de votre adversaire, il y a toujours un moyen d'en tirer le meilleur parti.",
@@ -26,11 +26,12 @@
     "chaos": "||Hasard et imprévisibilité||. Vous ne savez jamais sur quoi vous allez tomber.",
     "order": "||Combler l'écart|| entre les joueurs et ||contrôler|| le plateau.",
     "look": "Regarder les cartes",
+    "speciality": "Spécialité",
     "more": "Cliquez pour plus de détails",
-    "hover": "Survolez les cartes pour les voir de près. Vous pouvez également jeter un œil à toutes les cartes du jeu en allant"
+    "hover": "Survolez les cartes pour les voir de plus près. Vous pouvez également jeter un œil à toutes les cartes du jeu en allant"
   },
   "bench": {
     "title": "Choisirez-vous la chance plutôt qu'une récompense garantie?",
-    "description": "Au début de chaque tour vous avez le choix de piocher une carte face visible du marché ou 2 cartes face cachée de la rue. Qu'aller vous faire?"
+    "description": "Au début de chaque tour vous avez le choix entre piocher une carte du marché face visible ou 2 cartes de la rue face cachée. Qu'allez-vous faire?"
   }
 }

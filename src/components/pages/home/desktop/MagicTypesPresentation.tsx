@@ -90,14 +90,19 @@ function MagicTypesPresentation() {
             </Link>
             .
           </CardDescription>
-          {pt({
-            text: t(type),
-            default: true,
-            args: {
-              childClassName: `text-${type}`,
-              parentClassName: "text-xl w-full",
-            },
-          })}
+          <div className="flex flex-col w-full gap-1">
+            <h4 className="text-xl border-b border-tile text-tile">
+              {t("speciality")}:
+            </h4>
+            {pt({
+              text: t(type),
+              default: true,
+              args: {
+                childClassName: `text-${type}`,
+                parentClassName: "text-xl w-full",
+              },
+            })}
+          </div>
         </div>
       </TabsContent>
     );
