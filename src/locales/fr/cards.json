@@ -1,41 +1,41 @@
 {
   "destruction": {
     "name": "Glyphe de Destruction",
-    "description": "Gagnez 1 mana de ||destruction|| jusqu'à la fin de votre tour"
+    "description": "Gagnez 1 Mana de ||Destruction|| jusqu'à la fin de votre tour"
   },
   "arcane": {
     "name": "Glyphe d'Arcane",
-    "description": "Gagnez 1 mana d'||arcane|| jusqu'à la fin de votre tour"
+    "description": "Gagnez 1 Mana d'||Arcane|| jusqu'à la fin de votre tour"
   },
   "order": {
     "name": "Glyphe d'Ordre",
-    "description": "Gagnez 1 mana d'||ordre|| jusqu'à la fin de votre tour"
+    "description": "Gagnez 1 Mana d'||Ordre|| jusqu'à la fin de votre tour"
   },
   "chaos": {
     "name": "Glyphe de Chaos",
-    "description": "Gagnez 1 mana de ||chaos|| jusqu'à la fin de votre tour"
+    "description": "Gagnez 1 Mana de ||Chaos|| jusqu'à la fin de votre tour"
   },
   "creation": {
     "name": "Glyphe de Création",
-    "description": "Gagnez 1 mana de ||n'importe quel|| type jusqu'à la fin de votre tour ou ||montez un sort de niveau||"
+    "description": "Gagnez 1 Mana de ||n'importe quel|| type jusqu'à la fin de votre tour ou ||faites passer un Sort au niveau supérieur||"
   },
   "catalyst": {
     "name": "Catalyseur",
-    "description": "||Lorsque la carte est jouée||, combinez-la avec 1 glyphe magique régulier ou 2 glyphe de création pour l'infuser, ||autrement|| vous aurez besoin de 2 glyphes réguliers du même type. À la fin de votre tour, vous recevrez 1 mana du type du(des) glyphe(s) infusé(s)"
+    "description": "||Lorsque la carte est jouée||, combinez-la avec 1 Glyphe magique régulier ou 2 Glyphes de Création pour l'infuser, ||autrement|| vous aurez besoin de 2 Glyphes réguliers du même type. À la fin de votre Tour, vous recevrez 1 Mana du type du(des) Glyphe(s) infusé(s)"
   },
   "generator": {
     "name": "Générateur",
-    "description": "Double le mana généré par le bloc ci-dessus",
-    "warning": "Ce bloc ne peut être le premier bloc dans votre tour"
+    "description": "Double le Mana généré par le bloc ci-dessus",
+    "warning": "Ce bloc ne peut être le premier bloc dans votre Tour"
   },
   "arcane_mirror": {
     "name": "Miroir Arcanique",
-    "description": "Choisissez un adversaire, jusqu'à la fin de la partie ce bloc copiera la fonction du bloc au même étage dans ça tour",
+    "description": "Choisissez un adversaire, jusqu'à la fin de la partie ce bloc copiera la fonction du bloc au même étage dans ça Tour",
     "warning": "Ne copie pas les effets bonus appliqués au bloc. Ne peut pas copier un Observatoire"
   },
   "observatory": {
     "name": "Observatoire",
-    "description": "À partir de votre prochain tour, tous les sorts que vous jouez commenceront forcément au niveau 2.",
+    "description": "À partir de votre prochain tour, tous les Sorts que vous jouerez commenceront nécessairement au niveau 2.",
     "warning": "Vous ne pouvez placer de blocs au-dessus de celui-ci"
   },
   "ignite": {
@@ -46,15 +46,15 @@
   },
   "sacrifice": {
     "name": "Sacrifice",
-    "level_1": "À la fin de votre tour, défaussez toute votre main, gagnez 1 mana de destruction pour chaque 2 cartes défaussées",
-    "level_2": "Comme le niveau précédent mais vous choisissez un type régulier de mana à générer à la place de la destruction",
-    "level_3": "Défaussez un nombre quelconque de cartes de votre main, gagnez 1 mana de destruction pour chaque carte défaussée"
+    "level_1": "À la fin de votre tour, défaussez toute votre main, gagnez 1 Mana de destruction toutes les 2 cartes défaussées",
+    "level_2": "Identique au niveau précédent mais vous choisissez un type régulier de Mana à générer à la place de la destruction",
+    "level_3": "Défaussez un nombre quelconque de cartes de votre main, gagnez 1 Mana de destruction pour chaque carte défaussée"
   },
   "amplify": {
     "name": "Amplification",
-    "level_1": "Doublez le nombre de cartes tirées ou défaussées par votre prochain sort",
-    "level_2": "Les 2 prochains sorts que vous jouez ce tour-ci commencent au niveau 2",
-    "level_3": "À la fin de votre tour, gagnez le double de mana peu importe la source"
+    "level_1": "Doublez le nombre de cartes tirées ou défaussées par votre prochain Sort",
+    "level_2": "Les 2 prochains Sorts que vous jouez ce tour-ci commencent au niveau 2",
+    "level_3": "À la fin de votre tour, gagnez le double de Mana peu importe la source"
   },
   "clearsight": {
     "name": "Clairvoyance",
@@ -65,14 +65,14 @@
   "benevolence": {
     "name": "Bienveillance",
     "level_1": "Prenez une carte de votre choix dans la main de l'un de vos adversaires",
-    "level_2": "Volez jusqu'à 3 manas réguliers à l'un de vos adversaires",
-    "level_3": "Commencez un nouveau tour après que le vôtre se termine. Vos blocs ne vous donneront aucun mana à la fin de celui-ci"
+    "level_2": "Volez jusqu'à 3 Manas réguliers à l'un de vos adversaires",
+    "level_3": "Commencez un nouveau tour quand que le vôtre se termine. Vos blocs ne vous donneront aucun Mana à la fin de celui-ci"
   },
   "equality": {
     "name": "Égalité",
-    "level_1": "Piochez du deck jusqu'à avoir autant de cartes que l'un de vos adversaires",
-    "level_2": "Choisissez si tous les joueurs tirent 2 cartes du deck, ou défaussent 3 cartes de leur main",
-    "level_3": "Réduisez à 0 tous les points de mana accumulés par tous les joueurs"
+    "level_1": "Piochez des cartes du deck jusqu'à en avoir autant que l'un de vos adversaires",
+    "level_2": "Décidez si tous les joueurs doivent tirer 2 cartes du deck, ou défausser 3 cartes de leur main",
+    "level_3": "Réduisez à 0 tous les points de Mana accumulés par tous les joueurs"
   },
   "mind_control": {
     "name": "Contrôle Mental",
@@ -82,28 +82,28 @@
   },
   "confusion": {
     "name": "Confusion",
-    "level_1": "Mélangez votre main dans le deck, piochez s'y autant de cartes que vous en aviez",
-    "level_2": "Comme le niveau précédent mais pour un adversaire",
+    "level_1": "Mélangez votre main dans le deck, piochez y autant de cartes que vous en aviez",
+    "level_2": "Identique au niveau précédent mais pour un adversaire",
     "level_3": "Les effets des niveaux précédents sont combinés. Tous vos adversaires sont ciblés, mais vous pouvez choisir le nombre de cartes à mélanger et à tirer"
   },
   "apotheosis": {
     "name": "Apothéose",
     "level_1": "Ne fait rien",
     "level_2": "Piochez 3 cartes du deck",
-    "level_3": "Détruisez un bloc dans une tour adverse",
+    "level_3": "Détruisez un bloc dans une Tour adverse",
     "level_4": "Vous gagnez la partie"
   },
   "spellcatcher": {
     "name": "Capteur de Sorts",
-    "description": "Chaque fois qu'un sort ou un capteur de sorts est joué, vous pouvez utiliser cette carte pour le contrer. Si en fin de compte un sort est contré, il est défaussé et le mana utilisé pour le jouer est perdu",
+    "description": "Chaque fois qu'un Sort ou un Capteur de Sorts est joué, vous pouvez utiliser cette carte pour le contrer. Si en fin de compte un Sort est contré, il est défaussé et le Mana utilisé pour le jouer est perdu",
     "warning": "Vous ne pouvez pas jouer cette carte pendant une incantation"
   },
   "renovation": {
     "name": "Rénovation",
     "choose_option": "Choisissez une option:",
-    "option_1": "Reconfigurez votre tour en utilisant les blocs déjà placés",
-    "option_2": "Insérez un bloc de votre main dans votre tour",
-    "option_3": "Détruisez un bloc de votre tour et piochez une carte du banc",
+    "option_1": "Reconfigurez votre Tour en utilisant les blocs déjà placés",
+    "option_2": "Insérez un bloc de votre main dans votre Tour",
+    "option_3": "Détruisez un bloc de votre Tour et piochez une carte du banc",
     "warning": "Les restrictions de placement de vos blocs doivent être respectées"
   }
 }

@@ -1,31 +1,31 @@
 {
   "destruction": {
     "name": "Glyph of Destruction",
-    "description": "Gain 1 mana of ||destruction|| until the end of your turn"
+    "description": "Gain 1 Mana of ||Destruction|| until the end of your turn"
   },
   "arcane": {
     "name": "Glyph of Arcane",
-    "description": "Gain 1 mana of ||arcane|| until the end of your turn"
+    "description": "Gain 1 Mana of ||Arcane|| until the end of your turn"
   },
   "order": {
     "name": "Glyph of Order",
-    "description": "Gain 1 mana of ||order|| until the end of your turn"
+    "description": "Gain 1 Mana of ||Order|| until the end of your turn"
   },
   "chaos": {
     "name": "Glyph of Chaos",
-    "description": "Gain 1 mana of ||chaos|| until the end of your turn"
+    "description": "Gain 1 Mana of ||Chaos|| until the end of your turn"
   },
   "creation": {
     "name": "Glyph of Creation",
-    "description": "Gain 1 mana of ||any|| type until the end of your turn or ||level up a spell||"
+    "description": "Gain 1 Mana of ||any|| type until the end of your turn or ||level up a Spell||"
   },
   "catalyst": {
     "name": "Catalyst",
-    "description": "||When the card is played|| combine it with 1 regular magic glyph or 2 creation glyphs to infuse it, ||otherwise|| you will need 2 regular glyphs of the same type. At the end of your turn gives you 1 mana of the type of the infusing glyph(s)"
+    "description": "||When the card is played|| combine it with 1 regular magic Glyph or 2 Creation Glyphs to infuse it, ||otherwise|| you will need 2 regular Glyphs of the same type. At the end of your turn gives you 1 Mana of the type of the infusing Glyph(s)"
   },
   "generator": {
     "name": "Generator",
-    "description": "Doubles the mana given to you by the block above",
+    "description": "Doubles the Mana given to you by the block above",
     "warning": "This block can only be the first block in your tower"
   },
   "arcane_mirror": {
@@ -35,7 +35,7 @@
   },
   "observatory": {
     "name": "Observatory",
-    "description": "From your next turn, any spells you play will automatically start at level 2",
+    "description": "From your next turn, any Spells you play will automatically start at level 2",
     "warning": "You cannot place any other block on top of this one"
   },
   "ignite": {
@@ -46,15 +46,15 @@
   },
   "sacrifice": {
     "name": "Sacrifice",
-    "level_1": "At the end of your turn discard your whole hand, gain a mana of destruction for every 2 discarded cards",
-    "level_2": "Same as the previous level but you choose a regular type of mana to be generated instead of destruction",
-    "level_3": "Discard any number of cards from your hand, gain 1 mana of destruction for every discarded card"
+    "level_1": "At the end of your turn discard your whole hand, gain a Mana of destruction for every 2 discarded cards",
+    "level_2": "Same as the previous level but you choose a regular type of Mana to be generated instead of destruction",
+    "level_3": "Discard any number of cards from your hand, gain 1 Mana of destruction for every discarded card"
   },
   "amplify": {
     "name": "Amplify",
-    "level_1": "Double the number of cards drawn or discarded from your next spell",
-    "level_2": "The next 2 spells you play this turn start at level 2",
-    "level_3": "At the end of your turn, gain the double amount of mana from every source"
+    "level_1": "Double the number of cards drawn or discarded from your next Spell",
+    "level_2": "The next 2 Spells you play this turn start at level 2",
+    "level_3": "At the end of your turn, gain the double amount of Mana from every source"
   },
   "clearsight": {
     "name": "Clearsight",
@@ -65,14 +65,14 @@
   "benevolence": {
     "name": "Benevolence",
     "level_1": "Take a card of your choice from one of your opponent's hand",
-    "level_2": "Steal up to 3 regular manas from one of your opponents",
-    "level_3": "Start a new turn after your first one ends. Your blocks will not give you any mana at the end of it"
+    "level_2": "Steal up to 3 regular Manas from one of your opponents",
+    "level_3": "Start a new turn after your first one ends. Your blocks will not give you any Mana at the end of it"
   },
   "equality": {
     "name": "Equality",
     "level_1": "Draw from the deck until you have as many cards as one of your opponents",
     "level_2": "Choose if all the players draw 2 from the deck, or discard 3 cards from their hand",
-    "level_3": "Reduce all mana points accumulated by all players to 0"
+    "level_3": "Reduce all Mana points accumulated by all players to 0"
   },
   "mind_control": {
     "name": "Mind Control",
@@ -95,7 +95,7 @@
   },
   "spellcatcher": {
     "name": "Spellcatcher",
-    "description": "Whenever a spell or a spellcatcher is played, you can use this card to counter it. If in the end a spell is countered, it is discarded and the mana used to play it is lost",
+    "description": "Whenever a Spell or a Spellcatcher is played, you can use this card to counter it. If in the end a Spell is countered, it is discarded and the Mana used to play it is lost",
     "warning": "You cannot play this card during an incantation"
   },
   "renovation": {
