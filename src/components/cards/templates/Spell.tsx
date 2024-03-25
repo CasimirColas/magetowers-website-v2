@@ -13,8 +13,8 @@ interface SpellProps {
 }
 
 function Spell({ className, id, card }: SpellProps) {
-  const titleId = "glyph-title-" + id;
-  const descriptionId = "glyph-description-" + id;
+  const titleId = "spell-title-" + id;
+  const descriptionId = "spell-description-" + id;
   const t = useTranslations(`cards.${card.translation_key}`);
   const ct = useTranslations("common.vocabulary");
   useEffect(() => {

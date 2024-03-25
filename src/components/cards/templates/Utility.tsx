@@ -12,8 +12,8 @@ interface UtilityProps {
 }
 
 function Utility({ className, id, card }: UtilityProps) {
-  const titleId = "glyph-title-" + id;
-  const descriptionId = "glyph-description-" + id;
+  const titleId = "utility-title-" + id;
+  const descriptionId = "utility-description-" + id;
   const t = useTranslations(`cards.${card.translation_key}`);
   useEffect(() => {
     adjustFontSize(titleId, 0.06);

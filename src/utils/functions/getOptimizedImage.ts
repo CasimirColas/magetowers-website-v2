@@ -16,14 +16,22 @@ export function getOptimizedImage({
   width,
   height,
   alt,
+  quality,
 }: {
   src: string;
   width: number;
   height: number;
   alt?: string;
+  quality?: number;
 }) {
   const {
     props: { srcSet, sizes },
-  } = getImageProps({ src, width: width, height: height, alt: alt ?? "" });
+  } = getImageProps({
+    src,
+    width: width,
+    height: height,
+    alt: alt ?? "",
+    quality: quality ?? 80,
+  });
   return getBackgroundImage(srcSet);
 }

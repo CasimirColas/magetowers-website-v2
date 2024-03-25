@@ -13,8 +13,8 @@ interface BlockProps {
 }
 
 function Block({ className, id, card }: BlockProps) {
-  const titleId = "glyph-title-" + id;
-  const descriptionId = "glyph-description-" + id;
+  const titleId = "block-title-" + id;
+  const descriptionId = "block-description-" + id;
   const t = useTranslations(`cards.${card.translation_key}`);
   useEffect(() => {
     adjustFontSize(titleId, 0.1);
