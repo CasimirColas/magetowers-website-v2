@@ -81,7 +81,7 @@
     "destruction": {
       "name": "Apocalypse",
       "requirements": "Coûte ||13 mana de Destruction||",
-      "effect": "Lorsque vous l'utilisez, votre tour se termine, ||vous ne pouvez plus jouer de carte et votre tour est sauté||. Si, dans les ||2 prochains tours||, aucun autre joueur n'utilise d'Incantation ou si ||la pioche est vide||, ||vous remportez la partie||."
+      "effect": "Lorsque vous l'utilisez, votre tour se termine, ||vous ne pouvez plus jouer de carte et votre tour est sauté||. Si, dans les ||2 prochains tours||, aucun autre joueur n'utilise d'Incantations ou si ||la pioche est vide||, ||vous remportez la partie||."
     },
     "arcane": {
       "name": "Connexion Arcanique",
@@ -96,7 +96,7 @@
     "order": {
       "name": "Ordre Céleste",
       "requirements": "Coûte ||12 mana d'Ordre||",
-      "effect": "Lorsque vous l'utilisez, votre tour se termine. Jusqu'à la fin de la partie, si aucun autre joueur n'utilise d'Incantation, vous gagnez lorsque ||votre quantité totale de mana correspond à celle d'un autre joueur|| ou si ||la pioche est vide||."
+      "effect": "Lorsque vous l'utilisez, votre tour se termine. Jusqu'à la fin de la partie, si aucun autre joueur n'utilise d'Incantations, vous gagnez lorsque ||votre quantité totale de mana correspond à celle d'un autre joueur|| ou si ||la pioche est vide||."
     },
     "addendum": "Dans le cas où une Incantation est utilisée après une ||Apocalypse|| ou un ||Ordre Céleste||, le vainqueur est l'utilisateur de l'Incantation avec ||le plus de blocs de Catalyseurs infusés|| dans sa tour."
   },
