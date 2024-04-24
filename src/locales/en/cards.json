@@ -21,7 +21,7 @@
   },
   "catalyst": {
     "name": "Catalyst",
-    "description": "||When the card is played|| combine it with 1 regular magic Glyph or 2 Creation Glyphs to infuse it, ||otherwise|| you will need 2 regular Glyphs of the same type. At the end of your turn gives you 1 Mana of the type of the infusing Glyph(s)"
+    "description": "||When the card is played|| combine it with 1 common magic Glyph or 2 Creation Glyphs to infuse it, ||otherwise|| you will need 2 common Glyphs of the same type. At the end of your turn gives you 1 Mana of the type of the infusing Glyph(s)"
   },
   "generator": {
     "name": "Generator",
@@ -47,7 +47,7 @@
   "sacrifice": {
     "name": "Sacrifice",
     "level_1": "At the end of your turn discard your whole hand, gain a Mana of destruction for every 2 discarded cards",
-    "level_2": "Same as the previous level but you choose a regular type of Mana to be generated instead of destruction",
+    "level_2": "Same as the previous level but you choose a common type of Mana to be generated instead of destruction",
     "level_3": "Discard any number of cards from your hand, gain 1 Mana of destruction for every discarded card"
   },
   "amplify": {
@@ -65,7 +65,7 @@
   "benevolence": {
     "name": "Benevolence",
     "level_1": "Take a card of your choice from one of your opponent's hand",
-    "level_2": "Steal up to 3 regular Manas from one of your opponents",
+    "level_2": "Steal up to 3 common Manas from one of your opponents",
     "level_3": "Start a new turn after your first one ends. Your blocks will not give you any Mana at the end of it"
   },
   "equality": {
