@@ -16,8 +16,8 @@
     "spells_title": "les Sorts",
     "spells": "Les ||Sorts|| sont utilisés pour lancer des effets puissants. Ils peuvent vous aider ou entraver vos adversaires. Le premier niveau de chaque sort ne nécessite rien et peut être utilisé directement. Pour améliorer un sort, vous devez utiliser la ||quantité de mana requise|| ou ||sacrifier des glyphes et des sorts|| du même type de magie.",
     "learn_spells": "En savoir plus sur les sorts",
-    "utilities_title": "les Utilitaires",
-    "utilities": "Les cartes ||Utilitaires|| ne nécessitent rien pour être utilisés et peuvent s'avérer utiles dans certaines circonstances.",
+    "utilities_title": "Les Utilitaires",
+    "utilities": "Les cartes ||Utilitaires|| ne nécessitent rien pour être utilisées et peuvent s'avérer utiles dans certaines circonstances.",
     "look_cards_long": "Jetez un œil à toutes les cartes du jeu sur la page dédiée",
     "look_cards": "Regardez toutes les cartes ici"
   },
@@ -40,24 +40,24 @@
   },
   "mana": {
     "title": "Mana",
-    "intro": "Il y a ||5 types de mana|| dans Mage Towers. Le ||mana de Création|| est le plus rare et le plus puissant d'entre eux, il peut être converti en n'importe quel autre type de mana et bien qu'il n'ait pas d'Incantation, il peut améliorer les sorts de n'importe quel type de magie. Les 4 autres types de mana sont ||Destruction||, ||Arcane||, ||Chaos|| et ||Ordre||. Ils sont beaucoup plus courants et peuvent être utilisés pour améliorer les sorts de leur type respectif.",
+    "intro": "Il y a ||5 types de mana|| dans Mage Towers. Le ||mana de Création|| est le plus rare et le plus puissant, il peut être converti en n'importe quel autre type de mana et bien qu'il n'ait pas d'Incantation, il peut améliorer les sorts de n'importe quel type de magie. Les 4 autres types de mana sont ||Destruction||, ||Arcane||, ||Chaos|| et ||Ordre||. Ils sont beaucoup plus courants et peuvent être utilisés pour améliorer les sorts de leur type respectif.",
     "learn_incantations": "En savoir plus sur les Incantations",
     "gain_mana": "Il existe 3 principales façons de gagner du mana dans Mage Towers :",
     "catalysts": "||Blocs -|| À la fin de votre tour, chaque bloc ||Catalyseur|| dans votre tour produira ||un mana|| du type avec lequel il est infusé",
     "spells": "||Sorts -|| Utiliser des sorts tels que ||Sacrifice|| vous donnera du mana permanent",
     "glyphs": "||Glyphes -|| Utiliser un glyphe vous donnera du mana de son type jusqu'à la fin de votre tour",
-    "reminder": "N'oubliez pas que tout le mana que vous gagnez de vos ||Blocs et Sorts est permanent|| (n'oubliez pas de le noter), mais le mana que vous gagnez en utilisant des ||Glyphes n'est disponible que jusqu'à la fin de votre tour||."
+    "reminder": "N'oubliez pas que tout le mana que vous gagnez de vos ||Blocs et Sorts est permanent|| (pensez à le noter), mais le mana que vous gagnez en utilisant des ||Glyphes n'est disponible que jusqu'à la fin de votre tour||."
   },
   "catalysts": {
     "title": "Construire votre Tour de Mage",
-    "intro": "||Une fois par tour||, vous avez l'opportunité de ||placer un bloc|| dans votre tour. Chaque bloc est ||placé sur la table au-dessus du précédent|| dans une colonne représentant la construction de votre tour. Chaque joueur ne peut construire qu'||une seule tour||, donc faites attentions lors de la plannification car certains blocs ont ||des restrictions de placement||.",
+    "intro": "||Une fois par tour||, vous avez l'opportunité de ||placer un bloc|| dans votre tour. Chaque bloc est ||posé sur la table au-dessus du précédent|| dans une colonne représentant la construction de votre tour. Chaque joueur ne peut construire qu'||une seule tour||, donc faites attentions lors de la planification car certains blocs ont ||des restrictions de placement||.",
     "catalyst": "Le bloc le plus important de votre tour est le ||Catalyseur|| car il est votre principal moyen d'obtenir du mana. Vous pouvez le jouer en combinaison avec ||1 glyphe commun|| (Destruction, Arcane, Ordre, Chaos) ou ||2 glyphes de Création|| pour l'infuser. Si vous le faites, placez les glyphes au-dessus ou à côté du Catalyseur sur la table pour indiquer le type de mana qu'il produira. À la fin de votre tour, chaque bloc Catalyseur dans votre tour produira un mana du type avec lequel il est infusé.",
-    "change_infusion": "Pendant votre tour, vous pouvez également choisir de ||changer ou d'assigner un nouveau type d'infusion|| à votre Catalyseur. Pour ce faire, placez les glyphes d'infusion précédents dans la pile de défausse s'il y en avait, puis placez 2 glyphes identiques sur le Catalyseur. ||Cette action ne peut pas être effectuée avec des glyphes de Création||.",
+    "change_infusion": "Pendant votre tour, vous pouvez également choisir de ||changer ou d'assigner un nouveau type d'infusion|| à votre Catalyseur. Pour ce faire, placez les glyphes d'infusion précédents sur la pile de défausse, puis placez 2 glyphes identiques sur le Catalyseur. ||Cette action ne peut pas être effectuée avec des glyphes de Création||.",
     "tip": "Comme vous l'avez peut-être compris, ne pas infuser immédiatement un Catalyseur avec des glyphes pourrait vous coûter plus de ressources à l'avenir, alors planifiez en conséquence."
   },
   "spells": {
     "title": "Sorts",
-    "intro": "Chaque sort dans Mage Towers a plusieurs niveaux de puissance. Le premier niveau de chaque sort ne nécessite rien et peut être utilisé directement. Pour améliorer un sort, vous pouvez :",
+    "intro": "Chaque sort dans Mage Towers a plusieurs niveaux de puissance. Le premier niveau ne nécessite rien et peut être utilisé directement. Pour améliorer un sort, vous pouvez :",
     "addendum": "Toutes ces actions feront monter le sort d'un niveau. Elles peuvent être utilisées dans n'importe quel ordre et en n'importe quelle quantité, vous pouvez donc les combiner comme bon vous semble.",
     "mana": "||Utiliser un mana|| du même type que le sort",
     "sacrifice": "||Défausser un sort|| du même type",
@@ -77,7 +77,7 @@
   },
   "incantations": {
     "title": "Incantations",
-    "intro": "Utiliser une ||Incantation|| est le principal moyen de gagner dans Mage Towers. Elle ne peut être utilisée que pendant votre tour et vous devez avoir suffisamment de mana pour l'utiliser et respecter ses ||exigences spécifiques||. Voici la liste des ||Incantations|| que vous pouvez utiliser :",
+    "intro": "Utiliser une ||Incantation|| est le principal moyen de gagner dans Mage Towers. Elle ne peut être utilisée que pendant votre tour et vous devez avoir suffisamment de mana pour vous en servir et respecter ses ||exigences spécifiques||. Voici la liste des ||Incantations|| que vous pouvez utiliser :",
     "destruction": {
       "name": "Apocalypse",
       "requirements": "Coûte ||13 mana de Destruction||",
