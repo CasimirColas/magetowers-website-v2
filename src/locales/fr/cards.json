@@ -21,7 +21,7 @@
   },
   "catalyst": {
     "name": "Catalyseur",
-    "description": "||Lorsque la carte est jouée||, combinez-la avec 1 Glyphe magique régulier ou 2 Glyphes de Création pour l'infuser, ||autrement|| vous aurez besoin de 2 Glyphes réguliers du même type. À la fin de votre Tour, vous recevrez 1 Mana du type du(des) Glyphe(s) infusé(s)"
+    "description": "||Lorsque la carte est jouée||, combinez-la avec 1 Glyphe magique commun ou 2 Glyphes de Création pour l'infuser, ||autrement|| vous aurez besoin de 2 Glyphes réguliers du même type. À la fin de votre tour, vous recevrez 1 Mana du type du(des) Glyphe(s) infusé(s)"
   },
   "generator": {
     "name": "Générateur",
@@ -47,7 +47,7 @@
   "sacrifice": {
     "name": "Sacrifice",
     "level_1": "À la fin de votre tour, défaussez toute votre main, gagnez 1 Mana de destruction toutes les 2 cartes défaussées",
-    "level_2": "Identique au niveau précédent mais vous choisissez un type régulier de Mana à générer à la place de la destruction",
+    "level_2": "Identique au niveau précédent mais vous choisissez un type commun de Mana à générer à la place de la destruction",
     "level_3": "Défaussez un nombre quelconque de cartes de votre main, gagnez 1 Mana de destruction pour chaque carte défaussée"
   },
   "amplify": {
