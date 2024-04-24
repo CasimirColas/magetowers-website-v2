@@ -65,7 +65,7 @@
   "benevolence": {
     "name": "Bienveillance",
     "level_1": "Prenez une carte de votre choix dans la main de l'un de vos adversaires",
-    "level_2": "Volez jusqu'à 3 Manas réguliers à l'un de vos adversaires",
+    "level_2": "Volez jusqu'à 3 Manas communs à l'un de vos adversaires",
     "level_3": "Commencez un nouveau tour quand que le vôtre se termine. Vos blocs ne vous donneront aucun Mana à la fin de celui-ci"
   },
   "equality": {
