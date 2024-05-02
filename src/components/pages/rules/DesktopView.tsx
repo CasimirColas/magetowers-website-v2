@@ -101,7 +101,7 @@ function DesktopView() {
   return (
     <div className="relative w-full h-full flex justify-center">
       <Image
-        src={"/backgrounds/skyWithTower.png"}
+        src={"/backgrounds/sky.png"}
         alt="Background Image"
         fill
         priority
