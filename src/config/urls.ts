@@ -5,5 +5,5 @@ export const urls = {
   twitterURL: "https://twitter.com/MageTowers",
   tiktokURL: "https://www.tiktok.com/@mage.towers",
   kickstarterURL:
-    "https://www.kickstarter.com/projects/magetowers/mage-tower-0",
+    "https://www.kickstarter.com/projects/magetowers/mage-tower-0?ref=2jeiaw",
 };
