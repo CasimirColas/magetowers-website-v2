@@ -1,5 +1,7 @@
 import { useTranslations } from "next-intl";
 import LinksRow from "../../../../utility/LinksRow";
+import Link from "next/link";
+import { urls } from "@/config/urls";
 
 function LandingSection() {
   const t = useTranslations("home.landing_section");
@@ -16,9 +18,12 @@ function LandingSection() {
       </h1>
 
       <div className="flex flex-col justify-center items-center gap-4 mb-2">
-        <h2 className="p-4 rounded-full bg-white text-xl font-bold text-view shadow-lg mb-2">
-          {t("coming_soon")}
-        </h2>
+        <Link
+          className="p-4 rounded-full bg-green-400 text-xl font-bold text-green-800 shadow-lg mb-2 text-center"
+          href={urls.kickstarterURL}
+        >
+          {t("available_now")}
+        </Link>
         <LinksRow />
       </div>
     </section>

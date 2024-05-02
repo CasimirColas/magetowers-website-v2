@@ -4,5 +4,6 @@ export const urls = {
   instagramURL: "https://www.instagram.com/magetowers/",
   twitterURL: "https://twitter.com/MageTowers",
   tiktokURL: "https://www.tiktok.com/@mage.towers",
-  kickstarterURL: "https://www.kickstarter.com/",
+  kickstarterURL:
+    "https://www.kickstarter.com/projects/magetowers/mage-tower-0",
 };
