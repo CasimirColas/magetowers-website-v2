@@ -90,6 +90,7 @@ function MobileView() {
   function updateProgressBar(progress: number) {
     const div = document.getElementById("progress-bar");
     if (!div) return;
+    if (progress > 100) progress = 100;
     div.style.setProperty("width", `${progress}%`);
   }
 
