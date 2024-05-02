@@ -30,7 +30,7 @@
   },
   "gameplay": {
     "title": "Déroulement du jeu",
-    "text": "Le jeu se joue par tours. Au début de votre tour, commencez par prendre une carte du ||Marché|| ou 2 de la ||Rue||. Ensuite, vous pouvez ||jouer autant de cartes que vous le souhaitez|| de votre main, mais vous ne pouvez ||placer qu'un seul bloc|| par tour. Pendant votre tour, vous pouvez également convertir 2 ||mana de Création|| en 1 mana de n'importe quel type. ||Lorsque vous avez terminé, piochez une carte|| de la pioche et passez le tour au joueur suivant. À chaque fois que vous prenez des cartes du ||Banc||, remplissez les espaces vides avec des cartes de la pioche.",
+    "text": "Le jeu se joue par tours. Au début de votre tour, commencez par prendre une carte du ||Marché|| ou 2 de la ||Rue||. Ensuite, vous pouvez ||jouer autant de cartes que vous le souhaitez|| de votre main, mais vous ne pouvez ||placer qu'un seul bloc|| par tour. Sauf contre indication chaque carte jouée ou defaussée est placée face visible dans la pile de défausse. Pendant votre tour, vous pouvez également convertir 2 ||mana de Création|| en 1 mana de n'importe quel type. ||Lorsque vous avez terminé, piochez une carte|| de la pioche et passez le tour au joueur suivant. À chaque fois que vous prenez des cartes du ||Banc||, remplissez les espaces vides avec des cartes de la pioche.",
     "pick_cards": "Choisissez une carte du Marché ou 2 de la Rue",
     "play_cards": "Jouez autant de cartes que vous le souhaitez",
     "convert_mana": "Convertissez du mana de Création si besoin",

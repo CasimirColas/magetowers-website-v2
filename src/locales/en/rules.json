@@ -30,7 +30,7 @@
   },
   "gameplay": {
     "title": "Gameplay",
-    "text": "The game is played in turns. At the begining of your turn, start by picking a card from the ||Market|| or 2 from the ||Street||. Then, you can ||play as many cards as you want|| from your hand but you can only ||place one block|| per turn. During your turn can also convert 2 ||Creation mana|| into 1 mana of any type. ||When you are done, draw 1 card|| from the draw pile and pass the turn to the next player. Every time you pick cards from the ||Bench||, fill the empty spaces with cards from the draw pile.",
+    "text": "The game is played in turns. At the begining of your turn, start by picking a card from the ||Market|| or 2 from the ||Street||. Then, you can ||play as many cards as you want|| from your hand but you can only ||place one block|| per turn. Unless specified every card played or discarded is placed face up on the discard pile. During your turn can also convert 2 ||Creation mana|| into 1 mana of any type. ||When you are done, draw 1 card|| from the draw pile and pass the turn to the next player. Every time you pick cards from the ||Bench||, fill the empty spaces with cards from the draw pile.",
     "pick_cards": "Pick a card from the Market or 2 from the Street",
     "play_cards": "Play as many cards as you want",
     "convert_mana": "Convert some Creation mana if needed",
