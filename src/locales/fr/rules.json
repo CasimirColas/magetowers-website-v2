@@ -77,7 +77,7 @@
   },
   "incantations": {
     "title": "Incantations",
-    "intro": "Utiliser une ||Incantation|| est le principal moyen de gagner dans Mage Towers. Elle ne peut être utilisée que pendant votre tour et vous devez avoir suffisamment de mana pour vous en servir et respecter ses ||exigences spécifiques||. Voici la liste des ||Incantations|| que vous pouvez utiliser :",
+    "intro": "Utiliser une ||Incantation|| est le principal moyen de gagner dans Mage Towers. Elle ne peut être utilisée que pendant votre tour et vous devez avoir suffisamment de mana pour vous en servir et respecter ses ||exigences spécifiques||. Voici la liste des ||Incantations|| que vous pouvez utiliser:",
     "destruction": {
       "name": "Apocalypse",
       "requirements": "Coûte ||13 mana de Destruction||",
