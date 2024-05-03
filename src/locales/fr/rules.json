@@ -40,7 +40,7 @@
   },
   "mana": {
     "title": "Mana",
-    "intro": "Il y a ||5 types de mana|| dans Mage Towers. Le ||mana de Création|| est le plus rare et le plus puissant, il peut être converti en n'importe quel autre type de mana et bien qu'il n'ait pas d'Incantation, il peut améliorer les sorts de n'importe quel type de magie. Les 4 autres types de mana sont ||Destruction||, ||Arcane||, ||Chaos|| et ||Ordre||. Ils sont beaucoup plus courants et peuvent être utilisés pour améliorer les sorts de leur type respectif.",
+    "intro": "Il y a ||5 types de mana|| dans Mage Towers. Le ||mana de Création|| est le plus rare et le plus puissant, il peut être converti en n'importe quel autre type de mana et bien qu'il n'ait pas d'Incantation un glyphe de Création peut améliorer un sort de n'importe quel type de magie. Les 4 autres types de mana sont ||Destruction||, ||Arcane||, ||Chaos|| et ||Ordre||. Ils sont beaucoup plus courants et peuvent être utilisés pour améliorer les sorts de leur type respectif.",
     "learn_incantations": "En savoir plus sur les Incantations",
     "gain_mana": "Il existe 3 principales façons de gagner du mana dans Mage Towers :",
     "catalysts": "||Blocs -|| À la fin de votre tour, chaque bloc ||Catalyseur|| dans votre tour produira ||un mana|| du type avec lequel il est infusé",
