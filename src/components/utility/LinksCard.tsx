@@ -61,7 +61,7 @@ function LinksCard() {
         <span className="border border-slate-300 rounded-full" />
         <Button
           variant={"outline"}
-          className="flex justify-center items-center gap-2"
+          className="flex justify-center items-center gap-2 hover:cursor-not-allowed opacity-50"
         >
           {t("download")} <Download className="h-5/6" />
         </Button>
