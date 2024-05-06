@@ -11,11 +11,15 @@ import {
 import { Download } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { parseText } from "@/utils/functions/parseText";
+import { useRouter } from "next/router";
+import { download } from "@/config/download";
 
 const linkStyle = "flex justify-between items-center";
 
 function LinksCard() {
+  const router = useRouter();
   const t = useTranslations("ressources");
+  const locale = router.locale || "en";
   return (
     <Card className="bg-opacity-85 w-full max-w-md">
       <CardHeader>
@@ -59,11 +63,20 @@ function LinksCard() {
           },
         })}
         <span className="border border-slate-300 rounded-full" />
-        <Button
-          variant={"outline"}
-          className="flex justify-center items-center gap-2 hover:cursor-not-allowed opacity-50"
-        >
-          {t("download")} <Download className="h-5/6" />
+        <Button variant={"outline"} asChild>
+          <a
+            //@ts-expect-error
+            href={download.rules[locale]}
+            className="flex justify-center items-center gap-2"
+            download={"test"}
+            target="_blank"
+            style={{
+              //@ts-expect-error
+              cursor: download.rules[locale] ? "pointer" : "not-allowed",
+            }}
+          >
+            {t("download")} <Download className="h-5/6" />
+          </a>
         </Button>
       </CardContent>
     </Card>
