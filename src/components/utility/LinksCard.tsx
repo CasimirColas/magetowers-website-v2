@@ -19,6 +19,7 @@ const linkStyle = "flex justify-between items-center";
 function LinksCard() {
   const router = useRouter();
   const t = useTranslations("ressources");
+  const ct = useTranslations("common");
   const locale = router.locale || "en";
   return (
     <Card className="bg-opacity-85 w-full max-w-md">
@@ -68,7 +69,7 @@ function LinksCard() {
             //@ts-expect-error
             href={download.rules[locale]}
             className="flex justify-center items-center gap-2"
-            download={"test"}
+            download={ct("routes.rules") + "-Mage Towers" + `-${locale}`}
             target="_blank"
             style={{
               //@ts-expect-error
