@@ -49,7 +49,7 @@
     "rules": "Rules",
     "cards": "Cards",
     "credits": "Credits",
-    "ressources": "Ressources"
+    "contact": "Contact"
   },
   "navigation": {
     "menu": "Menu",
@@ -57,5 +57,5 @@
     "previous": "Previous",
     "next": "Next"
   },
-  "ressources": {}
+  "contact": {}
 }

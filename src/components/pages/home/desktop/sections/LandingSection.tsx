@@ -11,12 +11,6 @@ interface LandingSectionProps {
 
 function LandingSection({ className }: LandingSectionProps) {
   const t = useTranslations("home.landing_section");
-  const backgroundImage = getOptimizedImage({
-    src: "/backgrounds/teaserGifMT.gif",
-    width: screen.availWidth,
-    height: screen.availHeight,
-    priority: true,
-  });
   return (
     <section
       className={cn(
@@ -26,7 +20,7 @@ function LandingSection({ className }: LandingSectionProps) {
       style={{
         backgroundImage:
           "radial-gradient(circle, rgba(70,181,252,0.7) 0%, rgba(255,255,255,0.7) 100%)," +
-          backgroundImage,
+          "url(backgrounds/teaserGifMT.gif)",
         backgroundSize: "cover",
       }}
     >

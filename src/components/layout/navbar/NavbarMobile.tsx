@@ -34,7 +34,7 @@ const routeIcons: Record<string, JSX.Element> = {
   rules: <PencilRuler />,
   cards: <GalleryHorizontalEnd />,
   credits: <UsersRound />,
-  ressources: <LinkIcon />,
+  contact: <LinkIcon />,
 };
 
 function NavbarMobile({ className, pathname }: NavbarMobileProps) {

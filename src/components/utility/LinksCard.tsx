@@ -8,19 +8,14 @@ import {
   Youtube,
   Instagram,
 } from "../visuals/BrandLogos";
-import { Download } from "lucide-react";
-import { useTranslations } from "next-intl";
 import { parseText } from "@/utils/functions/parseText";
-import { useRouter } from "next/router";
-import { download } from "@/config/download";
+import { useTranslations } from "next-intl";
+import DownloadRulesButton from "./DownloadRulesButton";
 
 const linkStyle = "flex justify-between items-center";
 
 function LinksCard() {
-  const router = useRouter();
-  const t = useTranslations("ressources");
-  const ct = useTranslations("common");
-  const locale = router.locale || "en";
+  const t = useTranslations("contact");
   return (
     <Card className="bg-opacity-85 w-full max-w-md">
       <CardHeader>
@@ -63,22 +58,6 @@ function LinksCard() {
             childClassName: "text-view underline",
           },
         })}
-        <span className="border border-slate-300 rounded-full" />
-        <Button variant={"outline"} asChild>
-          <a
-            //@ts-expect-error
-            href={download.rules[locale]}
-            className="flex justify-center items-center gap-2"
-            download={ct("routes.rules") + "-Mage Towers" + `-${locale}`}
-            target="_blank"
-            style={{
-              //@ts-expect-error
-              cursor: download.rules[locale] ? "pointer" : "not-allowed",
-            }}
-          >
-            {t("download")} <Download className="h-5/6" />
-          </a>
-        </Button>
       </CardContent>
     </Card>
   );

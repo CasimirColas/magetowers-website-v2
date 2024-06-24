@@ -1,3 +1,3 @@
-// const routes = ["", "rules", "cards", "ressources"] as const;
-const routes = ["", "rules", "cards", "credits", "ressources"] as const;
+// const routes = ["", "rules", "cards", "contact"] as const;
+const routes = ["", "rules", "cards", "credits", "contact"] as const;
 export default routes;

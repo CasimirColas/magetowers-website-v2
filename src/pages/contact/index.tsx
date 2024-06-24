@@ -5,11 +5,11 @@ import { useTranslations } from "next-intl";
 import LinksCard from "@/components/utility/LinksCard";
 import Image from "next/image";
 
-export default function Ressources() {
+export default function Contact() {
   const c = useTranslations("common");
   return (
     <DefaultLayout
-      title={c("routes.ressources")}
+      title={c("routes.contact")}
       className="relative flex justify-center items-center p-6"
     >
       <Image
@@ -29,5 +29,5 @@ export default function Ressources() {
 }
 
 export async function getStaticProps({ locale }: GetStaticPropsContext) {
-  return getStaticPropsI18n(["common", "ressources"], locale);
+  return getStaticPropsI18n(["common", "contact"], locale);
 }
