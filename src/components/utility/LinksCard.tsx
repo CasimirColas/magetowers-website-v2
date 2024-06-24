@@ -10,7 +10,6 @@ import {
 } from "../visuals/BrandLogos";
 import { parseText } from "@/utils/functions/parseText";
 import { useTranslations } from "next-intl";
-import DownloadRulesButton from "./DownloadRulesButton";
 
 const linkStyle = "flex justify-between items-center";
 

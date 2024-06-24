@@ -5,14 +5,18 @@ import VideoSection from "./mobile/sections/VideoSection";
 import MobileSimpleSection from "./MobileSimpleSection";
 import Image from "next/image";
 import MagicTypesCarousel from "./mobile/MagicTypesCarousel";
+import { useTranslations } from "next-intl";
+import Link from "next/link";
+import { urls } from "@/config/urls";
 
 function MobileView() {
+  const t = useTranslations("home.landing_section");
   useEffect(() => {
     return scrollBackgroundWithContent("main-text", "background-image");
   }, []);
   return (
     <div
-      className="h-full w-full overflow-auto flex flex-col gap-4"
+      className="h-full w-full overflow-auto flex flex-col gap-4 items-center"
       id="main-text"
     >
       <Image
@@ -60,6 +64,12 @@ function MobileView() {
           />
         }
       />
+      <Link
+        className="p-4 rounded-full bg-green-400 text-xl font-bold text-green-800 shadow-lg text-center w-10/12 mb-8"
+        href={urls.kickstarterURL}
+      >
+        {t("available_now")}
+      </Link>
     </div>
   );
 }
