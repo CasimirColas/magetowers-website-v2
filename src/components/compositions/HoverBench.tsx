@@ -34,6 +34,7 @@ function HoverBench({ className }: HoverBenchProps) {
       />
       <Image
         src="/compositions/street.png"
+        quality={100}
         width={800}
         height={400}
         alt="street"
@@ -42,6 +43,7 @@ function HoverBench({ className }: HoverBenchProps) {
       />
       <Image
         src="/compositions/market.png"
+        quality={100}
         width={800}
         height={400}
         alt="market"

@@ -38,7 +38,7 @@ function LandingSection({ className }: LandingSectionProps) {
           className="p-4 rounded-full bg-green-400 text-xl font-bold text-green-800 shadow-lg sm:mb-8 hover:cursor-pointer hover:scale-105 hover:shadow-xl transition-all duration-300 ease-in-out"
           href={urls.kickstarterURL}
         >
-          {t("available_now")}
+          {t("sign_up")}
         </Link>
         {/* <h2
           className="scroll-m-20  text-xl font-semibold tracking-tight first:mt-0 text-white  underline-offset-8 w-10/12 text-center hidden sm:block"

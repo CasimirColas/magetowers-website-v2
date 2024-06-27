@@ -109,7 +109,7 @@ function MagicTypesPresentation() {
   }
   return (
     <Card className="bg-opacity-95 rounded-lg flex flex-col items-center w-1/2 max-w-xl border-0 max-h-[800px] p-6 h-full">
-      <Tabs defaultValue="destruction" className="w-full">
+      <Tabs defaultValue="destruction" className="w-full h-full">
         <TabsList className="w-full justify-evenly">
           <TabsTrigger
             value="destruction"
