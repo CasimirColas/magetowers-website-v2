@@ -22,7 +22,7 @@ function LandingSection() {
           className="p-4 rounded-full bg-green-400 text-xl font-bold text-green-800 shadow-lg mb-2 text-center"
           href={urls.kickstarterURL}
         >
-          {t("available_now")}
+          {t("sign_up")}
         </Link>
         <LinksRow />
       </div>

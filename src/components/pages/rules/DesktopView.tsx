@@ -99,7 +99,7 @@ function DesktopView() {
   }
 
   return (
-    <div className="relative w-full h-full flex justify-center">
+    <div className="relative w-full h-full flex justify-center overflow-hidden">
       <Image
         src={"/backgrounds/sky.png"}
         alt="Background Image"

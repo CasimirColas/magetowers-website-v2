@@ -68,7 +68,7 @@ function MobileView() {
         className="p-4 rounded-full bg-green-400 text-xl font-bold text-green-800 shadow-lg text-center w-10/12 mb-8"
         href={urls.kickstarterURL}
       >
-        {t("available_now")}
+        {t("sign_up")}
       </Link>
     </div>
   );

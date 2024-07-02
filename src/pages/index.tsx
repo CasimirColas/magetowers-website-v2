@@ -2,7 +2,7 @@ import getStaticPropsI18n from "@/utils/next-intl/getStaticPropsI18n";
 import { GetStaticPropsContext } from "next";
 import DefaultLayout from "@/components/layout/DefaultLayout";
 import MobileView from "@/components/pages/home/MobileView";
-import DesktopView from "@/components/pages/home/DesktopView";
+import DesktopView2 from "@/components/pages/home/DesktopView2";
 import { RenderView } from "@/components/utility/RenderView";
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
     <DefaultLayout className="snap-y snap-mandatory overflow-scroll sm:overflow-visible">
       {RenderView({
         breakpoint: "lg",
-        desktop: <DesktopView />,
+        desktop: <DesktopView2 />,
         mobile: <MobileView />,
       })}
     </DefaultLayout>
