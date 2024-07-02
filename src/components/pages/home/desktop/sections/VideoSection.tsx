@@ -13,7 +13,7 @@ function VideoSection() {
     return parseText({ default: true, text: textToParse });
   };
   return (
-    <section className="relative p-6 flex bg-cover bg-center justify-between items-center xl:flex-row flex-col min-h-[100vh]">
+    <section className="relative p-6 flex bg-cover bg-center justify-center items-center xl:flex-row flex-col min-h-[100vh]">
       <Image
         src={"/backgrounds/lakeSetup.jpg"}
         alt="Background Image"
@@ -28,7 +28,7 @@ function VideoSection() {
         <YoutubeVideoPlayer url={urls.videoTrailer} className="w-full" />
       </div>
       <div className="xl:w-1/2 w-full flex justify-center">
-        <Card className="bg-opacity-95 rounded-lg flex flex-col items-center xl:w-full w-[66vw] border-b-0 h-full max-h-[70vh]">
+        <Card className="bg-opacity-95 rounded-lg flex flex-col items-center xl:w-full w-[83vw] border-b-0 h-full max-h-[70vh]">
           <CardHeader className="pb-0">
             <CardTitle
               className="font-title text-center text-tile text-4xl"

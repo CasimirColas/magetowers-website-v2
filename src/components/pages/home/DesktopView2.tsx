@@ -27,25 +27,16 @@ function DesktopView2() {
       </div>
     );
   }
-  useEffect(() => {
-    return scrollBackgroundWithContent("main-text", "background-image", -700);
-  }, []);
+
   return (
     <div className="w-full h-full overflow-auto" id="main-text">
       <LandingSection />
       <VideoSection />
-      <div className="w-full flex justify-start pb-12 relative border-t-1 border-tile">
-        <Card className="flex flex-col gap-4 rounded-none rounded-b-lg xl:w-3/5 w-2/3 items-center pt-4">
+      <div className="w-full flex justify-center pb-12 bg-gray-200">
+        <Card className="flex flex-col gap-4 rounded-none rounded-b-lg w-10/12 items-center pt-4 max-w-[1200px]">
           <Section tkey="expectations_section" />
           <ManaTypesCards />
           <Section tkey="power_section" />
-          <Section tkey="future_section" />
-          <Link
-            className="p-4 rounded-full bg-green-400 text-xl font-bold text-green-800 shadow-lg sm:mb-8 hover:cursor-pointer hover:scale-105 hover:shadow-xl transition-all duration-300 ease-in-out"
-            href={urls.kickstarterURL}
-          >
-            {t("landing_section.sign_up")}
-          </Link>
           <div className="w-1/2 max-w-lg gap-8 flex flex-col justify-center items-center pb-8">
             <Image
               src="/compositions/closehand.png"
@@ -64,22 +55,32 @@ function DesktopView2() {
               quality={100}
             />
           </div>
+          <Section tkey="future_section" />
+          <Link
+            className="p-4 rounded-full bg-green-400 text-xl font-bold text-green-800 shadow-lg sm:mb-8 hover:cursor-pointer hover:scale-105 hover:shadow-xl transition-all duration-300 ease-in-out"
+            href={urls.kickstarterURL}
+          >
+            {t("landing_section.sign_up")}
+          </Link>
+          <div className="flex">
+            <Image
+              className="scale-x-[-1] p-8"
+              src={"/illustrations/pink-wiz.png"}
+              alt="pink wizard"
+              width={300}
+              height={300}
+              quality={100}
+            />
+            <Image
+              src={"/illustrations/old-wiz.png"}
+              alt="old wizard"
+              className="scale-x-[-1]"
+              width={300}
+              height={300}
+              quality={100}
+            />
+          </div>
         </Card>
-        <Image
-          src={"/backgrounds/mobile.png"}
-          alt="Background Image"
-          fill
-          priority
-          style={{
-            top: 0,
-            left: 0,
-            zIndex: -1,
-            position: "absolute",
-            objectFit: "cover",
-            objectPosition: "right bottom",
-          }}
-          id="background-image"
-        />
       </div>
     </div>
   );
