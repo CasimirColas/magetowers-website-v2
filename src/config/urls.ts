@@ -6,4 +6,6 @@ export const urls = {
   tiktokURL: "https://www.tiktok.com/@mage.towers",
   kickstarterURL:
     "https://www.kickstarter.com/projects/magetowers/mage-tower-0?ref=2jeiaw",
+  facebookURL:
+    "https://www.facebook.com/share/Lgm2UMd6Cg7T8fFh/?mibextid=LQQJ4d",
 };

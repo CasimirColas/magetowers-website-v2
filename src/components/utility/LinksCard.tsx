@@ -10,6 +10,7 @@ import {
 } from "../visuals/BrandLogos";
 import { parseText } from "@/utils/functions/parseText";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 const linkStyle = "flex justify-between items-center";
 
@@ -45,6 +46,19 @@ function LinksCard() {
           <Link href={urls.youtubeURL} target="_blank" className={linkStyle}>
             <Youtube w="30" />
             Youtube
+            <span />
+          </Link>
+        </Button>
+        <Button variant={"outline"} asChild>
+          <Link href={urls.facebookURL} target="_blank" className={linkStyle}>
+            <Image
+              src="/logos/facebook.jpg"
+              alt="Facebook"
+              width={25}
+              height={25}
+              className="rounded-[0.3rem]"
+            />
+            Facebook
             <span />
           </Link>
         </Button>

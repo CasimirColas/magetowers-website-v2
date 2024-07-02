@@ -1,12 +1,13 @@
+import { urls } from "@/config/urls";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
+import Image from "next/image";
 import {
   Instagram,
   TikTokFilled,
   TwitterFilled,
   Youtube,
-} from "@/components/visuals/BrandLogos";
-import { urls } from "@/config/urls";
-import { cn } from "@/lib/utils";
-import Link from "next/link";
+} from "../visuals/BrandLogos";
 
 interface LinksRowProps {
   className?: string;
@@ -44,6 +45,19 @@ function LinksRow({ className }: LinksRowProps) {
         className="rounded-md overflow-hidden hover:scale-105 hover:shadow-xl transition-all duration-300 ease-in-out"
       >
         <TikTokFilled w="45" />
+      </Link>
+      <Link
+        href={urls.facebookURL}
+        target="_blank"
+        className="rounded-md overflow-hidden hover:scale-105 hover:shadow-xl transition-all duration-300 ease-in-out"
+      >
+        <Image
+          src="/logos/facebook.jpg"
+          alt="Facebook"
+          width={38}
+          height={38}
+          className="rounded-lg"
+        />
       </Link>
     </div>
   );
