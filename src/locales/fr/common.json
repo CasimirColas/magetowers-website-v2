@@ -1,4 +1,16 @@
 {
+  "newsletter": {
+    "subscribeToNewsletter": "Abonnez-vous à notre newsletter en cliquant ici !",
+    "newsletterHook": "Recevez les dernières actualités du jeu et soyez informé de la sortie officielle sur Kickstarter !",
+    "thanks": "Merci de vous être abonné à notre newsletter, cela nous aide beaucoup !",
+    "placeholder": "Votre adresse e-mail",
+    "subscribe": "S'abonner",
+    "tryAgain": "Réessayer",
+    "success": "Succès !",
+    "error": "Erreur :(",
+    "continue": "Continuer",
+    "notSpam":"Vous recevrez une confirmation par e-mail. Assurez-vous de marquer nos e-mails comme désirables."
+  },
   "errors": {
     "404": "Page non trouvée",
     "500": "Erreur interne du serveur",

@@ -1,7 +1,6 @@
 import DefaultLayout from "@/components/layout/DefaultLayout";
 import ThxCardsData from "@/components/pages/credits/CreditsCardsData";
 import ThanksCard from "@/components/pages/credits/ThanksCard";
-import { Toaster } from "@/components/ui/toaster";
 import getStaticPropsI18n from "@/utils/next-intl/getStaticPropsI18n";
 import { GetStaticPropsContext } from "next";
 import { useTranslations } from "next-intl";
@@ -46,7 +45,6 @@ export default function Credits() {
           />
         ))}
       </div>
-      <Toaster />
     </DefaultLayout>
   );
 }

@@ -4,7 +4,8 @@ import { NextIntlClientProvider } from "next-intl";
 import { useRouter } from "next/router";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
-
+import { ContextProvider } from "@/components/context/AppContext";
+import { Toaster } from "@/components/ui/toaster";
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
   return (
@@ -13,7 +14,10 @@ export default function App({ Component, pageProps }: AppProps) {
       messages={pageProps.messages}
       timeZone="Europe/Paris"
     >
-      <Component {...pageProps} />
+      <ContextProvider>
+        <Component {...pageProps} />
+        <Toaster />
+      </ContextProvider>
       <SpeedInsights />
       <Analytics />
     </NextIntlClientProvider>
