@@ -6,8 +6,8 @@ import MobileSimpleSection from "./MobileSimpleSection";
 import Image from "next/image";
 import MagicTypesCarousel from "./mobile/MagicTypesCarousel";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 import { urls } from "@/config/urls";
+import MainActionButton from "@/components/utility/MainActionButton";
 
 function MobileView() {
   const t = useTranslations("home.landing_section");
@@ -16,7 +16,7 @@ function MobileView() {
   }, []);
   return (
     <div
-      className="h-full w-full overflow-auto flex flex-col gap-4 items-center"
+      className="h-full w-full overflow-auto flex flex-col gap-4 items-center pb-12"
       id="main-text"
     >
       <Image
@@ -64,12 +64,7 @@ function MobileView() {
           />
         }
       />
-      <Link
-        className="p-4 rounded-full bg-green-400 text-xl font-bold text-green-800 shadow-lg text-center w-10/12 mb-8"
-        href={urls.kickstarterURL}
-      >
-        {t("sign_up")}
-      </Link>
+      <MainActionButton url={urls.kickstarterURL} text={t("sign_up")} />
     </div>
   );
 }

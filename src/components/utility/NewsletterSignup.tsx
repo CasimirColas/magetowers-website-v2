@@ -9,7 +9,7 @@ import { useToast } from "@/components/ui/use-toast";
 import { ToastAction } from "@radix-ui/react-toast";
 
 function NewsletterSignUp() {
-  const { newsletterStatus, changeNewsletterStatus } = useAppContext();
+  const { newsletter, changeNewsletterStatus } = useAppContext();
   const c = useTranslations("common.newsletter");
   const { toast } = useToast();
   const [email, setEmail] = useState<string>("");
@@ -66,11 +66,11 @@ function NewsletterSignUp() {
   return (
     <>
       <dialog
-        open={newsletterStatus.status === "open"}
+        open={newsletter.status === "open"}
         className="sm:max-w-md max-w-[95vw] bg-white absolute bottom-0 sm:mr-4 mb-4 sm:mt-0 flex w-full items-center justify-between space-x-4 overflow-hidden rounded-md border border-slate-200 p-4 shadow-lg dark:border-slate-800"
         style={{
           transition: "translate 0.5s",
-          translate: newsletterStatus.status === "open" ? "0 0" : "105% 0",
+          translate: newsletter.status === "open" ? "0 0" : "105% 0",
         }}
       >
         <Avatar className="mt-4 mb-auto">
@@ -111,8 +111,8 @@ function NewsletterSignUp() {
         onClick={() => changeNewsletterStatus("open")}
         style={{
           transition: "translate 0.5s",
-          translate: newsletterStatus.status === "open" ? "0 100%" : "0 0",
-          display: newsletterStatus.status === "subbed" ? "none" : "block",
+          translate: newsletter.status === "open" ? "0 100%" : "0 0",
+          display: newsletter.status === "subbed" ? "none" : "block",
         }}
       >
         {c("subscribeToNewsletter")}

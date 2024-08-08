@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 import LinksRow from "../../../../utility/LinksRow";
-import Link from "next/link";
+import MainActionButton from "../../../../utility/MainActionButton";
 import { urls } from "@/config/urls";
 
 function LandingSection() {
@@ -18,12 +18,7 @@ function LandingSection() {
       </h1>
 
       <div className="flex flex-col justify-center items-center gap-4 mb-2">
-        <Link
-          className="p-4 rounded-full bg-green-400 text-xl font-bold text-green-800 shadow-lg mb-2 text-center"
-          href={urls.kickstarterURL}
-        >
-          {t("sign_up")}
-        </Link>
+        <MainActionButton url={urls.kickstarterURL} text={t("sign_up")} />
         <LinksRow />
       </div>
     </section>

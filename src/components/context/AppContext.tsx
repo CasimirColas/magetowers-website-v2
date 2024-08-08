@@ -5,16 +5,16 @@ import type { ReactNode } from "react";
 export type NewsletterStatus = "open" | "closed" | "subbed";
 
 export interface MageTowersContext {
-  newsletterStatus: { status: NewsletterStatus; lastClosed?: string };
+  newsletter: { status: NewsletterStatus; lastClosed?: string };
 }
 
 interface appContextType {
-  newsletterStatus: { status: NewsletterStatus; lastClosed?: string };
+  newsletter: { status: NewsletterStatus; lastClosed?: string };
   changeNewsletterStatus: (status: NewsletterStatus) => void;
 }
 
 const contextDefaultValues: appContextType = {
-  newsletterStatus: { status: "closed" },
+  newsletter: { status: "closed" },
   changeNewsletterStatus: () => {},
 };
 
@@ -30,18 +30,26 @@ interface Props {
 
 export function ContextProvider({ children }: Props): JSX.Element {
   const defaultContext: MageTowersContext = {
-    newsletterStatus: { status: "closed" },
+    newsletter: { status: "closed" },
   };
 
   const initial = (): MageTowersContext => {
     const data = window.localStorage.getItem("magetowers.com");
     if (data != null) {
       const context = JSON.parse(data) as MageTowersContext;
-      if (
-        context.newsletterStatus.status === "closed" &&
-        !isToday(parseISO(context.newsletterStatus.lastClosed ?? ""))
-      ) {
-        context.newsletterStatus.status = "open";
+      console.log(context);
+      try {
+        if (
+          context.newsletter.status === "closed" &&
+          !isToday(parseISO(context.newsletter.lastClosed ?? ""))
+        ) {
+          context.newsletter.status = "open";
+        }
+      } catch (error) {
+        window.localStorage.setItem(
+          "magetowers.com",
+          JSON.stringify(defaultContext)
+        );
       }
       return context;
     } else {
@@ -66,14 +74,14 @@ export function ContextProvider({ children }: Props): JSX.Element {
     }
     const saveString = JSON.stringify({
       ...context,
-      newsletterStatus: newStatus,
+      newsletter: newStatus,
     });
     setContext(JSON.parse(saveString));
     window.localStorage.setItem("magetowers.com", saveString);
   }
 
   const value = {
-    newsletterStatus: context.newsletterStatus,
+    newsletter: context.newsletter,
     changeNewsletterStatus,
   };
 
