@@ -6,6 +6,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 import { ContextProvider } from "@/components/context/AppContext";
 import { Toaster } from "@/components/ui/toaster";
+import { APIProvider } from "@vis.gl/react-google-maps";
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
   return (
@@ -15,8 +16,10 @@ export default function App({ Component, pageProps }: AppProps) {
       timeZone="Europe/Paris"
     >
       <ContextProvider>
-        <Component {...pageProps} />
-        <Toaster />
+        <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY ?? ""}>
+          <Component {...pageProps} />
+          <Toaster />
+        </APIProvider>
       </ContextProvider>
       <SpeedInsights />
       <Analytics />

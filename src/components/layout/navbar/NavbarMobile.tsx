@@ -14,6 +14,7 @@ import {
   GalleryHorizontalEnd,
   Home,
   LinkIcon,
+  MapPinned,
   Menu,
   PencilRuler,
   UsersRound,
@@ -35,6 +36,7 @@ const routeIcons: Record<string, JSX.Element> = {
   cards: <GalleryHorizontalEnd />,
   credits: <UsersRound />,
   contact: <LinkIcon />,
+  map: <MapPinned />,
 };
 
 function NavbarMobile({ className, pathname }: NavbarMobileProps) {

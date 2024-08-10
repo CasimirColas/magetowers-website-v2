@@ -1,7 +1,7 @@
 {
-  "newsletter":{
+  "newsletter": {
     "subscribeToNewsletter": "Subscribe to our newsletter by clicking here!",
-    "newsletterHook":"Get the latest news and updates for the game and get notified for the official release on kickstarter!",
+    "newsletterHook": "Get the latest news and updates for the game and get notified for the official release on kickstarter!",
     "thanks": "Thank you for subscribing to our newsletter it helps us a lot!",
     "placeholder": "Your email address",
     "subscribe": "Subscribe",
@@ -9,7 +9,7 @@
     "success": "Success !",
     "error": "Error :(",
     "continue": "Continue",
-    "notSpam":"You will recieve a confirmation by mail. Make sure to mark our emails as not Spam."
+    "notSpam": "You will recieve a confirmation by mail. Make sure to mark our emails as not Spam."
   },
   "errors": {
     "404": "Page not found",
@@ -61,7 +61,8 @@
     "rules": "Rules",
     "cards": "Cards",
     "credits": "Credits",
-    "contact": "Contact"
+    "contact": "Contact",
+    "map": "Play"
   },
   "navigation": {
     "menu": "Menu",

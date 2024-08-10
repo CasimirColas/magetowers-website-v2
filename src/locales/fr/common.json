@@ -9,7 +9,7 @@
     "success": "Succès !",
     "error": "Erreur :(",
     "continue": "Continuer",
-    "notSpam":"Vous recevrez une confirmation par e-mail. Assurez-vous de marquer nos e-mails comme désirables."
+    "notSpam": "Vous recevrez une confirmation par e-mail. Assurez-vous de marquer nos e-mails comme désirables."
   },
   "errors": {
     "404": "Page non trouvée",
@@ -61,7 +61,8 @@
     "rules": "Règles",
     "cards": "Cartes",
     "credits": "Crédits",
-    "contact": "Contact"
+    "contact": "Contact",
+    "map": "Jouer"
   },
   "navigation": {
     "menu": "Menu",

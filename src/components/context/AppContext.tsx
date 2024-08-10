@@ -37,7 +37,6 @@ export function ContextProvider({ children }: Props): JSX.Element {
     const data = window.localStorage.getItem("magetowers.com");
     if (data != null) {
       const context = JSON.parse(data) as MageTowersContext;
-      console.log(context);
       try {
         if (
           context.newsletter.status === "closed" &&
