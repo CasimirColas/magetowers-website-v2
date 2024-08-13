@@ -11,6 +11,7 @@ import Link from "next/link";
 import { urls } from "@/config/urls";
 import { useEffect } from "react";
 import scrollBackgroundWithContent from "@/utils/functions/scrollBackgroundWithContent";
+import GameplayHook from "./desktop/GameplayHook";
 
 function DesktopView2() {
   const t = useTranslations("home");
@@ -32,6 +33,7 @@ function DesktopView2() {
     <div className="w-full h-full overflow-auto" id="main-text">
       <LandingSection />
       <VideoSection />
+      <GameplayHook />
       <div className="w-full flex justify-center pb-12 bg-gray-200">
         <Card className="flex flex-col gap-4 rounded-none rounded-b-lg w-10/12 items-center pt-4 max-w-[1200px]">
           <Section tkey="expectations_section" />

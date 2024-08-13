@@ -10,6 +10,13 @@
     "title": "Checkout the trailer!",
     "text_full": "Do you enjoy Hearthstone, Magic the Gathering or Yu-Gi-Oh! ||Try Mage Towers!|| It can be played with ||up to 4 friends|| (or maybe even more 🤔) and it is very easy to get into. The ||variety of playstyles|| and win conditions, will guarantee that no game will ever feel or play the same."
   },
+  "hook_section": {
+    "build": "Build your Tower",
+    "collect": "Collect Mana",
+    "spells": "Use powerfull combinations of Spells",
+    "combos": "Can you spot any great combos here?",
+    "win": "And let the best Mage win!"
+  },
   "expectations_section": {
     "title": "What to expect?",
     "text_full": "Mage Towers is a card game centered around ||building you mage tower|| and collecting different types of Mana to ||empower your spells|| and use ||powerful Incantations||. You gain Mana by adding ||Catalyst|| blocks to your tower and infusing them with the power of ||Glyphs||. Each Mana type has it's own ||play style||, will you find a way to combine them to your advantage?"
