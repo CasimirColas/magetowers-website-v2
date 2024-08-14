@@ -107,7 +107,7 @@ function NewsletterSignUp() {
       </dialog>
 
       <button
-        className="w-full bg-white animate-fade-up animate-once absolute bottom-0 text-sky-500 hover:bg-sky-500 hover:text-white p-1"
+        className="w-full bg-white animate-fade-up animate-once absolute bottom-0 text-sky-500 hover:bg-sky-500 hover:text-white p-1 border-t z-50"
         onClick={() => changeNewsletterStatus("open")}
         style={{
           transition: "translate 0.5s",

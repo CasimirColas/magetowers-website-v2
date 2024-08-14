@@ -3,18 +3,10 @@ import Image from "next/image";
 import DetailsDialog from "@/components/utility/DetailsDialog";
 import { CardNames } from "@/components/cards/types";
 import { useTranslations } from "next-intl";
-
-const H2 = ({ children }: { children: React.ReactNode }) => (
-  <h2
-    className="text-6xl font-bold text-center font-title p-8 text-tile"
-    style={{
-      textShadow: "0px 3px 4px #0698c5",
-    }}
-  >
-    {children}
-  </h2>
-);
-
+import ManaTypesCards from "./ManaTypesCards";
+import HH2 from "@/components/pages/home/HookH2";
+import { useRef } from "react";
+import { useIsVisible } from "@/utils/hooks/useIsVisible";
 const CardDetails = ({
   name,
   className,
@@ -47,11 +39,50 @@ const CardDetails = ({
 
 function GameplayHook() {
   const t = useTranslations("home.hook_section");
+  //Tower
+  const towerRef = useRef(null);
+  const towerIsVisible = useIsVisible(towerRef);
+  //Mana
+  const manaRef = useRef(null);
+  const manaIsVisible = useIsVisible(manaRef);
+  //Spells
+  const spellsRef = useRef(null);
+  const spellsIsVisible = useIsVisible(spellsRef);
+  //Annimation
+  function annimateEntry(
+    className: string,
+    visible: boolean,
+    side: "left" | "right"
+  ) {
+    return visible
+      ? className +
+          ` animate-fade-${side} animate-once animate-delay-400 animate-duration-[1500ms]`
+      : className + " opacity-0";
+  }
   return (
-    <div className="flex flex-col gap-52 items-center py-24">
+    <div className="flex flex-col gap-52 items-center pt-24">
       <div className="flex justify-around items-center w-full">
-        <H2>{t("build")}</H2>
-        <div className="flex relative">
+        <div
+          className={annimateEntry(
+            "flex flex-col items-center",
+            towerIsVisible,
+            "right"
+          )}
+        >
+          <HH2>{t("build")}</HH2>
+          <Image
+            className="scale-x-[-1]"
+            src={"/illustrations/pink-wiz.png"}
+            alt="pink wizard"
+            width={300}
+            height={300}
+            quality={100}
+          />
+        </div>
+        <div
+          className={annimateEntry("flex relative", towerIsVisible, "left")}
+          ref={towerRef}
+        >
           <Image
             src="/illustrations/tower.png"
             width={200}
@@ -94,9 +125,16 @@ function GameplayHook() {
           </div>
         </div>
       </div>
-
+      <span className="w-[20vw] border border-tile" />
       <div className="flex justify-around px-24 items-center w-full">
-        <div className="flex w-full max-w-4xl min-w-max ml-12">
+        <div
+          className={annimateEntry(
+            "flex w-full max-w-4xl min-w-max ml-12",
+            manaIsVisible,
+            "right"
+          )}
+          ref={manaRef}
+        >
           <CardDetails
             name="arcane"
             id="arcane-hook"
@@ -123,16 +161,31 @@ function GameplayHook() {
             className="h-auto w-1/5 rotate-[20deg] relative top-[40px] mx-[-50px] rounded-md"
           />
         </div>
-        <H2>{t("collect")}</H2>
+        <HH2 className={annimateEntry("", manaIsVisible, "left")}>
+          {t("collect")}
+        </HH2>
       </div>
-
-      <div className="flex justify-around px-24 items-center w-full">
+      <span className="w-[20vw] border border-tile" />
+      <div
+        className={annimateEntry(
+          "flex justify-around px-24 items-center w-full",
+          spellsIsVisible,
+          "right"
+        )}
+      >
         <div className="flex flex-col justify-center items-center">
-          <H2>{t("spells")}</H2>
+          <HH2 className="w-[90%]">{t("spells")}</HH2>
           <i className="text-view">{t("combos")}</i>
         </div>
 
-        <div className="flex w-full max-w-6xl mr-12 justify-end">
+        <div
+          className={annimateEntry(
+            "flex w-full max-w-6xl mr-12 justify-end",
+            spellsIsVisible,
+            "left"
+          )}
+          ref={spellsRef}
+        >
           <CardDetails
             name="benevolence"
             id="benevolence-hook"
@@ -160,15 +213,10 @@ function GameplayHook() {
           />
         </div>
       </div>
-
+      <span className="w-[20vw] border border-tile" />
       <div className="flex justify-around px-24 items-center flex-col w-full">
-        <H2>{t("win")}</H2>
-        <Image
-          src="/illustrations/necroFire.png"
-          width={400}
-          height={400}
-          alt="Tower building"
-        />
+        <HH2 className="pb-24">{t("win")}</HH2>
+        <ManaTypesCards />
       </div>
     </div>
   );

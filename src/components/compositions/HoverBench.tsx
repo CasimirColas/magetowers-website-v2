@@ -54,4 +54,27 @@ function HoverBench({ className }: HoverBenchProps) {
   );
 }
 
+function HoverCompleteBench() {
+  return (
+    <div className="w-1/2 max-w-lg gap-8 flex flex-col justify-center items-center pb-8">
+      <Image
+        src="/compositions/closehand.png"
+        alt="opponent's hand"
+        className="rotate-180"
+        width={300}
+        height={300}
+        quality={100}
+      />
+      <HoverBench className="gap-4" />
+      <Image
+        src="/compositions/openhand.png"
+        alt="your hand of cards"
+        width={300}
+        height={300}
+        quality={100}
+      />
+    </div>
+  );
+}
+
 export default HoverBench;
