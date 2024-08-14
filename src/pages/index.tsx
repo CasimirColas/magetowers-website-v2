@@ -2,7 +2,7 @@ import getStaticPropsI18n from "@/utils/next-intl/getStaticPropsI18n";
 import { GetStaticPropsContext } from "next";
 import DefaultLayout from "@/components/layout/DefaultLayout";
 import MobileView from "@/components/pages/home/MobileView";
-import DesktopView2 from "@/components/pages/home/DesktopView2";
+import DesktopView from "@/components/pages/home/DesktopView";
 import { RenderView } from "@/components/utility/RenderView";
 import NewsletterSignUp from "@/components/utility/NewsletterSignup";
 
@@ -11,7 +11,7 @@ export default function Home() {
     <DefaultLayout className="overflow-hidden">
       {RenderView({
         breakpoint: "lg",
-        desktop: <DesktopView2 />,
+        desktop: <DesktopView />,
         mobile: <MobileView />,
       })}
       <NewsletterSignUp />
